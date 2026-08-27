@@ -1,0 +1,80 @@
+Removed Pin From Net: NetName=MCU_LED1 Pin=R4A-1
+Removed Pin From Net: NetName=NetQ1A_2 Pin=R4A-2
+Removed Pin From Net: NetName=MCU_LED2 Pin=R4B-1
+Removed Pin From Net: NetName=NetQ1B_2 Pin=R4B-2
+Removed Pin From Net: NetName=MCU_LED3 Pin=R4C-1
+Removed Pin From Net: NetName=NetQ1C_2 Pin=R4C-2
+Removed Pin From Net: NetName=MCU_LED4 Pin=R4D-1
+Removed Pin From Net: NetName=NetQ1D_2 Pin=R4D-2
+Removed Pin From Net: NetName=MCU_LED5 Pin=R4E-1
+Removed Pin From Net: NetName=NetQ1E_2 Pin=R4E-2
+Removed Pin From Net: NetName=MCU_LED6 Pin=R4F-1
+Removed Pin From Net: NetName=NetQ1F_2 Pin=R4F-2
+Removed Pin From Net: NetName=MCU_LED7 Pin=R4G-1
+Removed Pin From Net: NetName=NetQ1G_2 Pin=R4G-2
+Removed Pin From Net: NetName=MCU_LED8 Pin=R4H-1
+Removed Pin From Net: NetName=NetQ1H_2 Pin=R4H-2
+Removed Pin From Net: NetName=GND Pin=R5A-1
+Removed Pin From Net: NetName=NetQ1A_2 Pin=R5A-2
+Removed Pin From Net: NetName=GND Pin=R5B-1
+Removed Pin From Net: NetName=NetQ1B_2 Pin=R5B-2
+Removed Pin From Net: NetName=GND Pin=R5C-1
+Removed Pin From Net: NetName=NetQ1C_2 Pin=R5C-2
+Removed Pin From Net: NetName=GND Pin=R5D-1
+Removed Pin From Net: NetName=NetQ1D_2 Pin=R5D-2
+Removed Pin From Net: NetName=GND Pin=R5E-1
+Removed Pin From Net: NetName=NetQ1E_2 Pin=R5E-2
+Removed Pin From Net: NetName=GND Pin=R5F-1
+Removed Pin From Net: NetName=NetQ1F_2 Pin=R5F-2
+Removed Pin From Net: NetName=GND Pin=R5G-1
+Removed Pin From Net: NetName=NetQ1G_2 Pin=R5G-2
+Removed Pin From Net: NetName=GND Pin=R5H-1
+Removed Pin From Net: NetName=NetQ1H_2 Pin=R5H-2
+Added Pin To Net: NetName=NetQ1A_2 Pin=R4A-1
+Added Pin To Net: NetName=MCU_LED1 Pin=R4A-2
+Added Pin To Net: NetName=NetQ1B_2 Pin=R4B-1
+Added Pin To Net: NetName=MCU_LED2 Pin=R4B-2
+Added Pin To Net: NetName=NetQ1C_2 Pin=R4C-1
+Added Pin To Net: NetName=MCU_LED3 Pin=R4C-2
+Added Pin To Net: NetName=NetQ1D_2 Pin=R4D-1
+Added Pin To Net: NetName=MCU_LED4 Pin=R4D-2
+Added Pin To Net: NetName=NetQ1E_2 Pin=R4E-1
+Added Pin To Net: NetName=MCU_LED5 Pin=R4E-2
+Added Pin To Net: NetName=NetQ1F_2 Pin=R4F-1
+Added Pin To Net: NetName=MCU_LED6 Pin=R4F-2
+Added Pin To Net: NetName=NetQ1G_2 Pin=R4G-1
+Added Pin To Net: NetName=MCU_LED7 Pin=R4G-2
+Added Pin To Net: NetName=NetQ1H_2 Pin=R4H-1
+Added Pin To Net: NetName=MCU_LED8 Pin=R4H-2
+Added Pin To Net: NetName=NetQ1A_2 Pin=R5A-1
+Added Pin To Net: NetName=GND Pin=R5A-2
+Added Pin To Net: NetName=NetQ1B_2 Pin=R5B-1
+Added Pin To Net: NetName=GND Pin=R5B-2
+Added Pin To Net: NetName=NetQ1C_2 Pin=R5C-1
+Added Pin To Net: NetName=GND Pin=R5C-2
+Added Pin To Net: NetName=NetQ1D_2 Pin=R5D-1
+Added Pin To Net: NetName=GND Pin=R5D-2
+Added Pin To Net: NetName=NetQ1E_2 Pin=R5E-1
+Added Pin To Net: NetName=GND Pin=R5E-2
+Added Pin To Net: NetName=NetQ1F_2 Pin=R5F-1
+Added Pin To Net: NetName=GND Pin=R5F-2
+Added Pin To Net: NetName=NetQ1G_2 Pin=R5G-1
+Added Pin To Net: NetName=GND Pin=R5G-2
+Added Pin To Net: NetName=NetQ1H_2 Pin=R5H-1
+Added Pin To Net: NetName=GND Pin=R5H-2
+Added Member To Class: ClassName=CHANNELB Member=Component R4A (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELC Member=Component R4B (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELD Member=Component R4C (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELE Member=Component R4D (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELF Member=Component R4E (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELG Member=Component R4F (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELH Member=Component R4G (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELI Member=Component R4H (R4) RES 680R-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELB Member=Component R5A (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELC Member=Component R5B (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELD Member=Component R5C (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELE Member=Component R5D (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELF Member=Component R5E (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELG Member=Component R5F (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELH Member=Component R5G (R5) RES 47K-5%-1/8W-SMD
+Added Member To Class: ClassName=CHANNELI Member=Component R5H (R5) RES 47K-5%-1/8W-SMD

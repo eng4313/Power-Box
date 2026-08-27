@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : F:\Power Box\PCB\Power_Box_V0\Power_Box_V0.PcbDoc
+Date         : 6/15/2026
+Time         : 11:56:12 AM
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 878
+    Connections routed, 878
+    Connections remaining, 0
+count : 4

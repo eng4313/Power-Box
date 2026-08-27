@@ -1,0 +1,13 @@
+Added Component: Designator=C43(CAP-Elec-10x25-5)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "10x25"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "THD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1000uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+12 Pin=C43-1
+Added Pin To Net: NetName=GND_MCU Pin=C43-2
+Added Member To Class: ClassName=Power Member=Component C43 CAP Elec 1000uF-25V-10x25-THD

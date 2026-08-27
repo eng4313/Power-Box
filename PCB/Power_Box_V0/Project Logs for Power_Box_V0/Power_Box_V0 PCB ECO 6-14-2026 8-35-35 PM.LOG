@@ -1,0 +1,48 @@
+Removed Pin From Net: NetName=NetC46_1 Pin=SC2-1
+Change Component Designator: OldDesignator=SC2 NewDesignator=SC3
+Change Component Designator: OldDesignator=SC3 NewDesignator=SC2
+Added Component: Designator=C48(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C49(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=H1(H-9pin-F-S)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=C48-1
+Added Pin To Net: NetName=GND_MCU Pin=C48-2
+Added Pin To Net: NetName=+5 Pin=C49-1
+Added Pin To Net: NetName=GND_MCU Pin=C49-2
+Added Pin To Net: NetName=GND_MCU Pin=H1-1
+Added Pin To Net: NetName=+3V3 Pin=H1-2
+Added Pin To Net: NetName=TFT_CS Pin=H1-3
+Added Pin To Net: NetName=TFT_CLK Pin=H1-4
+Added Pin To Net: NetName=TFT_DC Pin=H1-5
+Added Pin To Net: NetName=TFT_MOSI Pin=H1-6
+Added Pin To Net: NetName=TFT_MISO Pin=H1-7
+Added Pin To Net: NetName=TFT_RES Pin=H1-8
+Added Pin To Net: NetName=TFT_BLK Pin=H1-9
+Added Pin To Net: NetName=NetC46_1 Pin=SC2-1
+Added Member To Class: ClassName=Interface Member=Component C48 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=Interface Member=Component C49 CAP Cer 1uF-50V-X7R-SMD
+Added Member To Class: ClassName=TFT Member=Component H1 MALE-STRAIGHT
+Added Member To Class: ClassName=Interface Member=Component SC3 Screw 3mm

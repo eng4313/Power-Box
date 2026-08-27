@@ -1,0 +1,107 @@
+Added Component: Designator=U3(STM-LQFP144_M)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com/web/en/home.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex-M4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "D/A Converter"; Value = "2x12-bit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "FLASH Size (Prog) (kB)"; Value = "1024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "I/Os (High Current)"; Value = "114"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Internal RAM Size (kB)"; Value = "192"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Frequency(F) (Processor speed) (MHz)"; Value = "168"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "144-Pin Low Profile Quad Flat Package, 20 x 20 mm Body, 0.5 mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LQFP144"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Rev. 4, 06/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "STM32F407ZGT6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 3"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "497-11766-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "73T2334"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 3"; Value = "511-STM32F407ZGT6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage(Vcc) max (V)"; Value = "3.6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage(Vcc) min (V)"; Value = "1.8"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=MCU_VBAT Pin=U3-6
+Added Pin To Net: NetName=MCU_LED8 Pin=U3-14
+Added Pin To Net: NetName=MCU_LOCK8 Pin=U3-15
+Added Pin To Net: NetName=GND_MCU Pin=U3-16
+Added Pin To Net: NetName=VCC_MCU Pin=U3-17
+Added Pin To Net: NetName=MCU_LED7 Pin=U3-18
+Added Pin To Net: NetName=MCU_LOCK7 Pin=U3-19
+Added Pin To Net: NetName=MCU_LED6 Pin=U3-20
+Added Pin To Net: NetName=MCU_LOCK6 Pin=U3-21
+Added Pin To Net: NetName=MCU_LED5 Pin=U3-22
+Added Pin To Net: NetName=MCU_OCS_N Pin=U3-23
+Added Pin To Net: NetName=MCU_OCS_P Pin=U3-24
+Added Pin To Net: NetName=MCU_NRST Pin=U3-25
+Added Pin To Net: NetName=MCU_LOCK5 Pin=U3-26
+Added Pin To Net: NetName=MCU_LED4 Pin=U3-27
+Added Pin To Net: NetName=MCU_LOCK4 Pin=U3-28
+Added Pin To Net: NetName=MCU_LED3 Pin=U3-29
+Added Pin To Net: NetName=VCC_MCU Pin=U3-30
+Added Pin To Net: NetName=GND_MCU Pin=U3-31
+Added Pin To Net: NetName=VCC_MCU Pin=U3-32
+Added Pin To Net: NetName=VCC_MCU Pin=U3-33
+Added Pin To Net: NetName=MCU_LOCK3 Pin=U3-34
+Added Pin To Net: NetName=MCU_LED2 Pin=U3-35
+Added Pin To Net: NetName=MCU_LOCK2 Pin=U3-36
+Added Pin To Net: NetName=MCU_LED1 Pin=U3-37
+Added Pin To Net: NetName=GND_MCU Pin=U3-38
+Added Pin To Net: NetName=VCC_MCU Pin=U3-39
+Added Pin To Net: NetName=MCU_LOCK1 Pin=U3-40
+Added Pin To Net: NetName=TFT_CLK Pin=U3-41
+Added Pin To Net: NetName=TFT_MISO Pin=U3-42
+Added Pin To Net: NetName=TFT_MOSI Pin=U3-43
+Added Pin To Net: NetName=TFT_BLK Pin=U3-44
+Added Pin To Net: NetName=TFT_RES Pin=U3-45
+Added Pin To Net: NetName=TFT_DC Pin=U3-46
+Added Pin To Net: NetName=TFT_CS Pin=U3-47
+Added Pin To Net: NetName=GND_MCU Pin=U3-51
+Added Pin To Net: NetName=VCC_MCU Pin=U3-52
+Added Pin To Net: NetName=MCU_MAGNET8 Pin=U3-56
+Added Pin To Net: NetName=MCU_MAGNET7 Pin=U3-57
+Added Pin To Net: NetName=MCU_MAGNET6 Pin=U3-58
+Added Pin To Net: NetName=MCU_MAGNET5 Pin=U3-59
+Added Pin To Net: NetName=MCU_MAGNET4 Pin=U3-60
+Added Pin To Net: NetName=GND_MCU Pin=U3-61
+Added Pin To Net: NetName=VCC_MCU Pin=U3-62
+Added Pin To Net: NetName=MCU_MAGNET3 Pin=U3-63
+Added Pin To Net: NetName=MCU_MAGNET2 Pin=U3-64
+Added Pin To Net: NetName=MCU_MAGNET1 Pin=U3-65
+Added Pin To Net: NetName=MCU_KEY3 Pin=U3-66
+Added Pin To Net: NetName=MCU_KEY2 Pin=U3-67
+Added Pin To Net: NetName=MCU_KEY1 Pin=U3-68
+Added Pin To Net: NetName=V_CAP_1 Pin=U3-71
+Added Pin To Net: NetName=VCC_MCU Pin=U3-72
+Added Pin To Net: NetName=ISD_SS Pin=U3-73
+Added Pin To Net: NetName=ISD_SCK Pin=U3-74
+Added Pin To Net: NetName=ISD_MISO Pin=U3-75
+Added Pin To Net: NetName=ISD_MOSI Pin=U3-76
+Added Pin To Net: NetName=TFT_CS_2 Pin=U3-77
+Added Pin To Net: NetName=TFT_CS_3 Pin=U3-78
+Added Pin To Net: NetName=GND_MCU Pin=U3-83
+Added Pin To Net: NetName=VCC_MCU Pin=U3-84
+Added Pin To Net: NetName=GND_MCU Pin=U3-94
+Added Pin To Net: NetName=VCC_MCU Pin=U3-95
+Added Pin To Net: NetName=MCU_TXD Pin=U3-101
+Added Pin To Net: NetName=MCU_RXD Pin=U3-102
+Added Pin To Net: NetName=MCU_SWDIO Pin=U3-105
+Added Pin To Net: NetName=V_CAP_2 Pin=U3-106
+Added Pin To Net: NetName=GND_MCU Pin=U3-107
+Added Pin To Net: NetName=VCC_MCU Pin=U3-108
+Added Pin To Net: NetName=MCU_SWCLK Pin=U3-109
+Added Pin To Net: NetName=GND_MCU Pin=U3-120
+Added Pin To Net: NetName=VCC_MCU Pin=U3-121
+Added Pin To Net: NetName=GND_MCU Pin=U3-130
+Added Pin To Net: NetName=VCC_MCU Pin=U3-131
+Added Pin To Net: NetName=MCU_SCL Pin=U3-136
+Added Pin To Net: NetName=MCU_SDA Pin=U3-137
+Added Pin To Net: NetName=MCU_BOOT0 Pin=U3-138
+Added Pin To Net: NetName=VCC_MCU Pin=U3-144
+Added Member To Class: ClassName=MCU Member=Component U3 STM32F407ZGT6

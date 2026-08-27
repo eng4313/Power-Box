@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=GND_MCU Pin=H1-1
+Removed Pin From Net: NetName=+3V3 Pin=H1-2
+Removed Pin From Net: NetName=TFT_CS Pin=H1-3
+Removed Pin From Net: NetName=TFT_CLK Pin=H1-4
+Removed Pin From Net: NetName=TFT_DC Pin=H1-5
+Removed Pin From Net: NetName=TFT_MOSI Pin=H1-6
+Removed Pin From Net: NetName=TFT_MISO Pin=H1-7
+Removed Pin From Net: NetName=TFT_RES Pin=H1-8
+Removed Pin From Net: NetName=TFT_BLK Pin=H1-9
+Removed Member From Class: ClassName=TFT Member=H1
+Added Member To Class: ClassName=Interface Member=Component SC3 Screw 3mm

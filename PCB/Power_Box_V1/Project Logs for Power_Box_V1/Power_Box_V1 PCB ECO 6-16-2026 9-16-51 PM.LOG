@@ -1,0 +1,12 @@
+Added Component: Designator=TR1(KF301-2pin)
+Add component (AddParameter): Name = "Code"; Value = "KF?/Phoenix-2Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "?mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Straight/Right"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=TR1-1
+Added Pin To Net: NetName=+12_IN Pin=TR1-2
+Added Member To Class: ClassName=Power Member=Component TR1 Terminal KF?/Phoenix-2Pin-?mm-Straight/Right

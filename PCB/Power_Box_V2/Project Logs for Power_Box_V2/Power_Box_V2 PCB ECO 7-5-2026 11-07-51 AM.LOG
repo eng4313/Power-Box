@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND_MCU Pin=C1C-2
+Removed Pin From Net: NetName=+3V3 Pin=R1C-1
+Removed Pin From Net: NetName=GND_MCU Pin=S1C-1
+Removed Member From Class: ClassName=STM32 Member=MCU_KEY3
+Removed Member From Class: ClassName=Digital Input Member=KEYD
+Added Pin To Net: NetName=MCU_KEY1 Pin=U3-1
+Added Pin To Net: NetName=MCU_KEY2 Pin=U3-2
+Added Pin To Net: NetName=NetLED3_1 Pin=U3-5
+Added Class: Name=MCU_KEY[1..2]

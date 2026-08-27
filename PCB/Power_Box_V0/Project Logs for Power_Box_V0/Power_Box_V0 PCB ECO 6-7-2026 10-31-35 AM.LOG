@@ -1,0 +1,29 @@
+Removed Member From Class: ClassName=Designator Member=C22
+Removed Member From Class: ClassName=Designator Member=C23
+Removed Member From Class: ClassName=Designator Member=C24
+Removed Member From Class: ClassName=Designator Member=C25
+Removed Member From Class: ClassName=Designator Member=C26
+Removed Member From Class: ClassName=Designator Member=C27
+Removed Member From Class: ClassName=Designator Member=H2
+Change Class Name : Old Net Name=Designator New Net Name=TFT
+Added Class: Name=DS1307
+Added Class: Name=EEPROM
+Added Class: Name=ISD1730
+Added Class: Name=MCU
+Added Class: Name=STM_AUX
+Added Member To Class: ClassName=TFT Member=Component C17 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=TFT Member=Component H1 MALE-STRAIGHT
+Added Member To Class: ClassName=CHANNELB Member=Component Q2_1 (Q2) TR ZXTN2010ZTA-SMD
+Added Member To Class: ClassName=CHANNELC Member=Component Q2_2 (Q2) TR ZXTN2010ZTA-SMD
+Added Member To Class: ClassName=CHANNELD Member=Component Q2_3 (Q2) TR ZXTN2010ZTA-SMD
+Added Member To Class: ClassName=CHANNELE Member=Component Q2_4 (Q2) TR ZXTN2010ZTA-SMD
+Added Member To Class: ClassName=TFT Member=Component R18 10R-1/8W-5%
+Added Member To Class: ClassName=TFT Member=Component R20 4.7K-1/8W-5%
+Added Member To Class: ClassName=TFT Member=Component R22 4.7K-1/8W-5%
+Added Member To Class: ClassName=TFT Member=Component R24 1K-1/8W-5%
+Added Room: Name=DS1307
+Added Room: Name=EEPROM
+Added Room: Name=ISD1730
+Added Room: Name=MCU
+Added Room: Name=STM_AUX
+Added Room: Name=TFT

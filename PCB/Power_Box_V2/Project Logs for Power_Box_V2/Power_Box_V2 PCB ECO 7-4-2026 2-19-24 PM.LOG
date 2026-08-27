@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=MCU_SCL Pin=U3-136
+Removed Pin From Net: NetName=MCU_SDA Pin=U3-137
+Change component parameters: Designator = "C43" ("C43"); Footprint = "CAP-Elec-10x25-5"; UniqueID = "\KGZSSFSK\UIQKPPGE" ("\KGZSSFSK\UIQKPPGE")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size"; Value = "10x25"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "THD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1000uF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=MCU_SDA Pin=U3-99
+Added Pin To Net: NetName=MCU_SCL Pin=U3-100

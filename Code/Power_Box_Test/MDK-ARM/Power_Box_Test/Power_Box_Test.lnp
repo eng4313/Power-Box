@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"power_box_test\startup_stm32f103xb.o"
+"power_box_test\main.o"
+"power_box_test\stm32f1xx_it.o"
+"power_box_test\stm32f1xx_hal_msp.o"
+"power_box_test\stm32f1xx_hal_gpio_ex.o"
+"power_box_test\stm32f1xx_hal_tim.o"
+"power_box_test\stm32f1xx_hal_tim_ex.o"
+"power_box_test\stm32f1xx_hal.o"
+"power_box_test\stm32f1xx_hal_rcc.o"
+"power_box_test\stm32f1xx_hal_rcc_ex.o"
+"power_box_test\stm32f1xx_hal_gpio.o"
+"power_box_test\stm32f1xx_hal_dma.o"
+"power_box_test\stm32f1xx_hal_cortex.o"
+"power_box_test\stm32f1xx_hal_pwr.o"
+"power_box_test\stm32f1xx_hal_flash.o"
+"power_box_test\stm32f1xx_hal_flash_ex.o"
+"power_box_test\stm32f1xx_hal_exti.o"
+"power_box_test\system_stm32f1xx.o"
+--strict --scatter "Power_Box_Test\Power_Box_Test.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Power_Box_Test.map" -o Power_Box_Test\Power_Box_Test.axf

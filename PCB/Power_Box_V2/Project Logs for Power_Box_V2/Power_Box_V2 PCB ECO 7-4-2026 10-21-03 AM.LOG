@@ -1,0 +1,1619 @@
+Removed Pin From Net: NetName=VCC_TFT Pin=C11-2
+Removed Pin From Net: NetName=GND_MCU Pin=C12-1
+Removed Pin From Net: NetName=VCC_TFT Pin=C12-2
+Removed Pin From Net: NetName=GND_MCU Pin=C13-1
+Removed Pin From Net: NetName=VCC_TFT Pin=C13-2
+Removed Pin From Net: NetName=GND_MCU Pin=C14-1
+Removed Pin From Net: NetName=VCC_TFT Pin=C14-2
+Removed Pin From Net: NetName=GND_MCU Pin=C15-1
+Removed Pin From Net: NetName=VCC_TFT Pin=C15-2
+Removed Pin From Net: NetName=GND_MCU Pin=C16-1
+Removed Pin From Net: NetName=VCC_TFT Pin=C16-2
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-6
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-12
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-16
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-17
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-18
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-19
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-20
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-21
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-22
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-23
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-24
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-25
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-26
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-27
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-28
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-29
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-30
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-31
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-32
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-33
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-37
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-41
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-42
+Removed Pin From Net: NetName=MCU_BOOT0 Pin=H2-2
+Removed Pin From Net: NetName=GND_MCU Pin=H2-3
+Removed Pin From Net: NetName=GND_MCU Pin=Q3-1
+Removed Pin From Net: NetName=VCC_TFT Pin=R17-1
+Removed Pin From Net: NetName=VCC_TFT Pin=R18-1
+Removed Pin From Net: NetName=VCC_TFT Pin=R19-1
+Removed Pin From Net: NetName=GND_MCU Pin=R22-1
+Removed Pin From Net: NetName=GND_MCU Pin=R23-2
+Removed Pin From Net: NetName=GND_MCU Pin=R24-2
+Removed Pin From Net: NetName=GND_MCU Pin=TP1-1
+Removed Pin From Net: NetName=+3V3 Pin=TP2-1
+Removed Pin From Net: NetName=MCU_VBAT Pin=U3-1
+Removed Pin From Net: NetName=MCU_LED1 Pin=U3-2
+Removed Pin From Net: NetName=MCU_LOCK1 Pin=U3-3
+Removed Pin From Net: NetName=MCU_MAGNET1 Pin=U3-4
+Removed Pin From Net: NetName=MCU_OCS_N Pin=U3-5
+Removed Pin From Net: NetName=MCU_OCS_P Pin=U3-6
+Removed Pin From Net: NetName=MCU_NRST Pin=U3-7
+Removed Pin From Net: NetName=NetLED3_1 Pin=U3-8
+Removed Pin From Net: NetName=MCU_KEY1 Pin=U3-9
+Removed Pin From Net: NetName=MCU_KEY2 Pin=U3-10
+Removed Pin From Net: NetName=MCU_KEY3 Pin=U3-11
+Removed Pin From Net: NetName=GND_MCU Pin=U3-12
+Removed Pin From Net: NetName=VCC_MCU Pin=U3-13
+Removed Pin From Net: NetName=GND_MCU Pin=U3-18
+Removed Pin From Net: NetName=VCC_MCU Pin=U3-19
+Removed Pin From Net: NetName=MCU_LED8 Pin=U3-27
+Removed Pin From Net: NetName=MCU_LOCK8 Pin=U3-28
+Removed Pin From Net: NetName=MCU_MAGNET8 Pin=U3-29
+Removed Pin From Net: NetName=MCU_LED7 Pin=U3-30
+Removed Pin From Net: NetName=MCU_LOCK7 Pin=U3-37
+Removed Pin From Net: NetName=MCU_MAGNET7 Pin=U3-38
+Removed Pin From Net: NetName=MCU_LED6 Pin=U3-39
+Removed Pin From Net: NetName=MCU_LOCK6 Pin=U3-40
+Removed Pin From Net: NetName=MCU_MAGNET6 Pin=U3-41
+Removed Pin From Net: NetName=MCU_TXD Pin=U3-42
+Removed Pin From Net: NetName=MCU_RXD Pin=U3-43
+Removed Pin From Net: NetName=MCU_LED5 Pin=U3-44
+Removed Pin From Net: NetName=MCU_LOCK5 Pin=U3-45
+Removed Pin From Net: NetName=MCU_SWDIO Pin=U3-46
+Removed Pin From Net: NetName=GND_MCU Pin=U3-47
+Removed Pin From Net: NetName=VCC_MCU Pin=U3-48
+Removed Pin From Net: NetName=MCU_SWCLK Pin=U3-49
+Removed Pin From Net: NetName=MCU_MAGNET5 Pin=U3-50
+Removed Pin From Net: NetName=MCU_LED4 Pin=U3-51
+Removed Pin From Net: NetName=MCU_LOCK4 Pin=U3-52
+Removed Pin From Net: NetName=MCU_MAGNET4 Pin=U3-53
+Removed Pin From Net: NetName=MCU_LED3 Pin=U3-54
+Removed Pin From Net: NetName=MCU_LOCK3 Pin=U3-55
+Removed Pin From Net: NetName=MCU_MAGNET3 Pin=U3-56
+Removed Pin From Net: NetName=MCU_LED2 Pin=U3-57
+Removed Pin From Net: NetName=MCU_SCL Pin=U3-58
+Removed Pin From Net: NetName=MCU_SDA Pin=U3-59
+Removed Pin From Net: NetName=MCU_BOOT0 Pin=U3-60
+Removed Pin From Net: NetName=MCU_LOCK2 Pin=U3-61
+Removed Pin From Net: NetName=MCU_MAGNET2 Pin=U3-62
+Removed Pin From Net: NetName=GND_MCU Pin=U3-63
+Removed Pin From Net: NetName=VCC_MCU Pin=U3-64
+Removed Pin From Net: NetName=GND_MCU Pin=U4-1
+Removed Pin From Net: NetName=+3V3 Pin=U4-2
+Removed Pin From Net: NetName=+5 Pin=U4-3
+Removed Pin From Net: NetName=+3V3 Pin=U4-4
+Removed Pin From Net: NetName=GND_MCU Pin=U5-4
+Removed Member From Class: ClassName=TFT Member=C15
+Removed Member From Class: ClassName=TFT Member=C16
+Removed Member From Class: ClassName=TFT Member=Q3
+Removed Member From Class: ClassName=TFT Member=TP7
+Removed Member From Class: ClassName=TFT Member=TP8
+Removed Member From Class: ClassName=TFT Member=TP9
+Removed Member From Class: ClassName=TFT Member=TP10
+Removed Member From Class: ClassName=TFT Member=TP11
+Removed Member From Class: ClassName=TFT Member=TP12
+Removed Member From Class: ClassName=TFT Member=TP13
+Removed Member From Class: ClassName=FPC Member=GND_MCU
+Removed Member From Class: ClassName=ISD Member=GND_MCU
+Removed Member From Class: ClassName=STM32 Member=GND_MCU
+Removed Member From Class: ClassName=ISD Member=ISD_MISO
+Removed Member From Class: ClassName=STM32 Member=ISD_MISO
+Removed Member From Class: ClassName=ISD Member=ISD_MOSI
+Removed Member From Class: ClassName=STM32 Member=ISD_MOSI
+Removed Member From Class: ClassName=ISD Member=ISD_SCK
+Removed Member From Class: ClassName=STM32 Member=ISD_SCK
+Removed Member From Class: ClassName=ISD Member=ISD_SS
+Removed Member From Class: ClassName=STM32 Member=ISD_SS
+Removed Member From Class: ClassName=STM32 Member=TFT_BLK
+Removed Member From Class: ClassName=FPC Member=TFT_CLK
+Removed Member From Class: ClassName=STM32 Member=TFT_CLK
+Removed Member From Class: ClassName=FPC Member=TFT_CS
+Removed Member From Class: ClassName=STM32 Member=TFT_CS
+Removed Member From Class: ClassName=FPC Member=TFT_DC
+Removed Member From Class: ClassName=STM32 Member=TFT_DC
+Removed Member From Class: ClassName=FPC Member=TFT_IM0
+Removed Member From Class: ClassName=FPC Member=TFT_IM1
+Removed Member From Class: ClassName=FPC Member=TFT_IM2
+Removed Member From Class: ClassName=FPC Member=TFT_LED_K1
+Removed Member From Class: ClassName=FPC Member=TFT_LED_K2
+Removed Member From Class: ClassName=FPC Member=TFT_LED_K3
+Removed Member From Class: ClassName=FPC Member=TFT_MISO
+Removed Member From Class: ClassName=STM32 Member=TFT_MISO
+Removed Member From Class: ClassName=FPC Member=TFT_MOSI
+Removed Member From Class: ClassName=STM32 Member=TFT_MOSI
+Removed Member From Class: ClassName=FPC Member=TFT_RES
+Removed Member From Class: ClassName=STM32 Member=TFT_RES
+Removed Member From Class: ClassName=FPC Member=TFT_XL
+Removed Member From Class: ClassName=STM32 Member=TFT_XL
+Removed Member From Class: ClassName=FPC Member=TFT_XR
+Removed Member From Class: ClassName=STM32 Member=TFT_XR
+Removed Member From Class: ClassName=FPC Member=TFT_YD
+Removed Member From Class: ClassName=STM32 Member=TFT_YD
+Removed Member From Class: ClassName=FPC Member=TFT_YU
+Removed Member From Class: ClassName=STM32 Member=TFT_YU
+Change Component Footprint: Designator=CN3 Old Footprint=CN-FPC-40-0.5mm-hor New Footprint=CN-FPC-50-0.5mm-hor
+Change Component Footprint: Designator=U2 Old Footprint=DIP28-wide New Footprint=SOIC28-wide
+Change Component Footprint: Designator=H2 Old Footprint=H-3pin-M-S New Footprint=H-3x2pin-F-S
+Change Component Footprint: Designator=U4 Old Footprint=SOT223 New Footprint=TO252-3pin
+Change Component Footprint: Designator=U3 Old Footprint=STM-LQFP64_N New Footprint=STM-LQFP144_N
+Change Component Footprint: Designator=TP1 Old Footprint=TEST POINT-DIP New Footprint=TEST POINT-SMD
+Change Component Footprint: Designator=TP2 Old Footprint=TEST POINT-DIP New Footprint=TEST POINT-SMD
+Change Component Footprint: Designator=TP3 Old Footprint=TEST POINT-DIP New Footprint=TEST POINT-SMD
+Change Component Footprint: Designator=TP4 Old Footprint=TEST POINT-DIP New Footprint=TEST POINT-SMD
+Change Component Footprint: Designator=TP5 Old Footprint=TEST POINT-DIP New Footprint=TEST POINT-SMD
+Change Component Footprint: Designator=TP6 Old Footprint=TEST POINT-DIP New Footprint=TEST POINT-SMD
+Change Component Comment : Designator=C12 Old Comment=CAP Cer 1uF-50V-X7R-SMD New Comment=CAP Cer 10uF-50V-X7R-SMD
+Change Component Comment : Designator=C11 Old Comment=CAP Cer 1uF-50V-X7R-SMD New Comment=CAP Cer 100nF-50V-X7R-SMD
+Change Component Comment : Designator=C13 Old Comment=CAP Cer 1uF-50V-X7R-SMD New Comment=CAP Cer 100nF-50V-X7R-SMD
+Change Component Comment : Designator=C14 Old Comment=CAP Cer 1uF-50V-X7R-SMD New Comment=CAP Cer 100nF-50V-X7R-SMD
+Change Component Comment : Designator=CN3 Old Comment=Connector FPC Right-2mm-40 Pin New Comment=Connector FPC Straight/Right-?mm-50 Pin
+Change Component Comment : Designator=H2 Old Comment=Header 3x1 Pin -Straight-Male-2.54mm New Comment=Header 3x2 Pin /Military-Straight/Right-Male/Female-2.54mm
+Change Component Comment : Designator=U4 Old Comment=Reg AMS1117-3.3V-SMD New Comment=Reg LF33-3.3V-SMD
+Change Component Comment : Designator=R21 Old Comment=RES 1K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R17 Old Comment=RES 4.7K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R18 Old Comment=RES 4.7K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R19 Old Comment=RES 4.7K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R23 Old Comment=RES 4.7K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R24 Old Comment=RES 4.7K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R22 Old Comment=RES 10K-5%-1/8W-SMD New Comment=RES 10R-5%-1/8W-SMD
+Change Component Comment : Designator=R15 Old Comment=RES 10R-5%-1/8W-SMD New Comment=RES 10K-5%-1/8W-SMD
+Change Component Comment : Designator=U3 Old Comment=STM32F103RCT6 New Comment=STM32F429ZGT6
+Change Component Designator: OldDesignator=C17 NewDesignator=C15
+Change Component Designator: OldDesignator=C18 NewDesignator=C16
+Change Component Designator: OldDesignator=C19 NewDesignator=C17
+Change Component Designator: OldDesignator=C25 NewDesignator=C33
+Change Component Designator: OldDesignator=C26 NewDesignator=C34
+Change Component Designator: OldDesignator=C27 NewDesignator=C35
+Change Component Designator: OldDesignator=C28 NewDesignator=C36
+Change Component Designator: OldDesignator=C29 NewDesignator=C38
+Change Component Designator: OldDesignator=C30 NewDesignator=C39
+Change Component Designator: OldDesignator=C31 NewDesignator=C41
+Change Component Designator: OldDesignator=C32 NewDesignator=C42
+Change Component Designator: OldDesignator=C33 NewDesignator=C40
+Change Component Designator: OldDesignator=C34 NewDesignator=C43
+Change Component Designator: OldDesignator=C35 NewDesignator=C44
+Change Component Designator: OldDesignator=C36 NewDesignator=C45
+Change Component Designator: OldDesignator=C37 NewDesignator=C46
+Change Component Designator: OldDesignator=R25 NewDesignator=R46
+Change Component Designator: OldDesignator=R26 NewDesignator=R48
+Change Component Designator: OldDesignator=R27 NewDesignator=R49
+Change Component Designator: OldDesignator=R28 NewDesignator=R50
+Change Component Designator: OldDesignator=R29 NewDesignator=R51
+Change Component Designator: OldDesignator=R30 NewDesignator=R52
+Change component parameters: Designator = "C11" ("C11"); Footprint = "C-0805"; UniqueID = "\XOSQRQJB\MOOLWTLD" ("\XOSQRQJB\MOOLWTLD")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C12" ("C12"); Footprint = "C-0805"; UniqueID = "\XOSQRQJB\HMLFUFVV" ("\XOSQRQJB\HMLFUFVV")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C13" ("C13"); Footprint = "C-0805"; UniqueID = "\XOSQRQJB\QCZIVAZL" ("\XOSQRQJB\QCZIVAZL")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C14" ("C14"); Footprint = "C-0805"; UniqueID = "\XOSQRQJB\XFWSMSXA" ("\XOSQRQJB\XFWSMSXA")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "CN3" ("CN3"); Footprint = "CN-FPC-40-0.5mm-hor"; UniqueID = "\XOSQRQJB\BCYLDEOT" ("\XOSQRQJB\BCYLDEOT")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size"; Value = "?mm-50 Pin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Straight/Right"; VariantName = "[No Variations]"
+Change component parameters: Designator = "H2" ("H2"); Footprint = "H-3pin-M-S"; UniqueID = "\WHSGVRKY\ZZLJSATM" ("\WHSGVRKY\ZZLJSATM")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size"; Value = "2.54mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Straight/Right-Male/Female"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "/Military"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R15" ("R15"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\ZPQDZLRM" ("\XOSQRQJB\ZPQDZLRM")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R17" ("R17"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\CYLLFRRC" ("\XOSQRQJB\CYLLFRRC")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R18" ("R18"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\ARFWAGAJ" ("\XOSQRQJB\ARFWAGAJ")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R19" ("R19"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\KRGNLFEL" ("\XOSQRQJB\KRGNLFEL")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R21" ("R21"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\WZIWRAIL" ("\XOSQRQJB\WZIWRAIL")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R22" ("R22"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\WRPHEVUB" ("\XOSQRQJB\WRPHEVUB")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R23" ("R23"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\UOQTIAQS" ("\XOSQRQJB\UOQTIAQS")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R24" ("R24"); Footprint = "R-0805"; UniqueID = "\XOSQRQJB\MXFQPRIH" ("\XOSQRQJB\MXFQPRIH")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U3" ("U3"); Footprint = "STM-LQFP64_N"; UniqueID = "\VCSRICHR\SHMBNPWZ" ("\VCSRICHR\SHMBNPWZ")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com/web/en/home.html"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/data_brief/DM00053488.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00037051.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Core"; Value = "ARM Cortex-M4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "D/A Converter"; Value = "2x12-bit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "FLASH Size (Prog) (kB)"; Value = "1024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "I/Os (High Current)"; Value = "114"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Internal RAM Size (kB)"; Value = "256"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Frequency(F) (Processor speed) (MHz)"; Value = "180"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageDescription"; Value = "144-Pin Low Profile Quad Flat Package, 20 x 20 mm Body, 0.5 mm Pitch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageReference"; Value = "LQFP144"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PackageVersion"; Value = "Rev. 4, 06/2013"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packing"; Value = "Tray"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PartNumber"; Value = "STM32F429ZGT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 2"; Value = "Newark"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 3"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "STM32F429ZGT6-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 2"; Value = "06X3675"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 3"; Value = "511-STM32F429ZGT6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supply Voltage(Vcc) max (V)"; Value = "3.6"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supply Voltage(Vcc) min (V)"; Value = "1.8"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U4" ("U4"); Footprint = "SOT223"; UniqueID = "\WHSGVRKY\CBMGAVDP" ("\WHSGVRKY\CBMGAVDP")
+Change component parameters (AddParameter): Name = "Code"; Value = "LF33"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "3.3V"; VariantName = "[No Variations]"
+Added Component: Designator=C18(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C19(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C25(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C26(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C27(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C28(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C29(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C30(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C31(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C32(TAN-A)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.2uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Added Component: Designator=C37(TAN-A)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.2uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Added Component: Designator=C47(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4.7uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "16V"; VariantName = "[No Variations]"
+Added Component: Designator=C48(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.2uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C49(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.2uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C50(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C51(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C52(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C53(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C54(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C55(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C56(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C57(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C58(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=D4(D-DO214AB)
+Add component (AddParameter): Name = "Code"; Value = "SS34"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=FB6(FB-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=FB7(FB-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=FB8(FB-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=L1(IND-SMD-1010)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "10x10mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uH"; VariantName = "[No Variations]"
+Added Component: Designator=R25(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R26(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R27(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R28(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R29(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R30(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R31(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R32(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R33(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R34(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R35(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R36(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R37(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R38(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R39(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R40(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R41(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R42(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R43(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R44(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R45(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10R"; VariantName = "[No Variations]"
+Added Component: Designator=R47(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R53(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100K"; VariantName = "[No Variations]"
+Added Component: Designator=R54(R-1206)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1.2R"; VariantName = "[No Variations]"
+Added Component: Designator=R55(R-1206)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1.2R"; VariantName = "[No Variations]"
+Added Component: Designator=R56(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "4.7K"; VariantName = "[No Variations]"
+Added Component: Designator=R57(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R58(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R59(R-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/8W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VALUE"; Value = "22R"; VariantName = "[No Variations]"
+Added Component: Designator=U6(SOT23-6N)
+Add component (AddParameter): Name = "Code"; Value = "MP3202"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "7-2-2026"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=U7(SOIC8-W)
+Add component (AddParameter): Name = "Code"; Value = "W25Qxx"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Component: Designator=U8(TSSOP-54)
+Add component (AddParameter): Name = "Code"; Value = "IS42S16400J-7TLI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC_TFT Pin=C12-1
+Added Pin To Net: NetName=GND_MCU Pin=C12-2
+Added Pin To Net: NetName=VCC_TFT Pin=C13-1
+Added Pin To Net: NetName=GND_MCU Pin=C13-2
+Added Pin To Net: NetName=VCC_TFT Pin=C14-1
+Added Pin To Net: NetName=GND_MCU Pin=C14-2
+Added Pin To Net: NetName=VCC_MCU Pin=C18-1
+Added Pin To Net: NetName=GND_MCU Pin=C18-2
+Added Pin To Net: NetName=VCC_MCU Pin=C19-1
+Added Pin To Net: NetName=GND_MCU Pin=C19-2
+Added Pin To Net: NetName=VCC_MCU Pin=C25-1
+Added Pin To Net: NetName=GND_MCU Pin=C25-2
+Added Pin To Net: NetName=VCC_MCU Pin=C26-1
+Added Pin To Net: NetName=GND_MCU Pin=C26-2
+Added Pin To Net: NetName=VCC_MCU Pin=C27-1
+Added Pin To Net: NetName=GND_MCU Pin=C27-2
+Added Pin To Net: NetName=VCC_MCU Pin=C28-1
+Added Pin To Net: NetName=GND_MCU Pin=C28-2
+Added Pin To Net: NetName=VCC_MCU Pin=C29-1
+Added Pin To Net: NetName=GND_MCU Pin=C29-2
+Added Pin To Net: NetName=VCC_MCU Pin=C30-1
+Added Pin To Net: NetName=GND_MCU Pin=C30-2
+Added Pin To Net: NetName=VCC_MCU Pin=C31-1
+Added Pin To Net: NetName=GND_MCU Pin=C31-2
+Added Pin To Net: NetName=GND_MCU Pin=C32-2
+Added Pin To Net: NetName=GND_MCU Pin=C37-2
+Added Pin To Net: NetName=+5 Pin=C47-1
+Added Pin To Net: NetName=GND Pin=C47-2
+Added Pin To Net: NetName=GND Pin=C48-2
+Added Pin To Net: NetName=GND Pin=C49-2
+Added Pin To Net: NetName=GND_MCU Pin=C50-1
+Added Pin To Net: NetName=GND_MCU Pin=C51-1
+Added Pin To Net: NetName=GND_MCU Pin=C52-1
+Added Pin To Net: NetName=GND_MCU Pin=C53-1
+Added Pin To Net: NetName=GND_MCU Pin=C54-1
+Added Pin To Net: NetName=GND_MCU Pin=C55-1
+Added Pin To Net: NetName=GND_MCU Pin=C56-1
+Added Pin To Net: NetName=GND_MCU Pin=C57-1
+Added Pin To Net: NetName=GND_MCU Pin=C58-1
+Added Pin To Net: NetName=GND_MCU Pin=CN3-36
+Added Pin To Net: NetName=GND_MCU Pin=CN3-38
+Added Pin To Net: NetName=GND_MCU Pin=CN3-39
+Added Pin To Net: NetName=GND_MCU Pin=CN3-40
+Added Pin To Net: NetName=VCC_TFT Pin=CN3-47
+Added Pin To Net: NetName=GND_MCU Pin=CN3-48
+Added Pin To Net: NetName=GND_MCU Pin=CN3-51
+Added Pin To Net: NetName=GND_MCU Pin=CN3-52
+Added Pin To Net: NetName=+3V3 Pin=FB6-1
+Added Pin To Net: NetName=+3V3 Pin=FB7-1
+Added Pin To Net: NetName=+3V3 Pin=FB8-1
+Added Pin To Net: NetName=MCU_BOOT0 Pin=H2-3
+Added Pin To Net: NetName=GND_MCU Pin=H2-5
+Added Pin To Net: NetName=GND_MCU Pin=H2-6
+Added Pin To Net: NetName=+5 Pin=L1-1
+Added Pin To Net: NetName=VCC_TFT Pin=R15-2
+Added Pin To Net: NetName=GND_MCU Pin=R25-1
+Added Pin To Net: NetName=GND_MCU Pin=R26-1
+Added Pin To Net: NetName=GND_MCU Pin=R33-1
+Added Pin To Net: NetName=GND_MCU Pin=R34-1
+Added Pin To Net: NetName=GND_MCU Pin=R41-1
+Added Pin To Net: NetName=GND_MCU Pin=R42-1
+Added Pin To Net: NetName=VCC_TFT Pin=R44-2
+Added Pin To Net: NetName=VCC_MCU Pin=R47-1
+Added Pin To Net: NetName=GND Pin=R53-2
+Added Pin To Net: NetName=GND Pin=R54-2
+Added Pin To Net: NetName=GND Pin=R55-2
+Added Pin To Net: NetName=MCU_VBAT Pin=U3-6
+Added Pin To Net: NetName=GND_MCU Pin=U3-16
+Added Pin To Net: NetName=VCC_MCU Pin=U3-17
+Added Pin To Net: NetName=MCU_OCS_N Pin=U3-23
+Added Pin To Net: NetName=MCU_OCS_P Pin=U3-24
+Added Pin To Net: NetName=MCU_NRST Pin=U3-25
+Added Pin To Net: NetName=VCC_MCU Pin=U3-30
+Added Pin To Net: NetName=VCC_MCU Pin=U3-33
+Added Pin To Net: NetName=GND_MCU Pin=U3-38
+Added Pin To Net: NetName=VCC_MCU Pin=U3-39
+Added Pin To Net: NetName=GND_MCU Pin=U3-51
+Added Pin To Net: NetName=VCC_MCU Pin=U3-52
+Added Pin To Net: NetName=GND_MCU Pin=U3-61
+Added Pin To Net: NetName=VCC_MCU Pin=U3-62
+Added Pin To Net: NetName=VCC_MCU Pin=U3-72
+Added Pin To Net: NetName=GND_MCU Pin=U3-83
+Added Pin To Net: NetName=VCC_MCU Pin=U3-84
+Added Pin To Net: NetName=GND_MCU Pin=U3-94
+Added Pin To Net: NetName=VCC_MCU Pin=U3-95
+Added Pin To Net: NetName=MCU_TXD Pin=U3-101
+Added Pin To Net: NetName=MCU_RXD Pin=U3-102
+Added Pin To Net: NetName=MCU_SWDIO Pin=U3-105
+Added Pin To Net: NetName=GND_MCU Pin=U3-107
+Added Pin To Net: NetName=VCC_MCU Pin=U3-108
+Added Pin To Net: NetName=MCU_SWCLK Pin=U3-109
+Added Pin To Net: NetName=GND_MCU Pin=U3-120
+Added Pin To Net: NetName=VCC_MCU Pin=U3-121
+Added Pin To Net: NetName=GND_MCU Pin=U3-130
+Added Pin To Net: NetName=VCC_MCU Pin=U3-131
+Added Pin To Net: NetName=MCU_SCL Pin=U3-136
+Added Pin To Net: NetName=MCU_SDA Pin=U3-137
+Added Pin To Net: NetName=MCU_BOOT0 Pin=U3-138
+Added Pin To Net: NetName=VCC_MCU Pin=U3-143
+Added Pin To Net: NetName=VCC_MCU Pin=U3-144
+Added Pin To Net: NetName=+5 Pin=U4-1
+Added Pin To Net: NetName=GND_MCU Pin=U4-2
+Added Pin To Net: NetName=+3V3 Pin=U4-3
+Added Pin To Net: NetName=GND Pin=U6-2
+Added Pin To Net: NetName=+5 Pin=U6-6
+Added Pin To Net: NetName=GND_MCU Pin=U7-4
+Added Pin To Net: NetName=GND_MCU Pin=U8-6
+Added Pin To Net: NetName=GND_MCU Pin=U8-12
+Added Pin To Net: NetName=GND_MCU Pin=U8-28
+Added Pin To Net: NetName=GND_MCU Pin=U8-41
+Added Pin To Net: NetName=GND_MCU Pin=U8-46
+Added Pin To Net: NetName=GND_MCU Pin=U8-52
+Added Pin To Net: NetName=GND_MCU Pin=U8-54
+Change Net Name : Old Net Name=GND_MCU New Net Name=LTDC_B0
+Change Net Name : Old Net Name=NetC33_1 New Net Name=NetC40_1
+Added Pin To Net: NetName=LTDC_B2 Pin=R24-1
+Added Pin To Net: NetName=LTDC_B2 Pin=U3-122
+Added Net: Name=LTDC_B2
+Added Pin To Net: NetName=LTDC_B3 Pin=R23-1
+Added Pin To Net: NetName=LTDC_B3 Pin=U3-126
+Added Net: Name=LTDC_B3
+Added Pin To Net: NetName=LTDC_B4 Pin=R22-1
+Added Pin To Net: NetName=LTDC_B4 Pin=U3-127
+Added Net: Name=LTDC_B4
+Added Pin To Net: NetName=LTDC_B5 Pin=R21-1
+Added Pin To Net: NetName=LTDC_B5 Pin=U3-37
+Added Net: Name=LTDC_B5
+Added Pin To Net: NetName=LTDC_B6 Pin=R20-1
+Added Pin To Net: NetName=LTDC_B6 Pin=U3-139
+Added Net: Name=LTDC_B6
+Added Pin To Net: NetName=LTDC_B7 Pin=R19-1
+Added Pin To Net: NetName=LTDC_B7 Pin=U3-140
+Added Net: Name=LTDC_B7
+Added Pin To Net: NetName=LTDC_CLK Pin=R43-1
+Added Pin To Net: NetName=LTDC_CLK Pin=U3-92
+Added Net: Name=LTDC_CLK
+Added Pin To Net: NetName=LTDC_DE Pin=R16-1
+Added Pin To Net: NetName=LTDC_DE Pin=U3-22
+Added Net: Name=LTDC_DE
+Added Pin To Net: NetName=LTDC_G2 Pin=R32-1
+Added Pin To Net: NetName=LTDC_G2 Pin=U3-42
+Added Net: Name=LTDC_G2
+Added Pin To Net: NetName=LTDC_G3 Pin=R31-1
+Added Pin To Net: NetName=LTDC_G3 Pin=U3-125
+Added Net: Name=LTDC_G3
+Added Pin To Net: NetName=LTDC_G4 Pin=R30-1
+Added Pin To Net: NetName=LTDC_G4 Pin=U3-69
+Added Net: Name=LTDC_G4
+Added Pin To Net: NetName=LTDC_G5 Pin=R29-1
+Added Pin To Net: NetName=LTDC_G5 Pin=U3-70
+Added Net: Name=LTDC_G5
+Added Pin To Net: NetName=LTDC_G6 Pin=R28-1
+Added Pin To Net: NetName=LTDC_G6 Pin=U3-97
+Added Net: Name=LTDC_G6
+Added Pin To Net: NetName=LTDC_G7 Pin=R27-1
+Added Pin To Net: NetName=LTDC_G7 Pin=U3-117
+Added Net: Name=LTDC_G7
+Added Pin To Net: NetName=LTDC_HSYNC Pin=R18-1
+Added Pin To Net: NetName=LTDC_HSYNC Pin=U3-96
+Added Net: Name=LTDC_HSYNC
+Added Pin To Net: NetName=LTDC_R2 Pin=R40-1
+Added Pin To Net: NetName=LTDC_R2 Pin=U3-111
+Added Net: Name=LTDC_R2
+Added Pin To Net: NetName=LTDC_R3 Pin=R39-1
+Added Pin To Net: NetName=LTDC_R3 Pin=U3-46
+Added Net: Name=LTDC_R3
+Added Pin To Net: NetName=LTDC_R4 Pin=R38-1
+Added Pin To Net: NetName=LTDC_R4 Pin=U3-103
+Added Net: Name=LTDC_R4
+Added Pin To Net: NetName=LTDC_R5 Pin=R37-1
+Added Pin To Net: NetName=LTDC_R5 Pin=U3-104
+Added Net: Name=LTDC_R5
+Added Pin To Net: NetName=LTDC_R6 Pin=R36-1
+Added Pin To Net: NetName=LTDC_R6 Pin=U3-47
+Added Net: Name=LTDC_R6
+Added Pin To Net: NetName=LTDC_R7 Pin=R35-1
+Added Pin To Net: NetName=LTDC_R7 Pin=U3-91
+Added Net: Name=LTDC_R7
+Added Pin To Net: NetName=LTDC_RST Pin=C11-2
+Added Pin To Net: NetName=LTDC_RST Pin=R44-1
+Added Pin To Net: NetName=LTDC_RST Pin=R45-1
+Added Pin To Net: NetName=LTDC_RST Pin=U3-98
+Added Net: Name=LTDC_RST
+Added Pin To Net: NetName=LTDC_VSYNC Pin=R17-1
+Added Pin To Net: NetName=LTDC_VSYNC Pin=U3-40
+Added Net: Name=LTDC_VSYNC
+Added Pin To Net: NetName=MCU_BOOT1 Pin=H2-4
+Added Pin To Net: NetName=MCU_BOOT1 Pin=U3-48
+Added Net: Name=MCU_BOOT1
+Added Pin To Net: NetName=NetCN3_6 Pin=CN3-6
+Added Pin To Net: NetName=NetCN3_6 Pin=TP1-1
+Added Net: Name=NetCN3_6
+Added Pin To Net: NetName=NetCN3_8 Pin=CN3-8
+Added Pin To Net: NetName=NetCN3_8 Pin=R15-1
+Added Net: Name=NetCN3_8
+Added Pin To Net: NetName=NetCN3_9 Pin=CN3-9
+Added Pin To Net: NetName=NetCN3_9 Pin=R16-2
+Added Net: Name=NetCN3_9
+Added Pin To Net: NetName=NetCN3_10 Pin=CN3-10
+Added Pin To Net: NetName=NetCN3_10 Pin=R17-2
+Added Net: Name=NetCN3_10
+Added Pin To Net: NetName=NetCN3_11 Pin=CN3-11
+Added Pin To Net: NetName=NetCN3_11 Pin=R18-2
+Added Net: Name=NetCN3_11
+Added Pin To Net: NetName=NetCN3_12 Pin=CN3-12
+Added Pin To Net: NetName=NetCN3_12 Pin=R19-2
+Added Net: Name=NetCN3_12
+Added Pin To Net: NetName=NetCN3_13 Pin=CN3-13
+Added Pin To Net: NetName=NetCN3_13 Pin=R20-2
+Added Net: Name=NetCN3_13
+Added Pin To Net: NetName=NetCN3_14 Pin=CN3-14
+Added Pin To Net: NetName=NetCN3_14 Pin=R21-2
+Added Net: Name=NetCN3_14
+Added Pin To Net: NetName=NetCN3_15 Pin=CN3-15
+Added Pin To Net: NetName=NetCN3_15 Pin=R22-2
+Added Net: Name=NetCN3_15
+Added Pin To Net: NetName=NetCN3_16 Pin=CN3-16
+Added Pin To Net: NetName=NetCN3_16 Pin=R23-2
+Added Net: Name=NetCN3_16
+Added Pin To Net: NetName=NetCN3_17 Pin=CN3-17
+Added Pin To Net: NetName=NetCN3_17 Pin=R24-2
+Added Net: Name=NetCN3_17
+Added Pin To Net: NetName=NetCN3_18 Pin=CN3-18
+Added Pin To Net: NetName=NetCN3_18 Pin=R25-2
+Added Net: Name=NetCN3_18
+Added Pin To Net: NetName=NetCN3_19 Pin=CN3-19
+Added Pin To Net: NetName=NetCN3_19 Pin=R26-2
+Added Net: Name=NetCN3_19
+Added Pin To Net: NetName=NetCN3_20 Pin=CN3-20
+Added Pin To Net: NetName=NetCN3_20 Pin=R27-2
+Added Net: Name=NetCN3_20
+Added Pin To Net: NetName=NetCN3_21 Pin=CN3-21
+Added Pin To Net: NetName=NetCN3_21 Pin=R28-2
+Added Net: Name=NetCN3_21
+Added Pin To Net: NetName=NetCN3_22 Pin=CN3-22
+Added Pin To Net: NetName=NetCN3_22 Pin=R29-2
+Added Net: Name=NetCN3_22
+Added Pin To Net: NetName=NetCN3_23 Pin=CN3-23
+Added Pin To Net: NetName=NetCN3_23 Pin=R30-2
+Added Net: Name=NetCN3_23
+Added Pin To Net: NetName=NetCN3_24 Pin=CN3-24
+Added Pin To Net: NetName=NetCN3_24 Pin=R31-2
+Added Net: Name=NetCN3_24
+Added Pin To Net: NetName=NetCN3_25 Pin=CN3-25
+Added Pin To Net: NetName=NetCN3_25 Pin=R32-2
+Added Net: Name=NetCN3_25
+Added Pin To Net: NetName=NetCN3_26 Pin=CN3-26
+Added Pin To Net: NetName=NetCN3_26 Pin=R33-2
+Added Net: Name=NetCN3_26
+Added Pin To Net: NetName=NetCN3_27 Pin=CN3-27
+Added Pin To Net: NetName=NetCN3_27 Pin=R34-2
+Added Net: Name=NetCN3_27
+Added Pin To Net: NetName=NetCN3_28 Pin=CN3-28
+Added Pin To Net: NetName=NetCN3_28 Pin=R35-2
+Added Net: Name=NetCN3_28
+Added Pin To Net: NetName=NetCN3_29 Pin=CN3-29
+Added Pin To Net: NetName=NetCN3_29 Pin=R36-2
+Added Net: Name=NetCN3_29
+Added Pin To Net: NetName=NetCN3_30 Pin=CN3-30
+Added Pin To Net: NetName=NetCN3_30 Pin=R37-2
+Added Net: Name=NetCN3_30
+Added Pin To Net: NetName=NetCN3_31 Pin=CN3-31
+Added Pin To Net: NetName=NetCN3_31 Pin=R38-2
+Added Net: Name=NetCN3_31
+Added Pin To Net: NetName=NetCN3_32 Pin=CN3-32
+Added Pin To Net: NetName=NetCN3_32 Pin=R39-2
+Added Net: Name=NetCN3_32
+Added Pin To Net: NetName=NetCN3_33 Pin=CN3-33
+Added Pin To Net: NetName=NetCN3_33 Pin=R40-2
+Added Net: Name=NetCN3_33
+Added Pin To Net: NetName=NetCN3_34 Pin=CN3-34
+Added Pin To Net: NetName=NetCN3_34 Pin=R41-2
+Added Net: Name=NetCN3_34
+Added Pin To Net: NetName=NetCN3_35 Pin=CN3-35
+Added Pin To Net: NetName=NetCN3_35 Pin=R42-2
+Added Net: Name=NetCN3_35
+Added Pin To Net: NetName=NetCN3_37 Pin=CN3-37
+Added Pin To Net: NetName=NetCN3_37 Pin=R43-2
+Added Net: Name=NetCN3_37
+Added Pin To Net: NetName=NetCN3_41 Pin=CN3-41
+Added Pin To Net: NetName=NetCN3_41 Pin=TP2-1
+Added Net: Name=NetCN3_41
+Added Pin To Net: NetName=NetCN3_42 Pin=CN3-42
+Added Pin To Net: NetName=NetCN3_42 Pin=TP3-1
+Added Net: Name=NetCN3_42
+Added Pin To Net: NetName=NetCN3_43 Pin=CN3-43
+Added Pin To Net: NetName=NetCN3_43 Pin=TP4-1
+Added Net: Name=NetCN3_43
+Added Pin To Net: NetName=NetCN3_44 Pin=CN3-44
+Added Pin To Net: NetName=NetCN3_44 Pin=R45-2
+Added Net: Name=NetCN3_44
+Added Pin To Net: NetName=NetCN3_45 Pin=CN3-45
+Added Pin To Net: NetName=NetCN3_45 Pin=TP5-1
+Added Net: Name=NetCN3_45
+Added Pin To Net: NetName=NetCN3_46 Pin=CN3-46
+Added Pin To Net: NetName=NetCN3_46 Pin=TP6-1
+Added Net: Name=NetCN3_46
+Added Pin To Net: NetName=NetH2_2 Pin=H2-2
+Added Pin To Net: NetName=NetH2_2 Pin=R47-2
+Added Net: Name=NetH2_2
+Added Pin To Net: NetName=NetR53_1 Pin=R53-1
+Added Pin To Net: NetName=NetR53_1 Pin=U6-4
+Added Net: Name=NetR53_1
+Added Pin To Net: NetName=NetR56_1 Pin=R56-1
+Added Pin To Net: NetName=NetR56_1 Pin=U3-129
+Added Pin To Net: NetName=NetR56_1 Pin=U7-1
+Added Net: Name=NetR56_1
+Added Pin To Net: NetName=NetR57_1 Pin=R57-1
+Added Pin To Net: NetName=NetR57_1 Pin=U7-3
+Added Net: Name=NetR57_1
+Added Pin To Net: NetName=NetR58_1 Pin=R58-1
+Added Pin To Net: NetName=NetR58_1 Pin=U7-7
+Added Net: Name=NetR58_1
+Added Pin To Net: NetName=NetR59_1 Pin=R59-1
+Added Pin To Net: NetName=NetR59_1 Pin=U3-93
+Added Net: Name=NetR59_1
+Added Pin To Net: NetName=NetR59_2 Pin=R59-2
+Added Pin To Net: NetName=NetR59_2 Pin=U8-38
+Added Net: Name=NetR59_2
+Added Pin To Net: NetName=NetU2_4 Pin=U2-4
+Added Pin To Net: NetName=NetU2_4 Pin=U3-134
+Added Pin To Net: NetName=NetU2_4 Pin=U7-2
+Added Net: Name=NetU2_4
+Added Pin To Net: NetName=NetU2_5 Pin=U2-5
+Added Pin To Net: NetName=NetU2_5 Pin=U3-135
+Added Pin To Net: NetName=NetU2_5 Pin=U7-5
+Added Net: Name=NetU2_5
+Added Pin To Net: NetName=NetU2_6 Pin=U2-6
+Added Pin To Net: NetName=NetU2_6 Pin=U3-133
+Added Pin To Net: NetName=NetU2_6 Pin=U7-6
+Added Net: Name=NetU2_6
+Added Pin To Net: NetName=NetU2_7 Pin=U2-7
+Added Pin To Net: NetName=NetU2_7 Pin=U3-128
+Added Net: Name=NetU2_7
+Added Pin To Net: NetName=NetU3_10 Pin=U3-10
+Added Pin To Net: NetName=NetU3_10 Pin=U8-23
+Added Net: Name=NetU3_10
+Added Pin To Net: NetName=NetU3_11 Pin=U3-11
+Added Pin To Net: NetName=NetU3_11 Pin=U8-24
+Added Net: Name=NetU3_11
+Added Pin To Net: NetName=NetU3_12 Pin=U3-12
+Added Pin To Net: NetName=NetU3_12 Pin=U8-25
+Added Net: Name=NetU3_12
+Added Pin To Net: NetName=NetU3_13 Pin=U3-13
+Added Pin To Net: NetName=NetU3_13 Pin=U8-26
+Added Net: Name=NetU3_13
+Added Pin To Net: NetName=NetU3_14 Pin=U3-14
+Added Pin To Net: NetName=NetU3_14 Pin=U8-29
+Added Net: Name=NetU3_14
+Added Pin To Net: NetName=NetU3_15 Pin=U3-15
+Added Pin To Net: NetName=NetU3_15 Pin=U8-30
+Added Net: Name=NetU3_15
+Added Pin To Net: NetName=NetU3_26 Pin=U3-26
+Added Pin To Net: NetName=NetU3_26 Pin=U8-16
+Added Net: Name=NetU3_26
+Added Pin To Net: NetName=NetU3_28 Pin=U3-28
+Added Pin To Net: NetName=NetU3_28 Pin=U8-19
+Added Net: Name=NetU3_28
+Added Pin To Net: NetName=NetU3_29 Pin=U3-29
+Added Pin To Net: NetName=NetU3_29 Pin=U8-37
+Added Net: Name=NetU3_29
+Added Pin To Net: NetName=NetU3_49 Pin=U3-49
+Added Pin To Net: NetName=NetU3_49 Pin=U8-18
+Added Net: Name=NetU3_49
+Added Pin To Net: NetName=NetU3_50 Pin=U3-50
+Added Pin To Net: NetName=NetU3_50 Pin=U8-31
+Added Net: Name=NetU3_50
+Added Pin To Net: NetName=NetU3_53 Pin=U3-53
+Added Pin To Net: NetName=NetU3_53 Pin=U8-32
+Added Net: Name=NetU3_53
+Added Pin To Net: NetName=NetU3_54 Pin=U3-54
+Added Pin To Net: NetName=NetU3_54 Pin=U8-33
+Added Net: Name=NetU3_54
+Added Pin To Net: NetName=NetU3_55 Pin=U3-55
+Added Pin To Net: NetName=NetU3_55 Pin=U8-34
+Added Net: Name=NetU3_55
+Added Pin To Net: NetName=NetU3_56 Pin=U3-56
+Added Pin To Net: NetName=NetU3_56 Pin=U8-22
+Added Net: Name=NetU3_56
+Added Pin To Net: NetName=NetU3_57 Pin=U3-57
+Added Pin To Net: NetName=NetU3_57 Pin=U8-35
+Added Net: Name=NetU3_57
+Added Pin To Net: NetName=NetU3_58 Pin=U3-58
+Added Pin To Net: NetName=NetU3_58 Pin=U8-8
+Added Net: Name=NetU3_58
+Added Pin To Net: NetName=NetU3_59 Pin=U3-59
+Added Pin To Net: NetName=NetU3_59 Pin=U8-10
+Added Net: Name=NetU3_59
+Added Pin To Net: NetName=NetU3_60 Pin=U3-60
+Added Pin To Net: NetName=NetU3_60 Pin=U8-11
+Added Net: Name=NetU3_60
+Added Pin To Net: NetName=NetU3_63 Pin=U3-63
+Added Pin To Net: NetName=NetU3_63 Pin=U8-13
+Added Net: Name=NetU3_63
+Added Pin To Net: NetName=NetU3_64 Pin=U3-64
+Added Pin To Net: NetName=NetU3_64 Pin=U8-42
+Added Net: Name=NetU3_64
+Added Pin To Net: NetName=NetU3_65 Pin=U3-65
+Added Pin To Net: NetName=NetU3_65 Pin=U8-44
+Added Net: Name=NetU3_65
+Added Pin To Net: NetName=NetU3_66 Pin=U3-66
+Added Pin To Net: NetName=NetU3_66 Pin=U8-45
+Added Net: Name=NetU3_66
+Added Pin To Net: NetName=NetU3_67 Pin=U3-67
+Added Pin To Net: NetName=NetU3_67 Pin=U8-47
+Added Net: Name=NetU3_67
+Added Pin To Net: NetName=NetU3_68 Pin=U3-68
+Added Pin To Net: NetName=NetU3_68 Pin=U8-48
+Added Net: Name=NetU3_68
+Added Pin To Net: NetName=NetU3_77 Pin=U3-77
+Added Pin To Net: NetName=NetU3_77 Pin=U8-50
+Added Net: Name=NetU3_77
+Added Pin To Net: NetName=NetU3_78 Pin=U3-78
+Added Pin To Net: NetName=NetU3_78 Pin=U8-51
+Added Net: Name=NetU3_78
+Added Pin To Net: NetName=NetU3_79 Pin=U3-79
+Added Pin To Net: NetName=NetU3_79 Pin=U8-53
+Added Net: Name=NetU3_79
+Added Pin To Net: NetName=NetU3_85 Pin=U3-85
+Added Pin To Net: NetName=NetU3_85 Pin=U8-2
+Added Net: Name=NetU3_85
+Added Pin To Net: NetName=NetU3_86 Pin=U3-86
+Added Pin To Net: NetName=NetU3_86 Pin=U8-4
+Added Net: Name=NetU3_86
+Added Pin To Net: NetName=NetU3_89 Pin=U3-89
+Added Pin To Net: NetName=NetU3_89 Pin=U8-21
+Added Net: Name=NetU3_89
+Added Pin To Net: NetName=NetU3_90 Pin=U3-90
+Added Pin To Net: NetName=NetU3_90 Pin=U8-20
+Added Net: Name=NetU3_90
+Added Pin To Net: NetName=NetU3_114 Pin=U3-114
+Added Pin To Net: NetName=NetU3_114 Pin=U8-5
+Added Net: Name=NetU3_114
+Added Pin To Net: NetName=NetU3_115 Pin=U3-115
+Added Pin To Net: NetName=NetU3_115 Pin=U8-7
+Added Net: Name=NetU3_115
+Added Pin To Net: NetName=NetU3_132 Pin=U3-132
+Added Pin To Net: NetName=NetU3_132 Pin=U8-17
+Added Net: Name=NetU3_132
+Added Pin To Net: NetName=NetU3_141 Pin=U3-141
+Added Pin To Net: NetName=NetU3_141 Pin=U8-15
+Added Net: Name=NetU3_141
+Added Pin To Net: NetName=NetU3_142 Pin=U3-142
+Added Pin To Net: NetName=NetU3_142 Pin=U8-39
+Added Net: Name=NetU3_142
+Added Pin To Net: NetName=SW Pin=D4-1
+Added Pin To Net: NetName=SW Pin=L1-2
+Added Pin To Net: NetName=SW Pin=U6-1
+Added Net: Name=SW
+Added Pin To Net: NetName=V_CAP_1 Pin=C32-1
+Added Pin To Net: NetName=V_CAP_1 Pin=U3-71
+Added Net: Name=V_CAP_1
+Added Pin To Net: NetName=V_CAP_2 Pin=C37-1
+Added Pin To Net: NetName=V_CAP_2 Pin=U3-106
+Added Net: Name=V_CAP_2
+Added Pin To Net: NetName=V_LED+ Pin=C48-1
+Added Pin To Net: NetName=V_LED+ Pin=C49-1
+Added Pin To Net: NetName=V_LED+ Pin=CN3-1
+Added Pin To Net: NetName=V_LED+ Pin=CN3-2
+Added Pin To Net: NetName=V_LED+ Pin=D4-2
+Added Pin To Net: NetName=V_LED+ Pin=U6-5
+Added Net: Name=V_LED+
+Added Pin To Net: NetName=V_LED- Pin=CN3-3
+Added Pin To Net: NetName=V_LED- Pin=CN3-4
+Added Pin To Net: NetName=V_LED- Pin=R54-1
+Added Pin To Net: NetName=V_LED- Pin=R55-1
+Added Pin To Net: NetName=V_LED- Pin=U6-3
+Added Net: Name=V_LED-
+Added Pin To Net: NetName=VCC_IS42 Pin=C51-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C52-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C53-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C54-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C55-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C56-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C57-2
+Added Pin To Net: NetName=VCC_IS42 Pin=C58-2
+Added Pin To Net: NetName=VCC_IS42 Pin=FB7-2
+Added Pin To Net: NetName=VCC_IS42 Pin=FB8-2
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-1
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-3
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-9
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-14
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-27
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-43
+Added Pin To Net: NetName=VCC_IS42 Pin=U8-49
+Added Net: Name=VCC_IS42
+Added Pin To Net: NetName=VCC_W25 Pin=C50-2
+Added Pin To Net: NetName=VCC_W25 Pin=FB6-2
+Added Pin To Net: NetName=VCC_W25 Pin=R56-2
+Added Pin To Net: NetName=VCC_W25 Pin=R57-2
+Added Pin To Net: NetName=VCC_W25 Pin=R58-2
+Added Pin To Net: NetName=VCC_W25 Pin=U7-8
+Added Net: Name=VCC_W25
+Change Class Name : Old Net Name=ISD1730 New Net Name=ISD1731
+Added Class: Name=ISD1730
+Add Class: Class already exists: ISD1730
+Add Class: Class already exists: Power
+Added Member To Class: ClassName=STM_AUX Member=Component C18 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C19 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C31 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C32
+Added Member To Class: ClassName=STM_AUX Member=Component C33 CAP Cer 22uF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C34 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C35 CAP Cer 10uF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C36 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C37
+Added Member To Class: ClassName=STM_AUX Member=Component C38 CAP Cer 10uF-50V-X7R-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component C39 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=TFT Member=Component R25 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R26 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R27 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R28 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R29 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R30 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R31 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R32 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R33 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R34 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R35 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R36 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R37 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R38 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R39 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R40 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R41 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R42 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R43 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R44 RES 10K-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component R45 RES 10R-5%-1/8W-SMD
+Added Member To Class: ClassName=STM_AUX Member=Component R47 RES 10K-5%-1/8W-SMD
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B0
+Added Member To Class: ClassName=ISD Member=Wire LTDC_B0
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B0
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B2
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B2
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B3
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B3
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B4
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B4
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B5
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B5
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B6
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B6
+Added Member To Class: ClassName=FPC Member=Wire LTDC_B7
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_B7
+Added Member To Class: ClassName=FPC Member=Wire LTDC_CLK
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_CLK
+Added Member To Class: ClassName=FPC Member=Wire LTDC_DE
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_DE
+Added Member To Class: ClassName=FPC Member=Wire LTDC_G2
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_G2
+Added Member To Class: ClassName=FPC Member=Wire LTDC_G3
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_G3
+Added Member To Class: ClassName=FPC Member=Wire LTDC_G4
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_G4
+Added Member To Class: ClassName=FPC Member=Wire LTDC_G5
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_G5
+Added Member To Class: ClassName=FPC Member=Wire LTDC_G6
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_G6
+Added Member To Class: ClassName=FPC Member=Wire LTDC_G7
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_G7
+Added Member To Class: ClassName=FPC Member=Wire LTDC_HSYNC
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_HSYNC
+Added Member To Class: ClassName=FPC Member=Wire LTDC_R2
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_R2
+Added Member To Class: ClassName=FPC Member=Wire LTDC_R3
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_R3
+Added Member To Class: ClassName=FPC Member=Wire LTDC_R4
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_R4
+Added Member To Class: ClassName=FPC Member=Wire LTDC_R5
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_R5
+Added Member To Class: ClassName=FPC Member=Wire LTDC_R6
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_R6
+Added Member To Class: ClassName=FPC Member=Wire LTDC_R7
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_R7
+Added Member To Class: ClassName=FPC Member=Wire LTDC_RST
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_RST
+Added Member To Class: ClassName=FPC Member=Wire LTDC_VSYNC
+Added Member To Class: ClassName=STM32 Member=Wire LTDC_VSYNC
+Added Member To Class: ClassName=STM32 Member=Wire MCU_BOOT1
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_6
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_8
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_9
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_10
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_11
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_12
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_13
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_14
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_15
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_16
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_17
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_18
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_19
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_20
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_21
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_22
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_23
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_24
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_25
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_26
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_27
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_28
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_29
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_30
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_31
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_32
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_33
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_34
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_35
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_37
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_41
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_42
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_43
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_44
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_45
+Added Member To Class: ClassName=FPC Member=Wire NetCN3_46
+Added Member To Class: ClassName=STM32 Member=Wire NetR56_1
+Added Member To Class: ClassName=STM32 Member=Wire NetR59_1
+Added Member To Class: ClassName=ISD Member=Wire NetU2_4
+Added Member To Class: ClassName=STM32 Member=Wire NetU2_4
+Added Member To Class: ClassName=ISD Member=Wire NetU2_5
+Added Member To Class: ClassName=STM32 Member=Wire NetU2_5
+Added Member To Class: ClassName=ISD Member=Wire NetU2_6
+Added Member To Class: ClassName=STM32 Member=Wire NetU2_6
+Added Member To Class: ClassName=ISD Member=Wire NetU2_7
+Added Member To Class: ClassName=STM32 Member=Wire NetU2_7
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_10
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_11
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_12
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_13
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_14
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_15
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_26
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_28
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_29
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_49
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_50
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_53
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_54
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_55
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_56
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_57
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_58
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_59
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_60
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_63
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_64
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_65
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_66
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_67
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_68
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_77
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_78
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_79
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_85
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_86
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_89
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_90
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_114
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_115
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_132
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_141
+Added Member To Class: ClassName=STM32 Member=Wire NetU3_142
+Added Member To Class: ClassName=STM32 Member=Wire V_CAP_1
+Added Member To Class: ClassName=STM32 Member=Wire V_CAP_2
+Added Member To Class: ClassName=FPC Member=Wire V_LED+
+Added Member To Class: ClassName=FPC Member=Wire V_LED-
+Added Room: Name=ISD1731

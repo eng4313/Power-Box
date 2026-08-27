@@ -1,0 +1,7 @@
+Removed Member From Class: ClassName=FPC Member=LTDC_B0
+Removed Member From Class: ClassName=ISD Member=LTDC_B0
+Removed Member From Class: ClassName=STM32 Member=LTDC_B0
+Change Net Name : Old Net Name=LTDC_B0 New Net Name=GND_MCU
+Added Member To Class: ClassName=FPC Member=Wire GND_MCU
+Added Member To Class: ClassName=ISD Member=Wire GND_MCU
+Added Member To Class: ClassName=STM32 Member=Wire GND_MCU

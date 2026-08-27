@@ -1,0 +1,12 @@
+Removed Member From Class: ClassName=ISD1730 Member=C50
+Removed Member From Class: ClassName=ISD1730 Member=FB6
+Removed Member From Class: ClassName=ISD1730 Member=R56
+Removed Member From Class: ClassName=ISD1730 Member=R57
+Removed Member From Class: ClassName=ISD1730 Member=R58
+Removed Member From Class: ClassName=ISD1730 Member=U7
+Change Class Name : Old Net Name=ISD1730 New Net Name=IS42S16400J
+Change Class Name : Old Net Name=Power New Net Name=MC3202
+Added Class: Name=ISD1730
+Added Class: Name=Power
+Added Room: Name=IS42S16400J
+Added Room: Name=MC3202

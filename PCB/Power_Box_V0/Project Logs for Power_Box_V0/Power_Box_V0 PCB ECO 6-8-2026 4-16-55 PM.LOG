@@ -1,0 +1,372 @@
+Removed Pin From Net: NetName=RELAY1 Pin=CN1_1-1
+Removed Pin From Net: NetName=RELAY2 Pin=CN1_2-1
+Removed Pin From Net: NetName=RELAY3 Pin=CN1_3-1
+Removed Pin From Net: NetName=RELAY4 Pin=CN1_4-1
+Removed Pin From Net: NetName=RELAY5 Pin=CN1_5-1
+Removed Pin From Net: NetName=RELAY6 Pin=CN1_6-1
+Removed Pin From Net: NetName=RELAY7 Pin=CN1_7-1
+Removed Pin From Net: NetName=RELAY8 Pin=CN1_8-1
+Removed Pin From Net: NetName=RELAY9 Pin=CN1_9-1
+Removed Pin From Net: NetName=RELAY10 Pin=CN1_10-1
+Removed Pin From Net: NetName=RELAY11 Pin=CN1_11-1
+Removed Pin From Net: NetName=RELAY12 Pin=CN1_12-1
+Removed Pin From Net: NetName=RELAY13 Pin=CN1_13-1
+Removed Pin From Net: NetName=RELAY14 Pin=CN1_14-1
+Removed Pin From Net: NetName=RELAY15 Pin=CN1_15-1
+Removed Pin From Net: NetName=RELAY16 Pin=CN1_16-1
+Removed Pin From Net: NetName=RELAY17 Pin=CN1_17-1
+Removed Pin From Net: NetName=RELAY18 Pin=CN1_18-1
+Removed Pin From Net: NetName=RELAY19 Pin=CN1_19-1
+Removed Pin From Net: NetName=RELAY20 Pin=CN1_20-1
+Removed Pin From Net: NetName=RELAY21 Pin=CN1_21-1
+Removed Pin From Net: NetName=RELAY22 Pin=CN1_22-1
+Removed Pin From Net: NetName=RELAY23 Pin=CN1_23-1
+Removed Pin From Net: NetName=RELAY24 Pin=CN1_24-1
+Removed Pin From Net: NetName=RELAY25 Pin=CN1_25-1
+Removed Pin From Net: NetName=RELAY26 Pin=CN1_26-1
+Removed Pin From Net: NetName=RELAY27 Pin=CN1_27-1
+Removed Pin From Net: NetName=RELAY28 Pin=CN1_28-1
+Removed Pin From Net: NetName=LED1 Pin=CN2_1-1
+Removed Pin From Net: NetName=+12 Pin=CN2_1-2
+Removed Pin From Net: NetName=LED2 Pin=CN2_2-1
+Removed Pin From Net: NetName=+12 Pin=CN2_2-2
+Removed Pin From Net: NetName=LED3 Pin=CN2_3-1
+Removed Pin From Net: NetName=+12 Pin=CN2_3-2
+Removed Pin From Net: NetName=LED4 Pin=CN2_4-1
+Removed Pin From Net: NetName=+12 Pin=CN2_4-2
+Removed Pin From Net: NetName=LED5 Pin=CN2_5-1
+Removed Pin From Net: NetName=+12 Pin=CN2_5-2
+Removed Pin From Net: NetName=LED6 Pin=CN2_6-1
+Removed Pin From Net: NetName=+12 Pin=CN2_6-2
+Removed Pin From Net: NetName=LED7 Pin=CN2_7-1
+Removed Pin From Net: NetName=+12 Pin=CN2_7-2
+Removed Pin From Net: NetName=LED8 Pin=CN2_8-1
+Removed Pin From Net: NetName=+12 Pin=CN2_8-2
+Removed Pin From Net: NetName=LED9 Pin=CN2_9-1
+Removed Pin From Net: NetName=+12 Pin=CN2_9-2
+Removed Pin From Net: NetName=LED10 Pin=CN2_10-1
+Removed Pin From Net: NetName=+12 Pin=CN2_10-2
+Removed Pin From Net: NetName=LED11 Pin=CN2_11-1
+Removed Pin From Net: NetName=+12 Pin=CN2_11-2
+Removed Pin From Net: NetName=LED12 Pin=CN2_12-1
+Removed Pin From Net: NetName=+12 Pin=CN2_12-2
+Removed Pin From Net: NetName=LED13 Pin=CN2_13-1
+Removed Pin From Net: NetName=+12 Pin=CN2_13-2
+Removed Pin From Net: NetName=LED14 Pin=CN2_14-1
+Removed Pin From Net: NetName=+12 Pin=CN2_14-2
+Removed Pin From Net: NetName=LED15 Pin=CN2_15-1
+Removed Pin From Net: NetName=+12 Pin=CN2_15-2
+Removed Pin From Net: NetName=LED16 Pin=CN2_16-1
+Removed Pin From Net: NetName=+12 Pin=CN2_16-2
+Removed Pin From Net: NetName=LED17 Pin=CN2_17-1
+Removed Pin From Net: NetName=+12 Pin=CN2_17-2
+Removed Pin From Net: NetName=LED18 Pin=CN2_18-1
+Removed Pin From Net: NetName=+12 Pin=CN2_18-2
+Removed Pin From Net: NetName=LED19 Pin=CN2_19-1
+Removed Pin From Net: NetName=+12 Pin=CN2_19-2
+Removed Pin From Net: NetName=LED20 Pin=CN2_20-1
+Removed Pin From Net: NetName=+12 Pin=CN2_20-2
+Removed Pin From Net: NetName=LED21 Pin=CN2_21-1
+Removed Pin From Net: NetName=+12 Pin=CN2_21-2
+Removed Pin From Net: NetName=LED22 Pin=CN2_22-1
+Removed Pin From Net: NetName=+12 Pin=CN2_22-2
+Removed Pin From Net: NetName=LED23 Pin=CN2_23-1
+Removed Pin From Net: NetName=+12 Pin=CN2_23-2
+Removed Pin From Net: NetName=LED24 Pin=CN2_24-1
+Removed Pin From Net: NetName=+12 Pin=CN2_24-2
+Removed Pin From Net: NetName=LED25 Pin=CN2_25-1
+Removed Pin From Net: NetName=+12 Pin=CN2_25-2
+Removed Pin From Net: NetName=LED26 Pin=CN2_26-1
+Removed Pin From Net: NetName=+12 Pin=CN2_26-2
+Removed Pin From Net: NetName=LED27 Pin=CN2_27-1
+Removed Pin From Net: NetName=+12 Pin=CN2_27-2
+Removed Pin From Net: NetName=LED28 Pin=CN2_28-1
+Removed Pin From Net: NetName=+12 Pin=CN2_28-2
+Removed Pin From Net: NetName=GND Pin=CN3_1-1
+Removed Pin From Net: NetName=GND Pin=CN3_2-1
+Removed Pin From Net: NetName=GND Pin=CN3_3-1
+Removed Pin From Net: NetName=GND Pin=CN3_4-1
+Removed Pin From Net: NetName=GND Pin=CN3_5-1
+Removed Pin From Net: NetName=GND Pin=CN3_6-1
+Removed Pin From Net: NetName=GND Pin=CN3_7-1
+Removed Pin From Net: NetName=GND Pin=CN3_8-1
+Removed Pin From Net: NetName=GND Pin=CN3_9-1
+Removed Pin From Net: NetName=GND Pin=CN3_10-1
+Removed Pin From Net: NetName=GND Pin=CN3_11-1
+Removed Pin From Net: NetName=GND Pin=CN3_12-1
+Removed Pin From Net: NetName=GND Pin=CN3_13-1
+Removed Pin From Net: NetName=GND Pin=CN3_14-1
+Removed Pin From Net: NetName=GND Pin=CN3_15-1
+Removed Pin From Net: NetName=GND Pin=CN3_16-1
+Removed Pin From Net: NetName=GND Pin=CN3_17-1
+Removed Pin From Net: NetName=GND Pin=CN3_18-1
+Removed Pin From Net: NetName=GND Pin=CN3_19-1
+Removed Pin From Net: NetName=GND Pin=CN3_20-1
+Removed Pin From Net: NetName=GND Pin=CN3_21-1
+Removed Pin From Net: NetName=GND Pin=CN3_22-1
+Removed Pin From Net: NetName=GND Pin=CN3_23-1
+Removed Pin From Net: NetName=GND Pin=CN3_24-1
+Removed Pin From Net: NetName=GND Pin=CN3_25-1
+Removed Pin From Net: NetName=GND Pin=CN3_26-1
+Removed Pin From Net: NetName=GND Pin=CN3_27-1
+Removed Pin From Net: NetName=GND Pin=CN3_28-1
+Removed Member From Class: ClassName=CHANNELB Member=CN2_1
+Removed Member From Class: ClassName=CHANNELC Member=CN2_2
+Removed Member From Class: ClassName=CHANNELD Member=CN2_3
+Removed Member From Class: ClassName=CHANNELE Member=CN2_4
+Removed Member From Class: ClassName=CHANNELF Member=CN2_5
+Removed Member From Class: ClassName=CHANNELG Member=CN2_6
+Removed Member From Class: ClassName=CHANNELH Member=CN2_7
+Removed Member From Class: ClassName=CHANNELI Member=CN2_8
+Removed Member From Class: ClassName=CHANNELJ Member=CN2_9
+Removed Member From Class: ClassName=CHANNELK Member=CN2_10
+Removed Member From Class: ClassName=CHANNELL Member=CN2_11
+Removed Member From Class: ClassName=CHANNELM Member=CN2_12
+Removed Member From Class: ClassName=CHANNELN Member=CN2_13
+Removed Member From Class: ClassName=CHANNELO Member=CN2_14
+Removed Member From Class: ClassName=CHANNELP Member=CN2_15
+Removed Member From Class: ClassName=CHANNELQ Member=CN2_16
+Removed Member From Class: ClassName=CHANNELR Member=CN2_17
+Removed Member From Class: ClassName=CHANNELS Member=CN2_18
+Removed Member From Class: ClassName=CHANNELT Member=CN2_19
+Removed Member From Class: ClassName=CHANNELU Member=CN2_20
+Removed Member From Class: ClassName=CHANNELV Member=CN2_21
+Removed Member From Class: ClassName=CHANNELW Member=CN2_22
+Removed Member From Class: ClassName=CHANNELX Member=CN2_23
+Removed Member From Class: ClassName=CHANNELY Member=CN2_24
+Removed Member From Class: ClassName=CHANNELZ Member=CN2_25
+Removed Member From Class: ClassName=CHANNELAA Member=CN2_26
+Removed Member From Class: ClassName=CHANNELAB Member=CN2_27
+Removed Member From Class: ClassName=CHANNELAC Member=CN2_28
+Removed Member From Class: ClassName=CHANNELB Member=CN3_1
+Removed Member From Class: ClassName=CHANNELC Member=CN3_2
+Removed Member From Class: ClassName=CHANNELD Member=CN3_3
+Removed Member From Class: ClassName=CHANNELE Member=CN3_4
+Removed Member From Class: ClassName=CHANNELF Member=CN3_5
+Removed Member From Class: ClassName=CHANNELG Member=CN3_6
+Removed Member From Class: ClassName=CHANNELH Member=CN3_7
+Removed Member From Class: ClassName=CHANNELI Member=CN3_8
+Removed Member From Class: ClassName=CHANNELJ Member=CN3_9
+Removed Member From Class: ClassName=CHANNELK Member=CN3_10
+Removed Member From Class: ClassName=CHANNELL Member=CN3_11
+Removed Member From Class: ClassName=CHANNELM Member=CN3_12
+Removed Member From Class: ClassName=CHANNELN Member=CN3_13
+Removed Member From Class: ClassName=CHANNELO Member=CN3_14
+Removed Member From Class: ClassName=CHANNELP Member=CN3_15
+Removed Member From Class: ClassName=CHANNELQ Member=CN3_16
+Removed Member From Class: ClassName=CHANNELR Member=CN3_17
+Removed Member From Class: ClassName=CHANNELS Member=CN3_18
+Removed Member From Class: ClassName=CHANNELT Member=CN3_19
+Removed Member From Class: ClassName=CHANNELU Member=CN3_20
+Removed Member From Class: ClassName=CHANNELV Member=CN3_21
+Removed Member From Class: ClassName=CHANNELW Member=CN3_22
+Removed Member From Class: ClassName=CHANNELX Member=CN3_23
+Removed Member From Class: ClassName=CHANNELY Member=CN3_24
+Removed Member From Class: ClassName=CHANNELZ Member=CN3_25
+Removed Member From Class: ClassName=CHANNELAA Member=CN3_26
+Removed Member From Class: ClassName=CHANNELAB Member=CN3_27
+Removed Member From Class: ClassName=CHANNELAC Member=CN3_28
+Change Component Footprint: Designator=CN1_1 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_2 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_3 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_4 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_5 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_6 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_7 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_8 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_9 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_10 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_11 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_12 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_13 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_14 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_15 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_16 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_17 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_18 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_19 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_20 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_21 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_22 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_23 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_24 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_25 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_26 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_27 Old Footprint=XH-2 New Footprint=XH-5
+Change Component Footprint: Designator=CN1_28 Old Footprint=XH-2 New Footprint=XH-5
+Added Pin To Net: NetName=RELAY1 Pin=CN1_1-3
+Added Pin To Net: NetName=LED1 Pin=CN1_1-4
+Added Pin To Net: NetName=+12 Pin=CN1_1-5
+Added Pin To Net: NetName=RELAY2 Pin=CN1_2-3
+Added Pin To Net: NetName=LED2 Pin=CN1_2-4
+Added Pin To Net: NetName=+12 Pin=CN1_2-5
+Added Pin To Net: NetName=RELAY3 Pin=CN1_3-3
+Added Pin To Net: NetName=LED3 Pin=CN1_3-4
+Added Pin To Net: NetName=+12 Pin=CN1_3-5
+Added Pin To Net: NetName=RELAY4 Pin=CN1_4-3
+Added Pin To Net: NetName=LED4 Pin=CN1_4-4
+Added Pin To Net: NetName=+12 Pin=CN1_4-5
+Added Pin To Net: NetName=RELAY5 Pin=CN1_5-3
+Added Pin To Net: NetName=LED5 Pin=CN1_5-4
+Added Pin To Net: NetName=+12 Pin=CN1_5-5
+Added Pin To Net: NetName=RELAY6 Pin=CN1_6-3
+Added Pin To Net: NetName=LED6 Pin=CN1_6-4
+Added Pin To Net: NetName=+12 Pin=CN1_6-5
+Added Pin To Net: NetName=RELAY7 Pin=CN1_7-3
+Added Pin To Net: NetName=LED7 Pin=CN1_7-4
+Added Pin To Net: NetName=+12 Pin=CN1_7-5
+Added Pin To Net: NetName=RELAY8 Pin=CN1_8-3
+Added Pin To Net: NetName=LED8 Pin=CN1_8-4
+Added Pin To Net: NetName=+12 Pin=CN1_8-5
+Added Pin To Net: NetName=RELAY9 Pin=CN1_9-3
+Added Pin To Net: NetName=LED9 Pin=CN1_9-4
+Added Pin To Net: NetName=+12 Pin=CN1_9-5
+Added Pin To Net: NetName=RELAY10 Pin=CN1_10-3
+Added Pin To Net: NetName=LED10 Pin=CN1_10-4
+Added Pin To Net: NetName=+12 Pin=CN1_10-5
+Added Pin To Net: NetName=RELAY11 Pin=CN1_11-3
+Added Pin To Net: NetName=LED11 Pin=CN1_11-4
+Added Pin To Net: NetName=+12 Pin=CN1_11-5
+Added Pin To Net: NetName=RELAY12 Pin=CN1_12-3
+Added Pin To Net: NetName=LED12 Pin=CN1_12-4
+Added Pin To Net: NetName=+12 Pin=CN1_12-5
+Added Pin To Net: NetName=RELAY13 Pin=CN1_13-3
+Added Pin To Net: NetName=LED13 Pin=CN1_13-4
+Added Pin To Net: NetName=+12 Pin=CN1_13-5
+Added Pin To Net: NetName=RELAY14 Pin=CN1_14-3
+Added Pin To Net: NetName=LED14 Pin=CN1_14-4
+Added Pin To Net: NetName=+12 Pin=CN1_14-5
+Added Pin To Net: NetName=RELAY15 Pin=CN1_15-3
+Added Pin To Net: NetName=LED15 Pin=CN1_15-4
+Added Pin To Net: NetName=+12 Pin=CN1_15-5
+Added Pin To Net: NetName=RELAY16 Pin=CN1_16-3
+Added Pin To Net: NetName=LED16 Pin=CN1_16-4
+Added Pin To Net: NetName=+12 Pin=CN1_16-5
+Added Pin To Net: NetName=RELAY17 Pin=CN1_17-3
+Added Pin To Net: NetName=LED17 Pin=CN1_17-4
+Added Pin To Net: NetName=+12 Pin=CN1_17-5
+Added Pin To Net: NetName=RELAY18 Pin=CN1_18-3
+Added Pin To Net: NetName=LED18 Pin=CN1_18-4
+Added Pin To Net: NetName=+12 Pin=CN1_18-5
+Added Pin To Net: NetName=RELAY19 Pin=CN1_19-3
+Added Pin To Net: NetName=LED19 Pin=CN1_19-4
+Added Pin To Net: NetName=+12 Pin=CN1_19-5
+Added Pin To Net: NetName=RELAY20 Pin=CN1_20-3
+Added Pin To Net: NetName=LED20 Pin=CN1_20-4
+Added Pin To Net: NetName=+12 Pin=CN1_20-5
+Added Pin To Net: NetName=RELAY21 Pin=CN1_21-3
+Added Pin To Net: NetName=LED21 Pin=CN1_21-4
+Added Pin To Net: NetName=+12 Pin=CN1_21-5
+Added Pin To Net: NetName=RELAY22 Pin=CN1_22-3
+Added Pin To Net: NetName=LED22 Pin=CN1_22-4
+Added Pin To Net: NetName=+12 Pin=CN1_22-5
+Added Pin To Net: NetName=RELAY23 Pin=CN1_23-3
+Added Pin To Net: NetName=LED23 Pin=CN1_23-4
+Added Pin To Net: NetName=+12 Pin=CN1_23-5
+Added Pin To Net: NetName=RELAY24 Pin=CN1_24-3
+Added Pin To Net: NetName=LED24 Pin=CN1_24-4
+Added Pin To Net: NetName=+12 Pin=CN1_24-5
+Added Pin To Net: NetName=RELAY25 Pin=CN1_25-3
+Added Pin To Net: NetName=LED25 Pin=CN1_25-4
+Added Pin To Net: NetName=+12 Pin=CN1_25-5
+Added Pin To Net: NetName=RELAY26 Pin=CN1_26-3
+Added Pin To Net: NetName=LED26 Pin=CN1_26-4
+Added Pin To Net: NetName=+12 Pin=CN1_26-5
+Added Pin To Net: NetName=RELAY27 Pin=CN1_27-3
+Added Pin To Net: NetName=LED27 Pin=CN1_27-4
+Added Pin To Net: NetName=+12 Pin=CN1_27-5
+Added Pin To Net: NetName=RELAY28 Pin=CN1_28-3
+Added Pin To Net: NetName=LED28 Pin=CN1_28-4
+Added Pin To Net: NetName=+12 Pin=CN1_28-5
+Add Net: Net with name "MCU_LED1" already exists
+Add Net: Net with name "MCU_LED2" already exists
+Add Net: Net with name "MCU_LED3" already exists
+Add Net: Net with name "MCU_LED4" already exists
+Add Net: Net with name "MCU_RELAY1" already exists
+Add Net: Net with name "MCU_RELAY2" already exists
+Add Net: Net with name "MCU_RELAY3" already exists
+Add Net: Net with name "MCU_RELAY4" already exists
+Added Pin To Net: NetName=NetCN1_1_1 Pin=CN1_1-1
+Added Pin To Net: NetName=NetCN1_1_1 Pin=R8_1-1
+Added Net: Name=NetCN1_1_1
+Added Pin To Net: NetName=NetCN1_2_1 Pin=CN1_2-1
+Added Pin To Net: NetName=NetCN1_2_1 Pin=R8_2-1
+Added Net: Name=NetCN1_2_1
+Added Pin To Net: NetName=NetCN1_3_1 Pin=CN1_3-1
+Added Pin To Net: NetName=NetCN1_3_1 Pin=R8_3-1
+Added Net: Name=NetCN1_3_1
+Added Pin To Net: NetName=NetCN1_4_1 Pin=CN1_4-1
+Added Pin To Net: NetName=NetCN1_4_1 Pin=R8_4-1
+Added Net: Name=NetCN1_4_1
+Added Pin To Net: NetName=NetCN1_5_1 Pin=CN1_5-1
+Added Pin To Net: NetName=NetCN1_5_1 Pin=R8_5-1
+Added Net: Name=NetCN1_5_1
+Added Pin To Net: NetName=NetCN1_6_1 Pin=CN1_6-1
+Added Pin To Net: NetName=NetCN1_6_1 Pin=R8_6-1
+Added Net: Name=NetCN1_6_1
+Added Pin To Net: NetName=NetCN1_7_1 Pin=CN1_7-1
+Added Pin To Net: NetName=NetCN1_7_1 Pin=R8_7-1
+Added Net: Name=NetCN1_7_1
+Added Pin To Net: NetName=NetCN1_8_1 Pin=CN1_8-1
+Added Pin To Net: NetName=NetCN1_8_1 Pin=R8_8-1
+Added Net: Name=NetCN1_8_1
+Added Pin To Net: NetName=NetCN1_9_1 Pin=CN1_9-1
+Added Pin To Net: NetName=NetCN1_9_1 Pin=R8_9-1
+Added Net: Name=NetCN1_9_1
+Added Pin To Net: NetName=NetCN1_10_1 Pin=CN1_10-1
+Added Pin To Net: NetName=NetCN1_10_1 Pin=R8_10-1
+Added Net: Name=NetCN1_10_1
+Added Pin To Net: NetName=NetCN1_11_1 Pin=CN1_11-1
+Added Pin To Net: NetName=NetCN1_11_1 Pin=R8_11-1
+Added Net: Name=NetCN1_11_1
+Added Pin To Net: NetName=NetCN1_12_1 Pin=CN1_12-1
+Added Pin To Net: NetName=NetCN1_12_1 Pin=R8_12-1
+Added Net: Name=NetCN1_12_1
+Added Pin To Net: NetName=NetCN1_13_1 Pin=CN1_13-1
+Added Pin To Net: NetName=NetCN1_13_1 Pin=R8_13-1
+Added Net: Name=NetCN1_13_1
+Added Pin To Net: NetName=NetCN1_14_1 Pin=CN1_14-1
+Added Pin To Net: NetName=NetCN1_14_1 Pin=R8_14-1
+Added Net: Name=NetCN1_14_1
+Added Pin To Net: NetName=NetCN1_15_1 Pin=CN1_15-1
+Added Pin To Net: NetName=NetCN1_15_1 Pin=R8_15-1
+Added Net: Name=NetCN1_15_1
+Added Pin To Net: NetName=NetCN1_16_1 Pin=CN1_16-1
+Added Pin To Net: NetName=NetCN1_16_1 Pin=R8_16-1
+Added Net: Name=NetCN1_16_1
+Added Pin To Net: NetName=NetCN1_17_1 Pin=CN1_17-1
+Added Pin To Net: NetName=NetCN1_17_1 Pin=R8_17-1
+Added Net: Name=NetCN1_17_1
+Added Pin To Net: NetName=NetCN1_18_1 Pin=CN1_18-1
+Added Pin To Net: NetName=NetCN1_18_1 Pin=R8_18-1
+Added Net: Name=NetCN1_18_1
+Added Pin To Net: NetName=NetCN1_19_1 Pin=CN1_19-1
+Added Pin To Net: NetName=NetCN1_19_1 Pin=R8_19-1
+Added Net: Name=NetCN1_19_1
+Added Pin To Net: NetName=NetCN1_20_1 Pin=CN1_20-1
+Added Pin To Net: NetName=NetCN1_20_1 Pin=R8_20-1
+Added Net: Name=NetCN1_20_1
+Added Pin To Net: NetName=NetCN1_21_1 Pin=CN1_21-1
+Added Pin To Net: NetName=NetCN1_21_1 Pin=R8_21-1
+Added Net: Name=NetCN1_21_1
+Added Pin To Net: NetName=NetCN1_22_1 Pin=CN1_22-1
+Added Pin To Net: NetName=NetCN1_22_1 Pin=R8_22-1
+Added Net: Name=NetCN1_22_1
+Added Pin To Net: NetName=NetCN1_23_1 Pin=CN1_23-1
+Added Pin To Net: NetName=NetCN1_23_1 Pin=R8_23-1
+Added Net: Name=NetCN1_23_1
+Added Pin To Net: NetName=NetCN1_24_1 Pin=CN1_24-1
+Added Pin To Net: NetName=NetCN1_24_1 Pin=R8_24-1
+Added Net: Name=NetCN1_24_1
+Added Pin To Net: NetName=NetCN1_25_1 Pin=CN1_25-1
+Added Pin To Net: NetName=NetCN1_25_1 Pin=R8_25-1
+Added Net: Name=NetCN1_25_1
+Added Pin To Net: NetName=NetCN1_26_1 Pin=CN1_26-1
+Added Pin To Net: NetName=NetCN1_26_1 Pin=R8_26-1
+Added Net: Name=NetCN1_26_1
+Added Pin To Net: NetName=NetCN1_27_1 Pin=CN1_27-1
+Added Pin To Net: NetName=NetCN1_27_1 Pin=R8_27-1
+Added Net: Name=NetCN1_27_1
+Added Pin To Net: NetName=NetCN1_28_1 Pin=CN1_28-1
+Added Pin To Net: NetName=NetCN1_28_1 Pin=R8_28-1
+Added Net: Name=NetCN1_28_1

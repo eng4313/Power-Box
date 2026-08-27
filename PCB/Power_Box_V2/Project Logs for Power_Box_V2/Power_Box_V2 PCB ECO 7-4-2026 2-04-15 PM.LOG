@@ -1,0 +1,9 @@
+Added Component: Designator=NT1(NET TIE-2)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=NT1-1
+Added Pin To Net: NetName=GND_MCU Pin=NT1-2
+Added Member To Class: ClassName=Interface Member=Component NT1 NET TIE-2

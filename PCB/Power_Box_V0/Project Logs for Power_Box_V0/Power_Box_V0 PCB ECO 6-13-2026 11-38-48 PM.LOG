@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=VCC_MCU Pin=U4-6
+Added Pin To Net: NetName=MCU_VBAT Pin=U4-6
+Added Member To Class: ClassName=STM32 Member=Wire MCU_VBAT

@@ -1,0 +1,112 @@
+Removed Pin From Net: NetName=GND Pin=CN1A-4
+Removed Pin From Net: NetName=+12 Pin=CN1A-5
+Removed Pin From Net: NetName=GND Pin=CN1B-4
+Removed Pin From Net: NetName=+12 Pin=CN1B-5
+Removed Pin From Net: NetName=GND Pin=CN1C-4
+Removed Pin From Net: NetName=+12 Pin=CN1C-5
+Removed Pin From Net: NetName=GND Pin=CN1D-4
+Removed Pin From Net: NetName=+12 Pin=CN1D-5
+Removed Pin From Net: NetName=GND Pin=CN1E-4
+Removed Pin From Net: NetName=+12 Pin=CN1E-5
+Removed Pin From Net: NetName=GND Pin=CN1F-4
+Removed Pin From Net: NetName=+12 Pin=CN1F-5
+Removed Pin From Net: NetName=GND Pin=CN1G-4
+Removed Pin From Net: NetName=+12 Pin=CN1G-5
+Removed Pin From Net: NetName=GND Pin=CN1H-4
+Removed Pin From Net: NetName=+12 Pin=CN1H-5
+Removed Pin From Net: NetName=NetCN1A_3 Pin=D3A-1
+Removed Pin From Net: NetName=NetCN1B_3 Pin=D3B-1
+Removed Pin From Net: NetName=NetCN1C_3 Pin=D3C-1
+Removed Pin From Net: NetName=NetCN1D_3 Pin=D3D-1
+Removed Pin From Net: NetName=NetCN1E_3 Pin=D3E-1
+Removed Pin From Net: NetName=NetCN1F_3 Pin=D3F-1
+Removed Pin From Net: NetName=NetCN1G_3 Pin=D3G-1
+Removed Pin From Net: NetName=NetCN1H_3 Pin=D3H-1
+Removed Pin From Net: NetName=NetCN1A_3 Pin=Q1A-3
+Removed Pin From Net: NetName=NetCN1B_3 Pin=Q1B-3
+Removed Pin From Net: NetName=NetCN1C_3 Pin=Q1C-3
+Removed Pin From Net: NetName=NetCN1D_3 Pin=Q1D-3
+Removed Pin From Net: NetName=NetCN1E_3 Pin=Q1E-3
+Removed Pin From Net: NetName=NetCN1F_3 Pin=Q1F-3
+Removed Pin From Net: NetName=NetCN1G_3 Pin=Q1G-3
+Removed Pin From Net: NetName=NetCN1H_3 Pin=Q1H-3
+Added Pin To Net: NetName=GND Pin=CN1A-1
+Added Pin To Net: NetName=+12 Pin=CN1A-2
+Added Pin To Net: NetName=GND Pin=CN1B-1
+Added Pin To Net: NetName=+12 Pin=CN1B-2
+Added Pin To Net: NetName=GND Pin=CN1C-1
+Added Pin To Net: NetName=+12 Pin=CN1C-2
+Added Pin To Net: NetName=GND Pin=CN1D-1
+Added Pin To Net: NetName=+12 Pin=CN1D-2
+Added Pin To Net: NetName=GND Pin=CN1E-1
+Added Pin To Net: NetName=+12 Pin=CN1E-2
+Added Pin To Net: NetName=GND Pin=CN1F-1
+Added Pin To Net: NetName=+12 Pin=CN1F-2
+Added Pin To Net: NetName=GND Pin=CN1G-1
+Added Pin To Net: NetName=+12 Pin=CN1G-2
+Added Pin To Net: NetName=GND Pin=CN1H-1
+Added Pin To Net: NetName=+12 Pin=CN1H-2
+Added Pin To Net: NetName=NetCN1A_3 Pin=R7A-1
+Added Pin To Net: NetName=NetCN1B_3 Pin=R7B-1
+Added Pin To Net: NetName=NetCN1C_3 Pin=R7C-1
+Added Pin To Net: NetName=NetCN1D_3 Pin=R7D-1
+Added Pin To Net: NetName=NetCN1E_3 Pin=R7E-1
+Added Pin To Net: NetName=NetCN1F_3 Pin=R7F-1
+Added Pin To Net: NetName=NetCN1G_3 Pin=R7G-1
+Added Pin To Net: NetName=NetCN1H_3 Pin=R7H-1
+Added Pin To Net: NetName=NetCN1A_4 Pin=CN1A-4
+Added Pin To Net: NetName=NetCN1A_4 Pin=D3A-1
+Added Pin To Net: NetName=NetCN1A_4 Pin=Q1A-3
+Added Net: Name=NetCN1A_4
+Added Pin To Net: NetName=NetCN1A_5 Pin=CN1A-5
+Added Pin To Net: NetName=NetCN1A_5 Pin=Q2A-3
+Added Net: Name=NetCN1A_5
+Added Pin To Net: NetName=NetCN1B_4 Pin=CN1B-4
+Added Pin To Net: NetName=NetCN1B_4 Pin=D3B-1
+Added Pin To Net: NetName=NetCN1B_4 Pin=Q1B-3
+Added Net: Name=NetCN1B_4
+Added Pin To Net: NetName=NetCN1B_5 Pin=CN1B-5
+Added Pin To Net: NetName=NetCN1B_5 Pin=Q2B-3
+Added Net: Name=NetCN1B_5
+Added Pin To Net: NetName=NetCN1C_4 Pin=CN1C-4
+Added Pin To Net: NetName=NetCN1C_4 Pin=D3C-1
+Added Pin To Net: NetName=NetCN1C_4 Pin=Q1C-3
+Added Net: Name=NetCN1C_4
+Added Pin To Net: NetName=NetCN1C_5 Pin=CN1C-5
+Added Pin To Net: NetName=NetCN1C_5 Pin=Q2C-3
+Added Net: Name=NetCN1C_5
+Added Pin To Net: NetName=NetCN1D_4 Pin=CN1D-4
+Added Pin To Net: NetName=NetCN1D_4 Pin=D3D-1
+Added Pin To Net: NetName=NetCN1D_4 Pin=Q1D-3
+Added Net: Name=NetCN1D_4
+Added Pin To Net: NetName=NetCN1D_5 Pin=CN1D-5
+Added Pin To Net: NetName=NetCN1D_5 Pin=Q2D-3
+Added Net: Name=NetCN1D_5
+Added Pin To Net: NetName=NetCN1E_4 Pin=CN1E-4
+Added Pin To Net: NetName=NetCN1E_4 Pin=D3E-1
+Added Pin To Net: NetName=NetCN1E_4 Pin=Q1E-3
+Added Net: Name=NetCN1E_4
+Added Pin To Net: NetName=NetCN1E_5 Pin=CN1E-5
+Added Pin To Net: NetName=NetCN1E_5 Pin=Q2E-3
+Added Net: Name=NetCN1E_5
+Added Pin To Net: NetName=NetCN1F_4 Pin=CN1F-4
+Added Pin To Net: NetName=NetCN1F_4 Pin=D3F-1
+Added Pin To Net: NetName=NetCN1F_4 Pin=Q1F-3
+Added Net: Name=NetCN1F_4
+Added Pin To Net: NetName=NetCN1F_5 Pin=CN1F-5
+Added Pin To Net: NetName=NetCN1F_5 Pin=Q2F-3
+Added Net: Name=NetCN1F_5
+Added Pin To Net: NetName=NetCN1G_4 Pin=CN1G-4
+Added Pin To Net: NetName=NetCN1G_4 Pin=D3G-1
+Added Pin To Net: NetName=NetCN1G_4 Pin=Q1G-3
+Added Net: Name=NetCN1G_4
+Added Pin To Net: NetName=NetCN1G_5 Pin=CN1G-5
+Added Pin To Net: NetName=NetCN1G_5 Pin=Q2G-3
+Added Net: Name=NetCN1G_5
+Added Pin To Net: NetName=NetCN1H_4 Pin=CN1H-4
+Added Pin To Net: NetName=NetCN1H_4 Pin=D3H-1
+Added Pin To Net: NetName=NetCN1H_4 Pin=Q1H-3
+Added Net: Name=NetCN1H_4
+Added Pin To Net: NetName=NetCN1H_5 Pin=CN1H-5
+Added Pin To Net: NetName=NetCN1H_5 Pin=Q2H-3
+Added Net: Name=NetCN1H_5

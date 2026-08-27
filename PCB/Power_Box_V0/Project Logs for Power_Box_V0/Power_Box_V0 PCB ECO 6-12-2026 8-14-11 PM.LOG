@@ -1,0 +1,38 @@
+Added Component: Designator=C48(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "THD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "1KV"; VariantName = "[No Variations]"
+Added Component: Designator=C49(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "THD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "1KV"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=C48-1
+Added Pin To Net: NetName=GND_MCU Pin=C48-2
+Added Pin To Net: NetName=+5 Pin=C49-1
+Added Pin To Net: NetName=GND_MCU Pin=C49-2
+Add Net: Net with name "MCU_LED1" already exists
+Add Net: Net with name "MCU_LED2" already exists
+Add Net: Net with name "MCU_LED3" already exists
+Add Net: Net with name "MCU_LED4" already exists
+Add Net: Net with name "MCU_RELAY1" already exists
+Add Net: Net with name "MCU_RELAY2" already exists
+Add Net: Net with name "MCU_RELAY3" already exists
+Add Net: Net with name "MCU_RELAY4" already exists
+Change Class Name : Old Net Name=N000-1_[5..28] New Net Name=N000-3_[5..28]
+Change Class Name : Old Net Name=N000-2_[5..28] New Net Name=N000-5_[5..28]
+Change Class Name : Old Net Name=N000-3_[1..4] New Net Name=N000-1_[1..4]
+Change Class Name : Old Net Name=N000-5_[5..28] New Net Name=N000-2_[5..28]
+Added Member To Class: ClassName=Interface Member=Component C48 CAP Cer 10uF-1KV-X7R-THD
+Added Member To Class: ClassName=Interface Member=Component C49 CAP Cer 100nF-1KV-X7R-THD

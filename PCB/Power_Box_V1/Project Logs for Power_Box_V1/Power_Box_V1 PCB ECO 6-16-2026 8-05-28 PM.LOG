@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=+12 Pin=CN1A-2
+Removed Pin From Net: NetName=+12 Pin=CN1B-2
+Removed Pin From Net: NetName=+12 Pin=CN1C-2
+Removed Pin From Net: NetName=+12 Pin=CN1D-2
+Removed Pin From Net: NetName=+12 Pin=CN1E-2
+Removed Pin From Net: NetName=+12 Pin=CN1F-2
+Removed Pin From Net: NetName=+12 Pin=CN1G-2
+Removed Pin From Net: NetName=+12 Pin=CN1H-2
+Added Pin To Net: NetName=+12 Pin=CN1A-3
+Added Pin To Net: NetName=+12 Pin=CN1B-3
+Added Pin To Net: NetName=+12 Pin=CN1C-3
+Added Pin To Net: NetName=+12 Pin=CN1D-3
+Added Pin To Net: NetName=+12 Pin=CN1E-3
+Added Pin To Net: NetName=+12 Pin=CN1F-3
+Added Pin To Net: NetName=+12 Pin=CN1G-3
+Added Pin To Net: NetName=+12 Pin=CN1H-3
+Added Pin To Net: NetName=NetCN1A_2 Pin=CN1A-2
+Added Pin To Net: NetName=NetCN1A_2 Pin=R7A-1
+Added Net: Name=NetCN1A_2
+Added Pin To Net: NetName=NetCN1B_2 Pin=CN1B-2
+Added Pin To Net: NetName=NetCN1B_2 Pin=R7B-1
+Added Net: Name=NetCN1B_2
+Added Pin To Net: NetName=NetCN1C_2 Pin=CN1C-2
+Added Pin To Net: NetName=NetCN1C_2 Pin=R7C-1
+Added Net: Name=NetCN1C_2
+Added Pin To Net: NetName=NetCN1D_2 Pin=CN1D-2
+Added Pin To Net: NetName=NetCN1D_2 Pin=R7D-1
+Added Net: Name=NetCN1D_2
+Added Pin To Net: NetName=NetCN1E_2 Pin=CN1E-2
+Added Pin To Net: NetName=NetCN1E_2 Pin=R7E-1
+Added Net: Name=NetCN1E_2
+Added Pin To Net: NetName=NetCN1F_2 Pin=CN1F-2
+Added Pin To Net: NetName=NetCN1F_2 Pin=R7F-1
+Added Net: Name=NetCN1F_2
+Added Pin To Net: NetName=NetCN1G_2 Pin=CN1G-2
+Added Pin To Net: NetName=NetCN1G_2 Pin=R7G-1
+Added Net: Name=NetCN1G_2
+Added Pin To Net: NetName=NetCN1H_2 Pin=CN1H-2
+Added Pin To Net: NetName=NetCN1H_2 Pin=R7H-1
+Added Net: Name=NetCN1H_2

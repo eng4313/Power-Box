@@ -1,0 +1,84 @@
+Removed Pin From Net: NetName=MCU_MAGNET1 Pin=R6A-1
+Removed Pin From Net: NetName=+12 Pin=R6A-2
+Removed Pin From Net: NetName=MCU_MAGNET2 Pin=R6B-1
+Removed Pin From Net: NetName=+12 Pin=R6B-2
+Removed Pin From Net: NetName=MCU_MAGNET3 Pin=R6C-1
+Removed Pin From Net: NetName=+12 Pin=R6C-2
+Removed Pin From Net: NetName=MCU_MAGNET4 Pin=R6D-1
+Removed Pin From Net: NetName=+12 Pin=R6D-2
+Removed Pin From Net: NetName=MCU_MAGNET5 Pin=R6E-1
+Removed Pin From Net: NetName=+12 Pin=R6E-2
+Removed Pin From Net: NetName=MCU_MAGNET6 Pin=R6F-1
+Removed Pin From Net: NetName=+12 Pin=R6F-2
+Removed Pin From Net: NetName=MCU_MAGNET7 Pin=R6G-1
+Removed Pin From Net: NetName=+12 Pin=R6G-2
+Removed Pin From Net: NetName=MCU_MAGNET8 Pin=R6H-1
+Removed Pin From Net: NetName=+12 Pin=R6H-2
+Removed Pin From Net: NetName=MCU_MAGNET1 Pin=R7A-1
+Removed Pin From Net: NetName=NetCN1A_2 Pin=R7A-2
+Removed Pin From Net: NetName=MCU_MAGNET2 Pin=R7B-1
+Removed Pin From Net: NetName=NetCN1B_2 Pin=R7B-2
+Removed Pin From Net: NetName=MCU_MAGNET3 Pin=R7C-1
+Removed Pin From Net: NetName=NetCN1C_2 Pin=R7C-2
+Removed Pin From Net: NetName=MCU_MAGNET4 Pin=R7D-1
+Removed Pin From Net: NetName=NetCN1D_2 Pin=R7D-2
+Removed Pin From Net: NetName=MCU_MAGNET5 Pin=R7E-1
+Removed Pin From Net: NetName=NetCN1E_2 Pin=R7E-2
+Removed Pin From Net: NetName=MCU_MAGNET6 Pin=R7F-1
+Removed Pin From Net: NetName=NetCN1F_2 Pin=R7F-2
+Removed Pin From Net: NetName=MCU_MAGNET7 Pin=R7G-1
+Removed Pin From Net: NetName=NetCN1G_2 Pin=R7G-2
+Removed Pin From Net: NetName=MCU_MAGNET8 Pin=R7H-1
+Removed Pin From Net: NetName=NetCN1H_2 Pin=R7H-2
+Removed Member From Class: ClassName=Interface Member=LED4
+Removed Member From Class: ClassName=Interface Member=R30
+Added Pin To Net: NetName=+12 Pin=R6A-1
+Added Pin To Net: NetName=MCU_MAGNET1 Pin=R6A-2
+Added Pin To Net: NetName=+12 Pin=R6B-1
+Added Pin To Net: NetName=MCU_MAGNET2 Pin=R6B-2
+Added Pin To Net: NetName=+12 Pin=R6C-1
+Added Pin To Net: NetName=MCU_MAGNET3 Pin=R6C-2
+Added Pin To Net: NetName=+12 Pin=R6D-1
+Added Pin To Net: NetName=MCU_MAGNET4 Pin=R6D-2
+Added Pin To Net: NetName=+12 Pin=R6E-1
+Added Pin To Net: NetName=MCU_MAGNET5 Pin=R6E-2
+Added Pin To Net: NetName=+12 Pin=R6F-1
+Added Pin To Net: NetName=MCU_MAGNET6 Pin=R6F-2
+Added Pin To Net: NetName=+12 Pin=R6G-1
+Added Pin To Net: NetName=MCU_MAGNET7 Pin=R6G-2
+Added Pin To Net: NetName=+12 Pin=R6H-1
+Added Pin To Net: NetName=MCU_MAGNET8 Pin=R6H-2
+Added Pin To Net: NetName=NetCN1A_2 Pin=R7A-1
+Added Pin To Net: NetName=MCU_MAGNET1 Pin=R7A-2
+Added Pin To Net: NetName=NetCN1B_2 Pin=R7B-1
+Added Pin To Net: NetName=MCU_MAGNET2 Pin=R7B-2
+Added Pin To Net: NetName=NetCN1C_2 Pin=R7C-1
+Added Pin To Net: NetName=MCU_MAGNET3 Pin=R7C-2
+Added Pin To Net: NetName=NetCN1D_2 Pin=R7D-1
+Added Pin To Net: NetName=MCU_MAGNET4 Pin=R7D-2
+Added Pin To Net: NetName=NetCN1E_2 Pin=R7E-1
+Added Pin To Net: NetName=MCU_MAGNET5 Pin=R7E-2
+Added Pin To Net: NetName=NetCN1F_2 Pin=R7F-1
+Added Pin To Net: NetName=MCU_MAGNET6 Pin=R7F-2
+Added Pin To Net: NetName=NetCN1G_2 Pin=R7G-1
+Added Pin To Net: NetName=MCU_MAGNET7 Pin=R7G-2
+Added Pin To Net: NetName=NetCN1H_2 Pin=R7H-1
+Added Pin To Net: NetName=MCU_MAGNET8 Pin=R7H-2
+Added Member To Class: ClassName=Power Member=Component C35 CAP Elec 1000uF-10V-10x25-THD
+Added Member To Class: ClassName=Power Member=Component C36 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=Power Member=Component C37 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=Interface Member=Component CN4 Connector XH-Straight-THD-2.54mm
+Added Member To Class: ClassName=Interface Member=Component LED3 LED GREEN-1206-SMD
+Added Member To Class: ClassName=CHANNELB Member=Component Q2A (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELC Member=Component Q2B (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELD Member=Component Q2C (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELE Member=Component Q2D (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELF Member=Component Q2E (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELG Member=Component Q2F (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELH Member=Component Q2G (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELI Member=Component Q2H (Q2) TR S8050-SMD
+Added Member To Class: ClassName=Interface Member=Component R29 RES 2.2K-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component TP6
+Added Member To Class: ClassName=TFT Member=Component TP8
+Added Member To Class: ClassName=TFT Member=Component TP11
+Added Member To Class: ClassName=TFT Member=Component TP12

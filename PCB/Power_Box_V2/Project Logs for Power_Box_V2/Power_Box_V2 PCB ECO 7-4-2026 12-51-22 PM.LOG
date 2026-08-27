@@ -1,0 +1,31 @@
+Removed Member From Class: ClassName=XPT2046 Member=FB3
+Change Component Designator: OldDesignator=FB3 NewDesignator=FB9
+Added Component: Designator=C60(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C61(C-0805)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC_XPT Pin=C60-1
+Added Pin To Net: NetName=GND_MCU Pin=C60-2
+Added Pin To Net: NetName=VCC_XPT Pin=C61-1
+Added Pin To Net: NetName=GND_MCU Pin=C61-2
+Added Member To Class: ClassName=TFT Member=Component C12 CAP Cer 10uF-50V-X7R-SMD
+Added Member To Class: ClassName=TFT Member=Component C13 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=XPT2046 Member=Component C60 CAP Cer 10uF-50V-X7R-SMD
+Added Member To Class: ClassName=XPT2046 Member=Component C61 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=XPT2046 Member=Component FB9 Ferrite Bead SMD

@@ -1,0 +1,12 @@
+Added Pin To Net: NetName=RELAY_EX1 Pin=CN13-1
+Added Pin To Net: NetName=RELAY_EX4 Pin=CN13-2
+Added Pin To Net: NetName=LED_EX1 Pin=CN13-3
+Added Pin To Net: NetName=LED_EX4 Pin=CN13-4
+Added Pin To Net: NetName=MAGNET_EX1 Pin=CN13-5
+Added Pin To Net: NetName=MAGNET_EX4 Pin=CN13-6
+Added Pin To Net: NetName=RELAY_EX2 Pin=CN13-9
+Added Pin To Net: NetName=RELAY_EX3 Pin=CN13-10
+Added Pin To Net: NetName=LED_EX2 Pin=CN13-11
+Added Pin To Net: NetName=LED_EX3 Pin=CN13-12
+Added Pin To Net: NetName=MAGNET_EX2 Pin=CN13-13
+Added Pin To Net: NetName=MAGNET_EX3 Pin=CN13-14

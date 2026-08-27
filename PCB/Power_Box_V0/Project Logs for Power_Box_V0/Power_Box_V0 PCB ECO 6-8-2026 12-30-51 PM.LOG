@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=TFT_CS Pin=U4-44
+Removed Pin From Net: NetName=TFT_DC Pin=U4-45
+Removed Pin From Net: NetName=TFT_RES Pin=U4-46
+Removed Pin From Net: NetName=TFT_BLK Pin=U4-47
+Removed Pin From Net: NetName=+3V3 Pin=U5-4
+Added Pin To Net: NetName=TFT_BLK Pin=U4-44
+Added Pin To Net: NetName=TFT_RES Pin=U4-45
+Added Pin To Net: NetName=TFT_DC Pin=U4-46
+Added Pin To Net: NetName=TFT_CS Pin=U4-47

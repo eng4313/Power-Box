@@ -1,0 +1,12 @@
+Change Component Footprint: Designator=C43 Old Footprint=CAP-Elec-10x25-5 New Footprint=CAP-Elec-6.3x12
+Change Component Footprint: Designator=U6 Old Footprint=TO252-3pin New Footprint=TO220-HEARSINK-1
+Change Component Comment : Designator=U6 Old Comment=Reg 78M05-5V-SMD New Comment=Reg 7805-5V-THD
+Change component parameters: Designator = "U6" ("U6"); Footprint = "TO252-3pin"; UniqueID = "\KGZSSFSK\QKWVCNQA" ("\KGZSSFSK\QKWVCNQA")
+Change component parameters (AddParameter): Name = "Code"; Value = "7805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "THD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "5V"; VariantName = "[No Variations]"

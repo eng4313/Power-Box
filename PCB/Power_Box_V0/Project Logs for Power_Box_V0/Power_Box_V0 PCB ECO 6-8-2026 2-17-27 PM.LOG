@@ -1,0 +1,88 @@
+Removed Member From Class: ClassName=ULN2003 Member=ULN2003_
+Change Component Designator: OldDesignator=C47_1 NewDesignator=C47_3
+Change Component Designator: OldDesignator=C47_2 NewDesignator=C47_1
+Change Component Designator: OldDesignator=C47_3 NewDesignator=C47_2
+Change Component Designator: OldDesignator=FB6_1 NewDesignator=FB6_3
+Change Component Designator: OldDesignator=FB6_2 NewDesignator=FB6_1
+Change Component Designator: OldDesignator=FB6_3 NewDesignator=FB6_2
+Change Component Designator: OldDesignator=R3_1 NewDesignator=R3_3
+Change Component Designator: OldDesignator=R3_2 NewDesignator=R3_1
+Change Component Designator: OldDesignator=R3_3 NewDesignator=R3_2
+Change Component Designator: OldDesignator=R4_1 NewDesignator=R4_3
+Change Component Designator: OldDesignator=R4_2 NewDesignator=R4_1
+Change Component Designator: OldDesignator=R4_3 NewDesignator=R4_2
+Change Component Designator: OldDesignator=R5_1 NewDesignator=R5_3
+Change Component Designator: OldDesignator=R5_2 NewDesignator=R5_1
+Change Component Designator: OldDesignator=R5_3 NewDesignator=R5_2
+Change Component Designator: OldDesignator=R6_1 NewDesignator=R6_3
+Change Component Designator: OldDesignator=R6_2 NewDesignator=R6_1
+Change Component Designator: OldDesignator=R6_3 NewDesignator=R6_2
+Change Component Designator: OldDesignator=R9_1 NewDesignator=R9_3
+Change Component Designator: OldDesignator=R9_2 NewDesignator=R9_1
+Change Component Designator: OldDesignator=R9_3 NewDesignator=R9_2
+Change Component Designator: OldDesignator=R10_1 NewDesignator=R10_3
+Change Component Designator: OldDesignator=R10_2 NewDesignator=R10_1
+Change Component Designator: OldDesignator=R10_3 NewDesignator=R10_2
+Change Component Designator: OldDesignator=R31_1 NewDesignator=R31_3
+Change Component Designator: OldDesignator=R31_2 NewDesignator=R31_1
+Change Component Designator: OldDesignator=R31_3 NewDesignator=R31_2
+Change Component Designator: OldDesignator=R32_1 NewDesignator=R32_3
+Change Component Designator: OldDesignator=R32_2 NewDesignator=R32_1
+Change Component Designator: OldDesignator=R32_3 NewDesignator=R32_2
+Change Component Designator: OldDesignator=R33_1 NewDesignator=R33_3
+Change Component Designator: OldDesignator=R33_2 NewDesignator=R33_1
+Change Component Designator: OldDesignator=R33_3 NewDesignator=R33_2
+Change Component Designator: OldDesignator=R34_1 NewDesignator=R34_3
+Change Component Designator: OldDesignator=R34_2 NewDesignator=R34_1
+Change Component Designator: OldDesignator=R34_3 NewDesignator=R34_2
+Change Component Designator: OldDesignator=R35_1 NewDesignator=R35_3
+Change Component Designator: OldDesignator=R35_2 NewDesignator=R35_1
+Change Component Designator: OldDesignator=R35_3 NewDesignator=R35_2
+Change Component Designator: OldDesignator=R36_1 NewDesignator=R36_3
+Change Component Designator: OldDesignator=R36_2 NewDesignator=R36_1
+Change Component Designator: OldDesignator=R36_3 NewDesignator=R36_2
+Change Component Designator: OldDesignator=R38_1 NewDesignator=R38_3
+Change Component Designator: OldDesignator=R38_2 NewDesignator=R38_1
+Change Component Designator: OldDesignator=R38_3 NewDesignator=R38_2
+Change Component Designator: OldDesignator=R39_1 NewDesignator=R39_3
+Change Component Designator: OldDesignator=R39_2 NewDesignator=R39_1
+Change Component Designator: OldDesignator=R39_3 NewDesignator=R39_2
+Change Component Designator: OldDesignator=U1_1 NewDesignator=U1_3
+Change Component Designator: OldDesignator=U1_2 NewDesignator=U1_1
+Change Component Designator: OldDesignator=U1_3 NewDesignator=U1_2
+Change Net Name : Old Net Name=NetR3_1_1 New Net Name=NetR3_3_1
+Change Net Name : Old Net Name=NetR3_2_1 New Net Name=NetR3_1_1
+Change Net Name : Old Net Name=NetR3_3_1 New Net Name=NetR3_2_1
+Change Net Name : Old Net Name=NetR4_1_1 New Net Name=NetR4_3_1
+Change Net Name : Old Net Name=NetR4_2_1 New Net Name=NetR4_1_1
+Change Net Name : Old Net Name=NetR4_3_1 New Net Name=NetR4_2_1
+Change Net Name : Old Net Name=NetR5_1_1 New Net Name=NetR5_3_1
+Change Net Name : Old Net Name=NetR5_2_1 New Net Name=NetR5_1_1
+Change Net Name : Old Net Name=NetR5_3_1 New Net Name=NetR5_2_1
+Change Net Name : Old Net Name=NetR6_1_1 New Net Name=NetR6_3_1
+Change Net Name : Old Net Name=NetR6_2_1 New Net Name=NetR6_1_1
+Change Net Name : Old Net Name=NetR6_3_1 New Net Name=NetR6_2_1
+Change Net Name : Old Net Name=NetR9_1_1 New Net Name=NetR9_3_1
+Change Net Name : Old Net Name=NetR9_2_1 New Net Name=NetR9_1_1
+Change Net Name : Old Net Name=NetR9_3_1 New Net Name=NetR9_2_1
+Change Net Name : Old Net Name=NetR10_1_1 New Net Name=NetR10_3_1
+Change Net Name : Old Net Name=NetR10_2_1 New Net Name=NetR10_1_1
+Change Net Name : Old Net Name=NetR10_3_1 New Net Name=NetR10_2_1
+Change Net Name : Old Net Name=NetR31_1_1 New Net Name=NetR31_3_1
+Change Net Name : Old Net Name=NetR31_2_1 New Net Name=NetR31_1_1
+Change Net Name : Old Net Name=NetR31_3_1 New Net Name=NetR31_2_1
+Add Net: Net with name "MCU_LED1" already exists
+Add Net: Net with name "MCU_LED2" already exists
+Add Net: Net with name "MCU_LED3" already exists
+Add Net: Net with name "MCU_LED4" already exists
+Add Net: Net with name "MCU_RELAY1" already exists
+Add Net: Net with name "MCU_RELAY2" already exists
+Add Net: Net with name "MCU_RELAY3" already exists
+Add Net: Net with name "MCU_RELAY4" already exists
+Change Class Name : Old Net Name=ULN2003_3 New Net Name=ULN2003_4
+Change Class Name : Old Net Name=ULN2003_4 New Net Name=ULN2003_5
+Change Class Name : Old Net Name=ULN2003_5 New Net Name=ULN2003_6
+Change Class Name : Old Net Name=ULN2003_6 New Net Name=ULN2003_7
+Change Class Name : Old Net Name=ULN2003_ New Net Name=ULN2003_3
+Added Member To Class: ClassName=ULN2003 Member=ULN2003_7 (ULN2003.SchDoc)
+Added Room: Name=ULN2003_7

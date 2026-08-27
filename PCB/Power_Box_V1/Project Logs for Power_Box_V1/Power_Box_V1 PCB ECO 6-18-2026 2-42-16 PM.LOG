@@ -1,0 +1,114 @@
+Removed Pin From Net: NetName=TFT_IM2 Pin=CN3-1
+Removed Pin From Net: NetName=TFT_IM1 Pin=CN3-2
+Removed Pin From Net: NetName=TFT_IM0 Pin=CN3-3
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-4
+Removed Pin From Net: NetName=TFT_LED_K3 Pin=CN3-5
+Removed Pin From Net: NetName=TFT_LED_K2 Pin=CN3-6
+Removed Pin From Net: NetName=TFT_LED_K1 Pin=CN3-7
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-8
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-9
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-10
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-11
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-12
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-13
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-14
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-15
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-16
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-17
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-18
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-19
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-20
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-21
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-22
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-23
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-24
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-25
+Removed Pin From Net: NetName=TFT_RES Pin=CN3-26
+Removed Pin From Net: NetName=TFT_MISO Pin=CN3-27
+Removed Pin From Net: NetName=TFT_MOSI Pin=CN3-28
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-29
+Removed Pin From Net: NetName=TFT_DC Pin=CN3-30
+Removed Pin From Net: NetName=TFT_CLK Pin=CN3-31
+Removed Pin From Net: NetName=TFT_CS Pin=CN3-32
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-34
+Removed Pin From Net: NetName=VCC_TFT Pin=CN3-35
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-36
+Removed Pin From Net: NetName=TFT_YD Pin=CN3-37
+Removed Pin From Net: NetName=TFT_XR Pin=CN3-38
+Removed Pin From Net: NetName=TFT_YU Pin=CN3-39
+Removed Pin From Net: NetName=TFT_XL Pin=CN3-40
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-41
+Removed Pin From Net: NetName=GND_MCU Pin=CN3-42
+Removed Member From Class: ClassName=TFT Member=CN3
+Removed Member From Class: ClassName=STM_AUX Member=D3
+Removed Member From Class: ClassName=Interface Member=LED4
+Removed Member From Class: ClassName=Interface Member=R30
+Added Component: Designator=CN?(CN-FPC-40-0.5mm-hor)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "2mm-40 Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Right"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TFT_XL Pin=CN?-1
+Added Pin To Net: NetName=TFT_YU Pin=CN?-2
+Added Pin To Net: NetName=TFT_XR Pin=CN?-3
+Added Pin To Net: NetName=TFT_YD Pin=CN?-4
+Added Pin To Net: NetName=GND_MCU Pin=CN?-5
+Added Pin To Net: NetName=VCC_TFT Pin=CN?-6
+Added Pin To Net: NetName=VCC_TFT Pin=CN?-7
+Added Pin To Net: NetName=TFT_CS Pin=CN?-9
+Added Pin To Net: NetName=TFT_CLK Pin=CN?-10
+Added Pin To Net: NetName=TFT_DC Pin=CN?-11
+Added Pin To Net: NetName=VCC_TFT Pin=CN?-12
+Added Pin To Net: NetName=TFT_MOSI Pin=CN?-13
+Added Pin To Net: NetName=TFT_MISO Pin=CN?-14
+Added Pin To Net: NetName=TFT_RES Pin=CN?-15
+Added Pin To Net: NetName=GND_MCU Pin=CN?-16
+Added Pin To Net: NetName=GND_MCU Pin=CN?-17
+Added Pin To Net: NetName=GND_MCU Pin=CN?-18
+Added Pin To Net: NetName=GND_MCU Pin=CN?-19
+Added Pin To Net: NetName=GND_MCU Pin=CN?-20
+Added Pin To Net: NetName=GND_MCU Pin=CN?-21
+Added Pin To Net: NetName=GND_MCU Pin=CN?-22
+Added Pin To Net: NetName=GND_MCU Pin=CN?-23
+Added Pin To Net: NetName=GND_MCU Pin=CN?-24
+Added Pin To Net: NetName=GND_MCU Pin=CN?-25
+Added Pin To Net: NetName=GND_MCU Pin=CN?-26
+Added Pin To Net: NetName=GND_MCU Pin=CN?-27
+Added Pin To Net: NetName=GND_MCU Pin=CN?-28
+Added Pin To Net: NetName=GND_MCU Pin=CN?-29
+Added Pin To Net: NetName=GND_MCU Pin=CN?-30
+Added Pin To Net: NetName=GND_MCU Pin=CN?-31
+Added Pin To Net: NetName=GND_MCU Pin=CN?-32
+Added Pin To Net: NetName=VCC_TFT Pin=CN?-33
+Added Pin To Net: NetName=TFT_LED_K1 Pin=CN?-34
+Added Pin To Net: NetName=TFT_LED_K2 Pin=CN?-35
+Added Pin To Net: NetName=TFT_LED_K3 Pin=CN?-36
+Added Pin To Net: NetName=GND_MCU Pin=CN?-37
+Added Pin To Net: NetName=TFT_IM0 Pin=CN?-38
+Added Pin To Net: NetName=TFT_IM1 Pin=CN?-39
+Added Pin To Net: NetName=TFT_IM2 Pin=CN?-40
+Added Pin To Net: NetName=GND_MCU Pin=CN?-41
+Added Pin To Net: NetName=GND_MCU Pin=CN?-42
+Added Member To Class: ClassName=Power Member=Component C35 CAP Elec 1000uF-10V-10x25-THD
+Added Member To Class: ClassName=Power Member=Component C36 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=Power Member=Component C37 CAP Cer 100nF-50V-X7R-SMD
+Added Member To Class: ClassName=Interface Member=Component CN4 Connector XH-Straight-THD-2.54mm
+Added Member To Class: ClassName=TFT Member=Component CN? Connector FPC Right-2mm-40 Pin
+Added Member To Class: ClassName=STM_AUX Member=Component D2 Diode 1N4148-SMD
+Added Member To Class: ClassName=Interface Member=Component LED3 LED GREEN-1206-SMD
+Added Member To Class: ClassName=CHANNELB Member=Component Q2A (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELC Member=Component Q2B (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELD Member=Component Q2C (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELE Member=Component Q2D (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELF Member=Component Q2E (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELG Member=Component Q2F (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELH Member=Component Q2G (Q2) TR S8050-SMD
+Added Member To Class: ClassName=CHANNELI Member=Component Q2H (Q2) TR S8050-SMD
+Added Member To Class: ClassName=Interface Member=Component R29 RES 2.2K-5%-1/8W-SMD
+Added Member To Class: ClassName=TFT Member=Component TP6
+Added Member To Class: ClassName=TFT Member=Component TP8
+Added Member To Class: ClassName=TFT Member=Component TP11
+Added Member To Class: ClassName=TFT Member=Component TP12

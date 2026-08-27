@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=MCU_BOOT0 Pin=H2-3
+Removed Pin From Net: NetName=MCU_BOOT1 Pin=H2-4
+Removed Pin From Net: NetName=GND_MCU Pin=H2-5
+Removed Pin From Net: NetName=GND_MCU Pin=H2-6
+Removed Member From Class: ClassName=TFT Member=FB9
+Removed Member From Class: ClassName=ISD Member=+5
+Change Component Footprint: Designator=H2 Old Footprint=H-3x2pin-F-S New Footprint=H-3pin-M-S
+Change Component Comment : Designator=H2 Old Comment=Header 3x2 Pin /Military-Straight/Right-Male/Female-2.54mm New Comment=Header 3x1 Pin /Military-Straight/Right-Male/Female-2.54mm
+Added Component: Designator=H3(H-3pin-M-S)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Size"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Straight/Right-Male/Female"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "/Military"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=MCU_BOOT0 Pin=H2-2
+Added Pin To Net: NetName=GND_MCU Pin=H2-3
+Added Pin To Net: NetName=GND_MCU Pin=H3-1
+Added Pin To Net: NetName=MCU_BOOT1 Pin=H3-2
+Added Pin To Net: NetName=NetH3_3 Pin=H3-3
+Added Pin To Net: NetName=NetH3_3 Pin=R47-2
+Added Net: Name=NetH3_3
+Added Member To Class: ClassName=TFT Member=Component FB3 Ferrite Bead SMD
+Added Member To Class: ClassName=STM_AUX Member=Component H3 Header 3x1 Pin /Military-Straight/Right-Male/Female-2.54mm
+Added Member To Class: ClassName=ISD Member=Wire +3V3

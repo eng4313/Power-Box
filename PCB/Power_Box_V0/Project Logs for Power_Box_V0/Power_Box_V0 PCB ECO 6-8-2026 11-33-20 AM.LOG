@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=MCU_SDA Pin=R9-1
+Removed Pin From Net: NetName=VCC_DS1307 Pin=R9-2
+Removed Pin From Net: NetName=MCU_SCL Pin=R10-1
+Removed Pin From Net: NetName=VCC_DS1307 Pin=R10-2
+Removed Member From Class: ClassName=DS1307 Member=R9
+Removed Member From Class: ClassName=DS1307 Member=R10

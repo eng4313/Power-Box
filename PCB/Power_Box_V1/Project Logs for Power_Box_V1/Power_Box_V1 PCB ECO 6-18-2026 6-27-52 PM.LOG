@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=LED2 Old Footprint=LED-THD-5R New Footprint=LED-1206-R
+Change Component Comment : Designator=LED2 Old Comment=LED RED-0805-SMD New Comment=LED RED-1206-SMD
+Change component parameters: Designator = "LED2" ("LED2"); Footprint = "LED-THD-5R"; UniqueID = "\WHSGVRKY\QZVAHXHZ" ("\WHSGVRKY\QZVAHXHZ")
+Change component parameters (AddParameter): Name = "Color"; Value = "RED"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Linkedin"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://ir.linkedin.com/in/mahdi-bagherzade"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Phone Number"; Value = "0915 8700 314"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Published Date"; Value = "9-15-2024"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Mahdi Bagherzadeh"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Size"; Value = "1206"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "SMD"; VariantName = "[No Variations]"

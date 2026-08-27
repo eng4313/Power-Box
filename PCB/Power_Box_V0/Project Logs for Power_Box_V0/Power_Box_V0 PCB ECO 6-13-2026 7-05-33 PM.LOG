@@ -1,0 +1,218 @@
+Removed Pin From Net: NetName=LED3 Pin=R5_1-2
+Removed Pin From Net: NetName=RELAY2 Pin=R6_1-2
+Removed Pin From Net: NetName=MCU_MAGNET1 Pin=U4-3
+Removed Pin From Net: NetName=MCU_MAGNET2 Pin=U4-7
+Removed Pin From Net: NetName=MCU_MAGNET3 Pin=U4-10
+Removed Pin From Net: NetName=MCU_MAGNET4 Pin=U4-13
+Removed Pin From Net: NetName=MCU_KEY1 Pin=U4-127
+Removed Pin From Net: NetName=MCU_KEY2 Pin=U4-128
+Removed Pin From Net: NetName=MCU_KEY3 Pin=U4-129
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX5
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX6
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX7
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX8
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX9
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX10
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX11
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX12
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX13
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX14
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX15
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX16
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX17
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX18
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX19
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX20
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX21
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX22
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX23
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX24
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX25
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX26
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX27
+Removed Member From Class: ClassName=STM32 Member=MCU_LED_EX28
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX5
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX6
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX7
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX8
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX9
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX10
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX11
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX12
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX13
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX14
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX15
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX16
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX17
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX18
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX19
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX20
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX21
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX22
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX23
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX24
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX25
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX26
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX27
+Removed Member From Class: ClassName=STM32 Member=MCU_MAGNET_EX28
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX5
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX6
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX7
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX8
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX9
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX10
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX11
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX12
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX13
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX14
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX15
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX16
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX17
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX18
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX19
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX20
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX21
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX22
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX23
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX24
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX25
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX26
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX27
+Removed Member From Class: ClassName=STM32 Member=MCU_RELAY_EX28
+Added Pin To Net: NetName=MCU_MAGNET4 Pin=U4-60
+Added Pin To Net: NetName=MCU_MAGNET3 Pin=U4-63
+Added Pin To Net: NetName=MCU_MAGNET2 Pin=U4-64
+Added Pin To Net: NetName=MCU_MAGNET1 Pin=U4-65
+Change Net Name : Old Net Name=MCU_LED2 New Net Name=MCU_RELAY3
+Change Net Name : Old Net Name=MCU_LED_EX5 New Net Name=MCU_LED7
+Change Net Name : Old Net Name=MCU_LED_EX6 New Net Name=MCU_RELAY9
+Change Net Name : Old Net Name=MCU_LED_EX7 New Net Name=MCU_LED10
+Change Net Name : Old Net Name=MCU_LED_EX8 New Net Name=MCU_RELAY12
+Change Net Name : Old Net Name=MCU_LED_EX9 New Net Name=MCU_LED13
+Change Net Name : Old Net Name=MCU_LED_EX10 New Net Name=MCU_MAGNET14
+Change Net Name : Old Net Name=MCU_LED_EX11 New Net Name=MCU_MAGNET11
+Change Net Name : Old Net Name=MCU_LED_EX12 New Net Name=MCU_MAGNET8
+Change Net Name : Old Net Name=MCU_LED_EX13 New Net Name=MCU_MAGNET5
+Change Net Name : Old Net Name=MCU_LED_EX19 New Net Name=MCU_MAGNET26
+Change Net Name : Old Net Name=MCU_LED_EX20 New Net Name=MCU_MAGNET23
+Change Net Name : Old Net Name=MCU_LED_EX21 New Net Name=MCU_MAGNET20
+Change Net Name : Old Net Name=MCU_LED_EX22 New Net Name=MCU_MAGNET17
+Change Net Name : Old Net Name=MCU_LED_EX23 New Net Name=MCU_LED28
+Change Net Name : Old Net Name=MCU_LED_EX24 New Net Name=MCU_RELAY27
+Change Net Name : Old Net Name=MCU_LED_EX25 New Net Name=MCU_LED25
+Change Net Name : Old Net Name=MCU_LED_EX26 New Net Name=MCU_RELAY24
+Change Net Name : Old Net Name=MCU_LED_EX27 New Net Name=MCU_LED22
+Change Net Name : Old Net Name=MCU_LED_EX28 New Net Name=MCU_RELAY21
+Change Net Name : Old Net Name=MCU_MAGNET_EX5 New Net Name=MCU_RELAY8
+Change Net Name : Old Net Name=MCU_MAGNET_EX6 New Net Name=MCU_LED9
+Change Net Name : Old Net Name=MCU_MAGNET_EX7 New Net Name=MCU_RELAY11
+Change Net Name : Old Net Name=MCU_MAGNET_EX8 New Net Name=MCU_LED12
+Change Net Name : Old Net Name=MCU_MAGNET_EX9 New Net Name=MCU_RELAY14
+Change Net Name : Old Net Name=MCU_MAGNET_EX10 New Net Name=MCU_MAGNET13
+Change Net Name : Old Net Name=MCU_MAGNET_EX11 New Net Name=MCU_MAGNET10
+Change Net Name : Old Net Name=MCU_MAGNET_EX12 New Net Name=MCU_MAGNET7
+Change Net Name : Old Net Name=MCU_MAGNET_EX18 New Net Name=MCU_MAGNET28
+Change Net Name : Old Net Name=MCU_MAGNET_EX19 New Net Name=MCU_MAGNET25
+Change Net Name : Old Net Name=MCU_MAGNET_EX20 New Net Name=MCU_MAGNET22
+Change Net Name : Old Net Name=MCU_MAGNET_EX21 New Net Name=MCU_MAGNET19
+Change Net Name : Old Net Name=MCU_MAGNET_EX22 New Net Name=MCU_MAGNET16
+Change Net Name : Old Net Name=MCU_MAGNET_EX23 New Net Name=MCU_RELAY28
+Change Net Name : Old Net Name=MCU_MAGNET_EX24 New Net Name=MCU_LED26
+Change Net Name : Old Net Name=MCU_MAGNET_EX25 New Net Name=MCU_RELAY25
+Change Net Name : Old Net Name=MCU_MAGNET_EX26 New Net Name=MCU_LED23
+Change Net Name : Old Net Name=MCU_MAGNET_EX27 New Net Name=MCU_RELAY22
+Change Net Name : Old Net Name=MCU_MAGNET_EX28 New Net Name=MCU_LED20
+Change Net Name : Old Net Name=MCU_RELAY3 New Net Name=MCU_RELAY4
+Change Net Name : Old Net Name=MCU_RELAY_EX5 New Net Name=MCU_RELAY7
+Change Net Name : Old Net Name=MCU_RELAY_EX6 New Net Name=MCU_LED8
+Change Net Name : Old Net Name=MCU_RELAY_EX7 New Net Name=MCU_RELAY10
+Change Net Name : Old Net Name=MCU_RELAY_EX8 New Net Name=MCU_LED11
+Change Net Name : Old Net Name=MCU_RELAY_EX9 New Net Name=MCU_RELAY13
+Change Net Name : Old Net Name=MCU_RELAY_EX10 New Net Name=MCU_LED14
+Change Net Name : Old Net Name=MCU_RELAY_EX11 New Net Name=MCU_MAGNET12
+Change Net Name : Old Net Name=MCU_RELAY_EX12 New Net Name=MCU_MAGNET9
+Change Net Name : Old Net Name=MCU_RELAY_EX13 New Net Name=MCU_MAGNET6
+Change Net Name : Old Net Name=MCU_RELAY_EX19 New Net Name=MCU_MAGNET27
+Change Net Name : Old Net Name=MCU_RELAY_EX20 New Net Name=MCU_MAGNET24
+Change Net Name : Old Net Name=MCU_RELAY_EX21 New Net Name=MCU_MAGNET21
+Change Net Name : Old Net Name=MCU_RELAY_EX22 New Net Name=MCU_MAGNET18
+Change Net Name : Old Net Name=MCU_RELAY_EX23 New Net Name=MCU_MAGNET15
+Change Net Name : Old Net Name=MCU_RELAY_EX24 New Net Name=MCU_LED27
+Change Net Name : Old Net Name=MCU_RELAY_EX25 New Net Name=MCU_RELAY26
+Change Net Name : Old Net Name=MCU_RELAY_EX26 New Net Name=MCU_LED24
+Change Net Name : Old Net Name=MCU_RELAY_EX27 New Net Name=MCU_RELAY23
+Change Net Name : Old Net Name=MCU_RELAY_EX28 New Net Name=MCU_LED21
+Add Net: Net with name "MCU_LED1" already exists
+Added Pin To Net: NetName=MCU_LED2 Pin=R6_1-2
+Added Net: Name=MCU_LED2
+Add Net: Net with name "MCU_LED2" already exists
+Add Net: Net with name "MCU_LED3" already exists
+Add Net: Net with name "MCU_LED4" already exists
+Add Net: Net with name "MCU_LED5" already exists
+Add Net: Net with name "MCU_LED6" already exists
+Add Net: Net with name "MCU_LED15" already exists
+Add Net: Net with name "MCU_LED16" already exists
+Add Net: Net with name "MCU_LED17" already exists
+Add Net: Net with name "MCU_LED18" already exists
+Add Net: Net with name "MCU_LED19" already exists
+Add Net: Net with name "MCU_RELAY1" already exists
+Add Net: Net with name "MCU_RELAY2" already exists
+Add Net: Net with name "MCU_RELAY3" already exists
+Add Net: Net with name "MCU_RELAY5" already exists
+Add Net: Net with name "MCU_RELAY6" already exists
+Add Net: Net with name "MCU_RELAY15" already exists
+Add Net: Net with name "MCU_RELAY16" already exists
+Add Net: Net with name "MCU_RELAY17" already exists
+Add Net: Net with name "MCU_RELAY18" already exists
+Add Net: Net with name "MCU_RELAY19" already exists
+Add Net: Net with name "MCU_RELAY20" already exists
+Change Class Name : Old Net Name=N000-3_[1..4] New Net Name=N000-1_[1..4]
+Change Class Name : Old Net Name=N000-5_[1..4] New Net Name=N000-2_[1..4]
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED5
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED6
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED7
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED8
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED9
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED10
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED11
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED12
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED13
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED14
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED15
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED16
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED17
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED18
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED19
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED20
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED21
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED22
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED23
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED24
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED25
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED26
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED27
+Added Member To Class: ClassName=STM32 Member=Wire MCU_LED28
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY5
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY6
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY7
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY8
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY9
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY10
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY11
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY12
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY13
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY14
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY15
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY16
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY17
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY18
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY19
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY20
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY21
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY22
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY23
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY24
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY25
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY26
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY27
+Added Member To Class: ClassName=STM32 Member=Wire MCU_RELAY28

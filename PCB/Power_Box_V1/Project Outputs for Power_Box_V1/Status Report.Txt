@@ -1,0 +1,20 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Power_Box_V1.PrjPcb]
+   Generated File[Power_Box_V1.GTO]
+   Generated File[Power_Box_V1.GTP]
+   Generated File[Power_Box_V1.GTS]
+   Generated File[Power_Box_V1.GTL]
+   Generated File[Power_Box_V1.GBL]
+   Generated File[Power_Box_V1.GBS]
+   Generated File[Power_Box_V1.GBP]
+   Generated File[Power_Box_V1.GBO]
+   Generated File[Power_Box_V1.GM]
+   Generated File[Power_Box_V1.EXTREP]
+   Generated File[Power_Box_V1.REP]
+
+
+Files Generated   : 11
+Documents Printed : 0
+
+Finished Output Generation At 11:56:07 AM On 6/29/2026
