@@ -102,20 +102,9 @@ typedef enum
 
 static TestStateTypeDef test_state = TEST_STATE_IDLE;
 static uint8_t test_locker_index = 0;
-static uint8_t test_phone_number[12] = "09123456789";
 static uint16_t test_fingerprint_id = 0;
 static uint8_t test_confirm_code = 0;
-static uint16_t test_page_id = 0;
-static uint16_t test_score = 0;
 static uint32_t test_timer_start = 0;
-
-/* ---- Touch bring-up test (no LCD yet): watch these in Keil's
-   Watch window with "Periodic Window Update" enabled while running.
-   volatile so the compiler never optimizes the writes away. ---- */
-volatile uint16_t g_touch_x       = 0;   /* raw ADC, 0-4095 */
-volatile uint16_t g_touch_y       = 0;   /* raw ADC, 0-4095 */
-volatile uint32_t g_touch_count   = 0;   /* increments on every valid reading */
-volatile uint8_t  g_touch_pressed = 0;   /* 1 while panel is currently pressed */
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

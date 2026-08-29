@@ -19,7 +19,6 @@ extern "C" {
 
 #define W25Q32_PAGE_SIZE          256U
 #define W25Q32_SECTOR_SIZE        4096U
-#define W25Q32_BLOCK_SIZE         65536U
 #define W25Q32_TOTAL_SIZE         (4U * 1024U * 1024U)  /* 4 MB */
 #define W25Q32_JEDEC_ID           0x00EF4016U            /* Winbond, 32Mbit */
 

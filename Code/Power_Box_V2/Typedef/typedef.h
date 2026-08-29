@@ -95,70 +95,11 @@ extern "C" {
 #define LOG_CAPACITY_TOTAL                  (LOG_CAPACITY_PER_LOCKER * LOCKER_COUNT)  /* e.g. 800 for 8 lockers */
 #define LOG_PAGE_SIZE                       50U     /* entries shown per admin log page, newest page first */
 
-/* ==========================================================================
- *  AUDIO (ISD1730) MESSAGE ADDRESS TABLE
- * ==========================================================================
- *  No voice messages have been recorded yet, so every address below is a
- *  placeholder (0x000000). Once messages are recorded onto the ISD1730,
- *  replace each value with the real start address returned/used by the
- *  record tool for that slot. Do not remove or renumber entries once other
- *  modules start calling Audio_Play(AUDIO_MSG_xxx) against them.
- * ========================================================================== */
-//typedef enum
-//{
-//    AUDIO_MSG_SELECT_PHONE_TYPE = 0,       /* "select android or iphone" */
-//    AUDIO_MSG_ENTER_PHONE_NUMBER,          /* "enter your phone number" */
-//    AUDIO_MSG_INVALID_PHONE_NUMBER,        /* "invalid phone number" */
-//    AUDIO_MSG_CONFIRM_PHONE_NUMBER,        /* "is this number correct?" */
-//    AUDIO_MSG_PLACE_FINGER,                /* "place your finger" (1st scan) */
-//    AUDIO_MSG_PLACE_FINGER_AGAIN,          /* "place your finger again" (confirm scan) */
-//    AUDIO_MSG_FINGERPRINT_TIMEOUT,         /* 60s expired without a valid scan */
-//    AUDIO_MSG_FINGERPRINT_MISMATCH,        /* two scans did not match, deposit flow */
-//    AUDIO_MSG_LOCKER_OPENED_PLACE_PHONE,   /* "locker opened, place your phone and close the door" */
-//    AUDIO_MSG_DEPOSIT_TIMEOUT_ERROR,       /* 150s expired, door not closed */
-//    AUDIO_MSG_DEPOSIT_SUCCESS,             /* deposit completed successfully */
-
-//    AUDIO_MSG_RETRIEVE_ENTER_PHONE,        /* retrieve flow: "enter your phone number" */
-//    AUDIO_MSG_PHONE_NOT_FOUND,             /* phone number not found / attempts remaining */
-//    AUDIO_MSG_RETRIEVE_PLACE_FINGER,       /* retrieve flow: "place your finger" */
-//    AUDIO_MSG_FINGERPRINT_NOT_MATCH,       /* retrieve flow: fingerprint mismatch, attempts remaining */
-//    AUDIO_MSG_LOCKER_LOCKED_30MIN,         /* locker locked out for 30 minutes */
-//    AUDIO_MSG_LOCKER_OPENED_TAKE_PHONE,    /* "locker opened, take your phone and close the door" */
-//    AUDIO_MSG_RETRIEVE_TIMEOUT_DOOR_OPEN,  /* 60s expired, door left open */
-//    AUDIO_MSG_RETRIEVE_SUCCESS,            /* retrieve completed successfully */
-
-//    AUDIO_MSG_ADMIN_WRONG_PASSWORD,        /* wrong admin password entered */
-//    AUDIO_MSG_ADMIN_WELCOME,               /* correct admin password entered */
-
-//    AUDIO_MSG_COUNT                        /* keep last: total number of defined messages */
-//} AudioMsgIdTypeDef;
-
-/* TODO(audio): fill in real ISD1730 addresses once messages are recorded.
- * Kept as a separate table (not baked into the enum) so re-recording never
- * requires touching AudioMsgIdTypeDef or any code that references it. */
-#define AUDIO_ADDRESS_TABLE_INIT { \
-    [AUDIO_MSG_SELECT_PHONE_TYPE]      = 0x000000U, \
-    [AUDIO_MSG_ENTER_PHONE_NUMBER]     = 0x000000U, \
-    [AUDIO_MSG_INVALID_PHONE_NUMBER]   = 0x000000U, \
-    [AUDIO_MSG_CONFIRM_PHONE_NUMBER]   = 0x000000U, \
-    [AUDIO_MSG_PLACE_FINGER]           = 0x000000U, \
-    [AUDIO_MSG_PLACE_FINGER_AGAIN]     = 0x000000U, \
-    [AUDIO_MSG_FINGERPRINT_TIMEOUT]    = 0x000000U, \
-    [AUDIO_MSG_FINGERPRINT_MISMATCH]   = 0x000000U, \
-    [AUDIO_MSG_LOCKER_OPENED_PLACE_PHONE] = 0x000000U, \
-    [AUDIO_MSG_DEPOSIT_TIMEOUT_ERROR]  = 0x000000U, \
-    [AUDIO_MSG_DEPOSIT_SUCCESS]        = 0x000000U, \
-    [AUDIO_MSG_RETRIEVE_ENTER_PHONE]   = 0x000000U, \
-    [AUDIO_MSG_PHONE_NOT_FOUND]        = 0x000000U, \
-    [AUDIO_MSG_RETRIEVE_PLACE_FINGER]  = 0x000000U, \
-    [AUDIO_MSG_FINGERPRINT_NOT_MATCH]  = 0x000000U, \
-    [AUDIO_MSG_LOCKER_LOCKED_30MIN]    = 0x000000U, \
-    [AUDIO_MSG_LOCKER_OPENED_TAKE_PHONE] = 0x000000U, \
-    [AUDIO_MSG_RETRIEVE_TIMEOUT_DOOR_OPEN] = 0x000000U, \
-    [AUDIO_MSG_RETRIEVE_SUCCESS]       = 0x000000U, \
-    [AUDIO_MSG_ADMIN_WRONG_PASSWORD]   = 0x000000U, \
-    [AUDIO_MSG_ADMIN_WELCOME]          = 0x000000U, \
-}
+/* NOTE: the old placeholder AudioMsgIdTypeDef / AUDIO_ADDRESS_TABLE_INIT
+ * block that used to live here has been removed. It predated actual voice
+ * recording and every address was a 0x000000 stub. Audio messages are now
+ * defined for real in ISD1730/isd1730.h as ISD_MESSAGE_t, with real
+ * recorded row ranges in ISD_MessageTable. Use that instead. */
 
 /* ==========================================================================
  *  GENERIC RETURN CODE (shared across new higher-level modules: Storage,

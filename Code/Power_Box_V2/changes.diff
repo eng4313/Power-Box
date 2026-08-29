@@ -1,0 +1,451 @@
+diff --git a/Code/Power_Box_V2/Core/Src/main.c b/Code/Power_Box_V2/Core/Src/main.c
+index e276ef0..57e204c 100644
+--- a/Code/Power_Box_V2/Core/Src/main.c
++++ b/Code/Power_Box_V2/Core/Src/main.c
+@@ -102,20 +102,9 @@ typedef enum
+ 
+ static TestStateTypeDef test_state = TEST_STATE_IDLE;
+ static uint8_t test_locker_index = 0;
+-static uint8_t test_phone_number[12] = "09123456789";
+ static uint16_t test_fingerprint_id = 0;
+ static uint8_t test_confirm_code = 0;
+-static uint16_t test_page_id = 0;
+-static uint16_t test_score = 0;
+ static uint32_t test_timer_start = 0;
+-
+-/* ---- Touch bring-up test (no LCD yet): watch these in Keil's
+-   Watch window with "Periodic Window Update" enabled while running.
+-   volatile so the compiler never optimizes the writes away. ---- */
+-volatile uint16_t g_touch_x       = 0;   /* raw ADC, 0-4095 */
+-volatile uint16_t g_touch_y       = 0;   /* raw ADC, 0-4095 */
+-volatile uint32_t g_touch_count   = 0;   /* increments on every valid reading */
+-volatile uint8_t  g_touch_pressed = 0;   /* 1 while panel is currently pressed */
+ /* USER CODE END PV */
+ 
+ /* Private function prototypes -----------------------------------------------*/
+diff --git a/Code/Power_Box_V2/ISD1730/isd1730.h b/Code/Power_Box_V2/ISD1730/isd1730.h
+index 2f6f4f4..e4835c9 100644
+--- a/Code/Power_Box_V2/ISD1730/isd1730.h
++++ b/Code/Power_Box_V2/ISD1730/isd1730.h
+@@ -95,12 +95,6 @@ typedef enum
+     ISD_ERROR = 0x01U
+ } ISD_StatusTypeDef;
+ 
+-/* Row addressing: SE (sound effects) occupy rows 0x000-0x00F, voice
+- * message storage starts at row 0x010. Row address is 11 bits (0-2047,
+- * device-dependent maximum -- see ISD1700 family table for exact top row
+- * per part number). */
+-#define ISD_FIRST_VOICE_ROW        0x010U
+-
+ /**
+   * @brief  Init CS GPIO and issue Power-Up so the chip is ready for
+   *         further commands.
+diff --git a/Code/Power_Box_V2/SD-RAM/sdram.c b/Code/Power_Box_V2/SD-RAM/sdram.c
+index 7535b6d..e78786f 100644
+--- a/Code/Power_Box_V2/SD-RAM/sdram.c
++++ b/Code/Power_Box_V2/SD-RAM/sdram.c
+@@ -1,9 +1,9 @@
+ /**
+   ******************************************************************************
+   * @file    sdram.c
+-  * @brief   درایور استاندارد SDRAM خارجی (IS42S16400J) روی FMC Bank1
++  * @brief   Standard driver for the external SDRAM (IS42S16400J) on FMC Bank1.
+   *
+-  * پین‌مپینگ (استخراج‌شده از شماتیک Power_Box_V2 / MCU.SchDoc):
++  * Pin mapping (extracted from the Power_Box_V2 / MCU.SchDoc schematic):
+   *   A0..A5   -> PF0..PF5      A6..A9  -> PF12..PF15    A10,A11 -> PG0,PG1
+   *   BA0,BA1  -> PG4,PG5
+   *   D0..D15  -> PD14,PD15,PD0,PD1,PE7..PE15,PD8,PD9,PD10
+@@ -11,12 +11,12 @@
+   *   NE0(CS)  -> PC2           CKE0    -> PC3            SDCLK  -> PG8
+   *   NBL0,NBL1-> PE0,PE1  (DQML, DQMH)
+   *
+-  * این پین‌اوت کاملا مطابق نگاشت استاندارد FMC-SDRAM در STM32F429 است
+-  * (همان چیپ و همان سیم‌کشی بورد STM32F429I-Discovery) بنابراین
+-  * تایمینگ‌های زیر بر اساس دیتاشیت IS42S16400J و مقادیر تست‌شده‌ی
+-  * مرجع ST برای HCLK=180MHz (SDCLK=HCLK/2=90MHz) تنظیم شده‌اند.
+-  * در صورت تغییر فرکانس سیستم، مقدار SDRAM_REFRESH_COUNT باید
+-  * دوباره طبق فرمول زیر محاسبه شود:
++  * This pinout exactly matches the standard FMC-SDRAM mapping on the
++  * STM32F429 (same chip and same wiring as the STM32F429I-Discovery board),
++  * so the timings below are set according to the IS42S16400J datasheet and
++  * ST's tested reference values for HCLK=180MHz (SDCLK=HCLK/2=90MHz).
++  * If the system clock frequency changes, SDRAM_REFRESH_COUNT must be
++  * recalculated using the formula below:
+   *
+   *   REFRESH_COUNT = (SDRAM_Refresh_Period / Rows) * SDCLK_Freq - 20
+   *   IS42S16400J : Refresh Period = 64ms , Rows = 4096
+@@ -25,22 +25,22 @@
+ 
+ #include "sdram.h"
+ 
+-/* ==================== تنظیمات وابسته به کلاک سیستم ==================== */
+-/* فرض: HCLK = 180MHz  =>  SDCLK = HCLK/2 = 90MHz                          */
+-/* اگر SystemClock فرق داشت، این عدد را دوباره با فرمول بالای فایل بسازید */
++/* ==================== System-clock-dependent settings ==================== */
++/* Assumption: HCLK = 180MHz  =>  SDCLK = HCLK/2 = 90MHz */
++/* If SystemClock differs, recompute this value with the formula in the file header. */
+ #define SDRAM_REFRESH_COUNT             ((uint32_t)1386)
+ 
+ #define SDRAM_TIMEOUT                   ((uint32_t)0xFFFF)
+ 
+ static SDRAM_HandleTypeDef hsdram1;
+ 
+-/* ==================== توابع داخلی (private) ==================== */
++/* ==================== Private functions ==================== */
+ static void SDRAM_MspInit(SDRAM_HandleTypeDef *hsdram);
+ static SDRAM_StatusTypeDef SDRAM_SendCommand(uint32_t CommandMode, uint32_t RefreshNum, uint32_t RegVal);
+ static SDRAM_StatusTypeDef SDRAM_InitSequence(void);
+ 
+ /* =========================================================================
+- *                              API عمومی
++ *                              Public API
+  * ========================================================================= */
+ 
+ SDRAM_StatusTypeDef SDRAM_Init(void)
+@@ -49,7 +49,7 @@ SDRAM_StatusTypeDef SDRAM_Init(void)
+ 
+ 	hsdram1.Instance = FMC_SDRAM_DEVICE;
+ 
+-	/* ---------------- پیکربندی کنترلر ---------------- */
++	/* ---------------- Controller configuration ---------------- */
+ 	hsdram1.Init.SDBank             = FMC_SDRAM_BANK1;
+ 	hsdram1.Init.ColumnBitsNumber   = FMC_SDRAM_COLUMN_BITS_NUM_8;
+ 	hsdram1.Init.RowBitsNumber      = FMC_SDRAM_ROW_BITS_NUM_12;
+@@ -61,8 +61,8 @@ SDRAM_StatusTypeDef SDRAM_Init(void)
+ 	hsdram1.Init.ReadBurst          = FMC_SDRAM_RBURST_ENABLE;
+ 	hsdram1.Init.ReadPipeDelay      = FMC_SDRAM_RPIPE_DELAY_1;
+ 
+-	/* ---------------- تایمینگ (بر حسب چرخه‌ی SDCLK) ----------------
+-	 * مقادیر مرجع برای IS42S16400J @ SDCLK=90MHz (HCLK=180MHz)       */
++	/* ---------------- Timing (in SDCLK cycles) ----------------
++	 * Reference values for IS42S16400J @ SDCLK=90MHz (HCLK=180MHz) */
+ 	SdramTiming.LoadToActiveDelay    = 2;   /* TMRD */
+ 	SdramTiming.ExitSelfRefreshDelay = 7;   /* TXSR */
+ 	SdramTiming.SelfRefreshTime      = 4;   /* TRAS */
+@@ -71,7 +71,7 @@ SDRAM_StatusTypeDef SDRAM_Init(void)
+ 	SdramTiming.RPDelay              = 2;   /* TRP  */
+ 	SdramTiming.RCDDelay             = 2;   /* TRCD */
+ 
+-	/* GPIO و کلاک FMC قبل از HAL_SDRAM_Init فراخوانی می‌شود */
++	/* FMC GPIO and clock must be configured before HAL_SDRAM_Init */
+ 	SDRAM_MspInit(&hsdram1);
+ 
+ 	if (HAL_SDRAM_Init(&hsdram1, &SdramTiming) != HAL_OK)
+@@ -125,13 +125,13 @@ SDRAM_StatusTypeDef SDRAM_Test(uint32_t offset, uint32_t size_words)
+ 	uint32_t rd_data;
+ 	volatile uint32_t *pSdram = (volatile uint32_t *)(SDRAM_BANK_ADDR + offset);
+ 
+-	/* نوشتن الگوی تست */
++	/* Write the test pattern */
+ 	for (i = 0; i < size_words; i++)
+ 	{
+ 		pSdram[i] = (uint32_t)(i ^ 0xA5A5A5A5UL);
+ 	}
+ 
+-	/* خواندن و مقایسه */
++	/* Read back and compare */
+ 	for (i = 0; i < size_words; i++)
+ 	{
+ 		rd_data = pSdram[i];
+@@ -145,39 +145,39 @@ SDRAM_StatusTypeDef SDRAM_Test(uint32_t offset, uint32_t size_words)
+ }
+ 
+ /* =========================================================================
+- *                        توابع داخلی (private)
++ *                        Private functions
+  * ========================================================================= */
+ 
+ /**
+-  * @brief  دنباله‌ی راه‌اندازی تراشه طبق دیتاشیت IS42S16400J:
+-  *         1) فعال‌سازی کلاک        2) تاخیر 100us (طبق دیتاشیت)
+-  *         3) Precharge All          4) Auto-Refresh x8
+-  *         5) Load Mode Register     6) تنظیم نرخ رفرش
++  * @brief  Chip init sequence per the IS42S16400J datasheet:
++  *         1) enable clock            2) 100us delay (per datasheet)
++  *         3) Precharge All            4) Auto-Refresh x8
++  *         5) Load Mode Register       6) set refresh rate
+   */
+ static SDRAM_StatusTypeDef SDRAM_InitSequence(void)
+ {
+ 	uint32_t tmpmrd;
+ 
+-	/* گام 1: فعال‌سازی کلاک */
++	/* Step 1: enable clock */
+ 	if (SDRAM_SendCommand(FMC_SDRAM_CMD_CLK_ENABLE, 1, 0) != SDRAM_OK)
+ 	{
+ 		return SDRAM_ERROR;
+ 	}
+-	HAL_Delay(1); /* حداقل 100us طبق دیتاشیت - جهت اطمینان 1ms */
++	HAL_Delay(1); /* datasheet requires >= 100us - rounded up to 1ms for margin */
+ 
+-	/* گام 2: Precharge All */
++	/* Step 2: Precharge All */
+ 	if (SDRAM_SendCommand(FMC_SDRAM_CMD_PALL, 1, 0) != SDRAM_OK)
+ 	{
+ 		return SDRAM_ERROR;
+ 	}
+ 
+-	/* گام 3: Auto-Refresh (حداقل 2 بار طبق دیتاشیت، 8 بار برای اطمینان) */
++	/* Step 3: Auto-Refresh (datasheet requires >= 2, using 8 for margin) */
+ 	if (SDRAM_SendCommand(FMC_SDRAM_CMD_AUTOREFRESH_MODE, 8, 0) != SDRAM_OK)
+ 	{
+ 		return SDRAM_ERROR;
+ 	}
+ 
+-	/* گام 4: Load Mode Register
++	/* Step 4: Load Mode Register
+ 	 * Burst Length = 1 , Burst Type = Sequential , CAS Latency = 3
+ 	 * Operating Mode = Standard , Write Burst = Single Location Access */
+ 	tmpmrd = (uint32_t)(SDRAM_MODEREG_BURST_LENGTH_1          |
+@@ -191,7 +191,7 @@ static SDRAM_StatusTypeDef SDRAM_InitSequence(void)
+ 		return SDRAM_ERROR;
+ 	}
+ 
+-	/* گام 5: تنظیم نرخ رفرش */
++	/* Step 5: set refresh rate */
+ 	if (HAL_SDRAM_ProgramRefreshRate(&hsdram1, SDRAM_REFRESH_COUNT) != HAL_OK)
+ 	{
+ 		return SDRAM_ERROR;
+@@ -218,14 +218,14 @@ static SDRAM_StatusTypeDef SDRAM_SendCommand(uint32_t CommandMode, uint32_t Refr
+ }
+ 
+ /**
+-  * @brief  فعال‌سازی کلاک FMC و پیکربندی تمام پین‌های GPIO مربوط به SDRAM
+-  *         (پین‌اوت دقیقا مطابق شماتیک Power_Box_V2)
++  * @brief  Enables the FMC clock and configures every GPIO pin used by
++  *         SDRAM (pinout matches the Power_Box_V2 schematic exactly).
+   */
+ static void SDRAM_MspInit(SDRAM_HandleTypeDef *hsdram)
+ {
+ 	GPIO_InitTypeDef GPIO_Init = {0};
+ 
+-	/* فعال‌سازی کلاک‌ها */
++	/* Enable clocks */
+ 	__HAL_RCC_FMC_CLK_ENABLE();
+ 	__HAL_RCC_GPIOC_CLK_ENABLE();
+ 	__HAL_RCC_GPIOD_CLK_ENABLE();
+diff --git a/Code/Power_Box_V2/SD-RAM/sdram.h b/Code/Power_Box_V2/SD-RAM/sdram.h
+index 17be7a8..ef8e49c 100644
+--- a/Code/Power_Box_V2/SD-RAM/sdram.h
++++ b/Code/Power_Box_V2/SD-RAM/sdram.h
+@@ -1,13 +1,13 @@
+ /**
+   ******************************************************************************
+   * @file    sdram.h
+-  * @brief   درایور استاندارد SDRAM خارجی (IS42S16400J) روی FMC Bank1
+-  *          پروژه: Power Box V2 - STM32F429ZGT6
++  * @brief   Standard driver for the external SDRAM (IS42S16400J) on FMC Bank1.
++  *          Project: Power Box V2 - STM32F429ZGT6
+   *
+-  * این ماژول کاملا مستقل است و فقط به HAL وابسته است.
+-  * بالادست (مثلا درایور LTDC برای فریم‌بافر، یا هر ماژول دیگری که
+-  * نیاز به حافظه‌ی خارجی زیاد دارد) باید صرفا از طریق توابع این فایل
+-  * با SDRAM کار کند و هیچ‌گاه مستقیما به HAL_SDRAM_* دسترسی نداشته باشد.
++  * This module is fully self-contained and depends only on HAL. Upstream
++  * consumers (e.g. the LTDC driver for the framebuffer, or any other module
++  * that needs large external memory) must go through this file's functions
++  * only, and must never call HAL_SDRAM_* directly.
+   ******************************************************************************
+   */
+ 
+@@ -21,23 +21,20 @@ extern "C" {
+ #include "main.h"
+ #include <stdint.h>
+ 
+-/* ---- بیت‌های Mode Register طبق دیتاشیت IS42S16400J ----
+- * این مقادیر جزو HAL نیستند و مستقیما از دیتاشیت تراشه گرفته شده‌اند */
++/* ---- Mode Register bits per the IS42S16400J datasheet ----
++ * These values are not part of HAL; they come directly from the chip datasheet. */
+ #define SDRAM_MODEREG_BURST_LENGTH_1             ((uint16_t)0x0000)
+ #define SDRAM_MODEREG_BURST_TYPE_SEQUENTIAL      ((uint16_t)0x0000)
+ #define SDRAM_MODEREG_CAS_LATENCY_3              ((uint16_t)0x0030)
+ #define SDRAM_MODEREG_OPERATING_MODE_STANDARD    ((uint16_t)0x0000)
+ #define SDRAM_MODEREG_WRITEBURST_MODE_SINGLE     ((uint16_t)0x0200)
+ 
+-/* ==================== آدرس و ظرفیت حافظه ==================== */
+-/* IS42S16400J : 4M x 16bit x 4 Banks = 64Mbit = 8 MegaByte           */
++/* ==================== Address and capacity ==================== */
++/* IS42S16400J : 4M x 16bit x 4 Banks = 64Mbit = 8 MegaByte */
+ #define SDRAM_BANK_ADDR                 ((uint32_t)0xC0000000)
+ #define SDRAM_MEMORY_WIDTH               FMC_SDRAM_MEM_BUS_WIDTH_16
+-#define SDRAM_SIZE_BYTES                 ((uint32_t)0x800000)   /* 8 MB   */
+-#define SDRAM_ROWBITS_NUMBER              12
+-#define SDRAM_COLUMNBITS_NUMBER           8
+ 
+-/* ==================== کدهای بازگشتی ==================== */
++/* ==================== Return codes ==================== */
+ typedef enum
+ {
+ 	SDRAM_OK       = 0x00U,
+@@ -46,44 +43,44 @@ typedef enum
+ 	SDRAM_TEST_FAIL = 0x03U
+ } SDRAM_StatusTypeDef;
+ 
+-/* ==================== API عمومی ==================== */
++/* ==================== Public API ==================== */
+ 
+ /**
+-  * @brief  راه‌اندازی کامل SDRAM (کلاک، GPIO، تایمینگ، دنباله‌ی init، رفرش)
+-  * @note   قبل از فراخوانی این تابع باید سیستم‌کلاک (SystemClock_Config)
+-  *         از قبل تنظیم شده باشد، چون محاسبه‌ی نرخ رفرش به HCLK وابسته است.
+-  * @retval SDRAM_OK در صورت موفقیت
++  * @brief  Full SDRAM bring-up (clocks, GPIO, timing, init sequence, refresh).
++  * @note   SystemClock_Config() must already have run before calling this,
++  *         since the refresh rate calculation depends on HCLK.
++  * @retval SDRAM_OK on success.
+   */
+ SDRAM_StatusTypeDef SDRAM_Init(void);
+ 
+ /**
+-  * @brief  تست ساده‌ی حافظه (Write/Read/Compare) روی یک بازه از حافظه
+-  * @param  offset: افست نسبت به SDRAM_BANK_ADDR (بایت)
+-  * @param  size_words: تعداد کلمه‌های 32 بیتی برای تست
+-  * @retval SDRAM_OK اگر تست موفق بود، SDRAM_TEST_FAIL در غیر این صورت
++  * @brief  Simple memory test (Write/Read/Compare) over a memory range.
++  * @param  offset: offset relative to SDRAM_BANK_ADDR (bytes)
++  * @param  size_words: number of 32-bit words to test
++  * @retval SDRAM_OK if the test passed, SDRAM_TEST_FAIL otherwise.
+   */
+ SDRAM_StatusTypeDef SDRAM_Test(uint32_t offset, uint32_t size_words);
+ 
+ /**
+-  * @brief  نوشتن بافر روی SDRAM
+-  * @param  pData: اشاره‌گر به داده‌ی مبدا
+-  * @param  offset: افست نسبت به SDRAM_BANK_ADDR (بایت)
+-  * @param  size_words: تعداد کلمه‌های 32 بیتی
++  * @brief  Write a buffer to SDRAM.
++  * @param  pData: pointer to the source data
++  * @param  offset: offset relative to SDRAM_BANK_ADDR (bytes)
++  * @param  size_words: number of 32-bit words
+   */
+ SDRAM_StatusTypeDef SDRAM_WriteBuffer(const uint32_t *pData, uint32_t offset, uint32_t size_words);
+ 
+ /**
+-  * @brief  خواندن بافر از SDRAM
+-  * @param  pData: اشاره‌گر به بافر مقصد
+-  * @param  offset: افست نسبت به SDRAM_BANK_ADDR (بایت)
+-  * @param  size_words: تعداد کلمه‌های 32 بیتی
++  * @brief  Read a buffer from SDRAM.
++  * @param  pData: pointer to the destination buffer
++  * @param  offset: offset relative to SDRAM_BANK_ADDR (bytes)
++  * @param  size_words: number of 32-bit words
+   */
+ SDRAM_StatusTypeDef SDRAM_ReadBuffer(uint32_t *pData, uint32_t offset, uint32_t size_words);
+ 
+ /**
+-  * @brief  آدرس مطلق حافظه برای دسترسی مستقیم (مثلا برای فریم‌بافر LTDC)
+-  * @param  offset: افست نسبت به ابتدای بانک
+-  * @retval آدرس واقعی حافظه (پوینتر خام)
++  * @brief  Absolute memory address for direct access (e.g. for the LTDC framebuffer).
++  * @param  offset: offset relative to the start of the bank
++  * @retval Real memory address (raw pointer).
+   */
+ static inline uint32_t SDRAM_GetAbsoluteAddress(uint32_t offset)
+ {
+diff --git a/Code/Power_Box_V2/Typedef/typedef.h b/Code/Power_Box_V2/Typedef/typedef.h
+index bba58a6..5cefb7c 100644
+--- a/Code/Power_Box_V2/Typedef/typedef.h
++++ b/Code/Power_Box_V2/Typedef/typedef.h
+@@ -95,70 +95,11 @@ extern "C" {
+ #define LOG_CAPACITY_TOTAL                  (LOG_CAPACITY_PER_LOCKER * LOCKER_COUNT)  /* e.g. 800 for 8 lockers */
+ #define LOG_PAGE_SIZE                       50U     /* entries shown per admin log page, newest page first */
+ 
+-/* ==========================================================================
+- *  AUDIO (ISD1730) MESSAGE ADDRESS TABLE
+- * ==========================================================================
+- *  No voice messages have been recorded yet, so every address below is a
+- *  placeholder (0x000000). Once messages are recorded onto the ISD1730,
+- *  replace each value with the real start address returned/used by the
+- *  record tool for that slot. Do not remove or renumber entries once other
+- *  modules start calling Audio_Play(AUDIO_MSG_xxx) against them.
+- * ========================================================================== */
+-//typedef enum
+-//{
+-//    AUDIO_MSG_SELECT_PHONE_TYPE = 0,       /* "select android or iphone" */
+-//    AUDIO_MSG_ENTER_PHONE_NUMBER,          /* "enter your phone number" */
+-//    AUDIO_MSG_INVALID_PHONE_NUMBER,        /* "invalid phone number" */
+-//    AUDIO_MSG_CONFIRM_PHONE_NUMBER,        /* "is this number correct?" */
+-//    AUDIO_MSG_PLACE_FINGER,                /* "place your finger" (1st scan) */
+-//    AUDIO_MSG_PLACE_FINGER_AGAIN,          /* "place your finger again" (confirm scan) */
+-//    AUDIO_MSG_FINGERPRINT_TIMEOUT,         /* 60s expired without a valid scan */
+-//    AUDIO_MSG_FINGERPRINT_MISMATCH,        /* two scans did not match, deposit flow */
+-//    AUDIO_MSG_LOCKER_OPENED_PLACE_PHONE,   /* "locker opened, place your phone and close the door" */
+-//    AUDIO_MSG_DEPOSIT_TIMEOUT_ERROR,       /* 150s expired, door not closed */
+-//    AUDIO_MSG_DEPOSIT_SUCCESS,             /* deposit completed successfully */
+-
+-//    AUDIO_MSG_RETRIEVE_ENTER_PHONE,        /* retrieve flow: "enter your phone number" */
+-//    AUDIO_MSG_PHONE_NOT_FOUND,             /* phone number not found / attempts remaining */
+-//    AUDIO_MSG_RETRIEVE_PLACE_FINGER,       /* retrieve flow: "place your finger" */
+-//    AUDIO_MSG_FINGERPRINT_NOT_MATCH,       /* retrieve flow: fingerprint mismatch, attempts remaining */
+-//    AUDIO_MSG_LOCKER_LOCKED_30MIN,         /* locker locked out for 30 minutes */
+-//    AUDIO_MSG_LOCKER_OPENED_TAKE_PHONE,    /* "locker opened, take your phone and close the door" */
+-//    AUDIO_MSG_RETRIEVE_TIMEOUT_DOOR_OPEN,  /* 60s expired, door left open */
+-//    AUDIO_MSG_RETRIEVE_SUCCESS,            /* retrieve completed successfully */
+-
+-//    AUDIO_MSG_ADMIN_WRONG_PASSWORD,        /* wrong admin password entered */
+-//    AUDIO_MSG_ADMIN_WELCOME,               /* correct admin password entered */
+-
+-//    AUDIO_MSG_COUNT                        /* keep last: total number of defined messages */
+-//} AudioMsgIdTypeDef;
+-
+-/* TODO(audio): fill in real ISD1730 addresses once messages are recorded.
+- * Kept as a separate table (not baked into the enum) so re-recording never
+- * requires touching AudioMsgIdTypeDef or any code that references it. */
+-#define AUDIO_ADDRESS_TABLE_INIT { \
+-    [AUDIO_MSG_SELECT_PHONE_TYPE]      = 0x000000U, \
+-    [AUDIO_MSG_ENTER_PHONE_NUMBER]     = 0x000000U, \
+-    [AUDIO_MSG_INVALID_PHONE_NUMBER]   = 0x000000U, \
+-    [AUDIO_MSG_CONFIRM_PHONE_NUMBER]   = 0x000000U, \
+-    [AUDIO_MSG_PLACE_FINGER]           = 0x000000U, \
+-    [AUDIO_MSG_PLACE_FINGER_AGAIN]     = 0x000000U, \
+-    [AUDIO_MSG_FINGERPRINT_TIMEOUT]    = 0x000000U, \
+-    [AUDIO_MSG_FINGERPRINT_MISMATCH]   = 0x000000U, \
+-    [AUDIO_MSG_LOCKER_OPENED_PLACE_PHONE] = 0x000000U, \
+-    [AUDIO_MSG_DEPOSIT_TIMEOUT_ERROR]  = 0x000000U, \
+-    [AUDIO_MSG_DEPOSIT_SUCCESS]        = 0x000000U, \
+-    [AUDIO_MSG_RETRIEVE_ENTER_PHONE]   = 0x000000U, \
+-    [AUDIO_MSG_PHONE_NOT_FOUND]        = 0x000000U, \
+-    [AUDIO_MSG_RETRIEVE_PLACE_FINGER]  = 0x000000U, \
+-    [AUDIO_MSG_FINGERPRINT_NOT_MATCH]  = 0x000000U, \
+-    [AUDIO_MSG_LOCKER_LOCKED_30MIN]    = 0x000000U, \
+-    [AUDIO_MSG_LOCKER_OPENED_TAKE_PHONE] = 0x000000U, \
+-    [AUDIO_MSG_RETRIEVE_TIMEOUT_DOOR_OPEN] = 0x000000U, \
+-    [AUDIO_MSG_RETRIEVE_SUCCESS]       = 0x000000U, \
+-    [AUDIO_MSG_ADMIN_WRONG_PASSWORD]   = 0x000000U, \
+-    [AUDIO_MSG_ADMIN_WELCOME]          = 0x000000U, \
+-}
++/* NOTE: the old placeholder AudioMsgIdTypeDef / AUDIO_ADDRESS_TABLE_INIT
++ * block that used to live here has been removed. It predated actual voice
++ * recording and every address was a 0x000000 stub. Audio messages are now
++ * defined for real in ISD1730/isd1730.h as ISD_MESSAGE_t, with real
++ * recorded row ranges in ISD_MessageTable. Use that instead. */
+ 
+ /* ==========================================================================
+  *  GENERIC RETURN CODE (shared across new higher-level modules: Storage,
+diff --git a/Code/Power_Box_V2/W25Q32/w25q32.h b/Code/Power_Box_V2/W25Q32/w25q32.h
+index 515e7dd..9e00ad1 100644
+--- a/Code/Power_Box_V2/W25Q32/w25q32.h
++++ b/Code/Power_Box_V2/W25Q32/w25q32.h
+@@ -19,7 +19,6 @@ extern "C" {
+ 
+ #define W25Q32_PAGE_SIZE          256U
+ #define W25Q32_SECTOR_SIZE        4096U
+-#define W25Q32_BLOCK_SIZE         65536U
+ #define W25Q32_TOTAL_SIZE         (4U * 1024U * 1024U)  /* 4 MB */
+ #define W25Q32_JEDEC_ID           0x00EF4016U            /* Winbond, 32Mbit */
+ 
+diff --git a/Code/Power_Box_V2/ZFM40/zfm40.h b/Code/Power_Box_V2/ZFM40/zfm40.h
+index 19d3632..cb88cc7 100644
+--- a/Code/Power_Box_V2/ZFM40/zfm40.h
++++ b/Code/Power_Box_V2/ZFM40/zfm40.h
+@@ -31,9 +31,7 @@ extern "C" {
+ #define ZFM_DEFAULT_ADDRESS        0xFFFFFFFFU
+ 
+ #define ZFM_PID_COMMAND            0x01U
+-#define ZFM_PID_DATA               0x02U
+ #define ZFM_PID_ACK                0x07U
+-#define ZFM_PID_END_OF_DATA        0x08U
+ 
+ /* ---- Instruction codes ---- */
+ #define ZFM_CMD_GET_IMAGE          0x01U

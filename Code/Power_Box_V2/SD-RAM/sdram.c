@@ -1,9 +1,9 @@
 /**
   ******************************************************************************
   * @file    sdram.c
-  * @brief   درایور استاندارد SDRAM خارجی (IS42S16400J) روی FMC Bank1
+  * @brief   Standard driver for the external SDRAM (IS42S16400J) on FMC Bank1.
   *
-  * پین‌مپینگ (استخراج‌شده از شماتیک Power_Box_V2 / MCU.SchDoc):
+  * Pin mapping (extracted from the Power_Box_V2 / MCU.SchDoc schematic):
   *   A0..A5   -> PF0..PF5      A6..A9  -> PF12..PF15    A10,A11 -> PG0,PG1
   *   BA0,BA1  -> PG4,PG5
   *   D0..D15  -> PD14,PD15,PD0,PD1,PE7..PE15,PD8,PD9,PD10
@@ -11,12 +11,12 @@
   *   NE0(CS)  -> PC2           CKE0    -> PC3            SDCLK  -> PG8
   *   NBL0,NBL1-> PE0,PE1  (DQML, DQMH)
   *
-  * این پین‌اوت کاملا مطابق نگاشت استاندارد FMC-SDRAM در STM32F429 است
-  * (همان چیپ و همان سیم‌کشی بورد STM32F429I-Discovery) بنابراین
-  * تایمینگ‌های زیر بر اساس دیتاشیت IS42S16400J و مقادیر تست‌شده‌ی
-  * مرجع ST برای HCLK=180MHz (SDCLK=HCLK/2=90MHz) تنظیم شده‌اند.
-  * در صورت تغییر فرکانس سیستم، مقدار SDRAM_REFRESH_COUNT باید
-  * دوباره طبق فرمول زیر محاسبه شود:
+  * This pinout exactly matches the standard FMC-SDRAM mapping on the
+  * STM32F429 (same chip and same wiring as the STM32F429I-Discovery board),
+  * so the timings below are set according to the IS42S16400J datasheet and
+  * ST's tested reference values for HCLK=180MHz (SDCLK=HCLK/2=90MHz).
+  * If the system clock frequency changes, SDRAM_REFRESH_COUNT must be
+  * recalculated using the formula below:
   *
   *   REFRESH_COUNT = (SDRAM_Refresh_Period / Rows) * SDCLK_Freq - 20
   *   IS42S16400J : Refresh Period = 64ms , Rows = 4096
@@ -25,22 +25,22 @@
 
 #include "sdram.h"
 
-/* ==================== تنظیمات وابسته به کلاک سیستم ==================== */
-/* فرض: HCLK = 180MHz  =>  SDCLK = HCLK/2 = 90MHz                          */
-/* اگر SystemClock فرق داشت، این عدد را دوباره با فرمول بالای فایل بسازید */
+/* ==================== System-clock-dependent settings ==================== */
+/* Assumption: HCLK = 180MHz  =>  SDCLK = HCLK/2 = 90MHz */
+/* If SystemClock differs, recompute this value with the formula in the file header. */
 #define SDRAM_REFRESH_COUNT             ((uint32_t)1386)
 
 #define SDRAM_TIMEOUT                   ((uint32_t)0xFFFF)
 
 static SDRAM_HandleTypeDef hsdram1;
 
-/* ==================== توابع داخلی (private) ==================== */
+/* ==================== Private functions ==================== */
 static void SDRAM_MspInit(SDRAM_HandleTypeDef *hsdram);
 static SDRAM_StatusTypeDef SDRAM_SendCommand(uint32_t CommandMode, uint32_t RefreshNum, uint32_t RegVal);
 static SDRAM_StatusTypeDef SDRAM_InitSequence(void);
 
 /* =========================================================================
- *                              API عمومی
+ *                              Public API
  * ========================================================================= */
 
 SDRAM_StatusTypeDef SDRAM_Init(void)
@@ -49,7 +49,7 @@ SDRAM_StatusTypeDef SDRAM_Init(void)
 
 	hsdram1.Instance = FMC_SDRAM_DEVICE;
 
-	/* ---------------- پیکربندی کنترلر ---------------- */
+	/* ---------------- Controller configuration ---------------- */
 	hsdram1.Init.SDBank             = FMC_SDRAM_BANK1;
 	hsdram1.Init.ColumnBitsNumber   = FMC_SDRAM_COLUMN_BITS_NUM_8;
 	hsdram1.Init.RowBitsNumber      = FMC_SDRAM_ROW_BITS_NUM_12;
@@ -61,8 +61,8 @@ SDRAM_StatusTypeDef SDRAM_Init(void)
 	hsdram1.Init.ReadBurst          = FMC_SDRAM_RBURST_ENABLE;
 	hsdram1.Init.ReadPipeDelay      = FMC_SDRAM_RPIPE_DELAY_1;
 
-	/* ---------------- تایمینگ (بر حسب چرخه‌ی SDCLK) ----------------
-	 * مقادیر مرجع برای IS42S16400J @ SDCLK=90MHz (HCLK=180MHz)       */
+	/* ---------------- Timing (in SDCLK cycles) ----------------
+	 * Reference values for IS42S16400J @ SDCLK=90MHz (HCLK=180MHz) */
 	SdramTiming.LoadToActiveDelay    = 2;   /* TMRD */
 	SdramTiming.ExitSelfRefreshDelay = 7;   /* TXSR */
 	SdramTiming.SelfRefreshTime      = 4;   /* TRAS */
@@ -71,7 +71,7 @@ SDRAM_StatusTypeDef SDRAM_Init(void)
 	SdramTiming.RPDelay              = 2;   /* TRP  */
 	SdramTiming.RCDDelay             = 2;   /* TRCD */
 
-	/* GPIO و کلاک FMC قبل از HAL_SDRAM_Init فراخوانی می‌شود */
+	/* FMC GPIO and clock must be configured before HAL_SDRAM_Init */
 	SDRAM_MspInit(&hsdram1);
 
 	if (HAL_SDRAM_Init(&hsdram1, &SdramTiming) != HAL_OK)
@@ -125,13 +125,13 @@ SDRAM_StatusTypeDef SDRAM_Test(uint32_t offset, uint32_t size_words)
 	uint32_t rd_data;
 	volatile uint32_t *pSdram = (volatile uint32_t *)(SDRAM_BANK_ADDR + offset);
 
-	/* نوشتن الگوی تست */
+	/* Write the test pattern */
 	for (i = 0; i < size_words; i++)
 	{
 		pSdram[i] = (uint32_t)(i ^ 0xA5A5A5A5UL);
 	}
 
-	/* خواندن و مقایسه */
+	/* Read back and compare */
 	for (i = 0; i < size_words; i++)
 	{
 		rd_data = pSdram[i];
@@ -145,39 +145,39 @@ SDRAM_StatusTypeDef SDRAM_Test(uint32_t offset, uint32_t size_words)
 }
 
 /* =========================================================================
- *                        توابع داخلی (private)
+ *                        Private functions
  * ========================================================================= */
 
 /**
-  * @brief  دنباله‌ی راه‌اندازی تراشه طبق دیتاشیت IS42S16400J:
-  *         1) فعال‌سازی کلاک        2) تاخیر 100us (طبق دیتاشیت)
-  *         3) Precharge All          4) Auto-Refresh x8
-  *         5) Load Mode Register     6) تنظیم نرخ رفرش
+  * @brief  Chip init sequence per the IS42S16400J datasheet:
+  *         1) enable clock            2) 100us delay (per datasheet)
+  *         3) Precharge All            4) Auto-Refresh x8
+  *         5) Load Mode Register       6) set refresh rate
   */
 static SDRAM_StatusTypeDef SDRAM_InitSequence(void)
 {
 	uint32_t tmpmrd;
 
-	/* گام 1: فعال‌سازی کلاک */
+	/* Step 1: enable clock */
 	if (SDRAM_SendCommand(FMC_SDRAM_CMD_CLK_ENABLE, 1, 0) != SDRAM_OK)
 	{
 		return SDRAM_ERROR;
 	}
-	HAL_Delay(1); /* حداقل 100us طبق دیتاشیت - جهت اطمینان 1ms */
+	HAL_Delay(1); /* datasheet requires >= 100us - rounded up to 1ms for margin */
 
-	/* گام 2: Precharge All */
+	/* Step 2: Precharge All */
 	if (SDRAM_SendCommand(FMC_SDRAM_CMD_PALL, 1, 0) != SDRAM_OK)
 	{
 		return SDRAM_ERROR;
 	}
 
-	/* گام 3: Auto-Refresh (حداقل 2 بار طبق دیتاشیت، 8 بار برای اطمینان) */
+	/* Step 3: Auto-Refresh (datasheet requires >= 2, using 8 for margin) */
 	if (SDRAM_SendCommand(FMC_SDRAM_CMD_AUTOREFRESH_MODE, 8, 0) != SDRAM_OK)
 	{
 		return SDRAM_ERROR;
 	}
 
-	/* گام 4: Load Mode Register
+	/* Step 4: Load Mode Register
 	 * Burst Length = 1 , Burst Type = Sequential , CAS Latency = 3
 	 * Operating Mode = Standard , Write Burst = Single Location Access */
 	tmpmrd = (uint32_t)(SDRAM_MODEREG_BURST_LENGTH_1          |
@@ -191,7 +191,7 @@ static SDRAM_StatusTypeDef SDRAM_InitSequence(void)
 		return SDRAM_ERROR;
 	}
 
-	/* گام 5: تنظیم نرخ رفرش */
+	/* Step 5: set refresh rate */
 	if (HAL_SDRAM_ProgramRefreshRate(&hsdram1, SDRAM_REFRESH_COUNT) != HAL_OK)
 	{
 		return SDRAM_ERROR;
@@ -218,14 +218,14 @@ static SDRAM_StatusTypeDef SDRAM_SendCommand(uint32_t CommandMode, uint32_t Refr
 }
 
 /**
-  * @brief  فعال‌سازی کلاک FMC و پیکربندی تمام پین‌های GPIO مربوط به SDRAM
-  *         (پین‌اوت دقیقا مطابق شماتیک Power_Box_V2)
+  * @brief  Enables the FMC clock and configures every GPIO pin used by
+  *         SDRAM (pinout matches the Power_Box_V2 schematic exactly).
   */
 static void SDRAM_MspInit(SDRAM_HandleTypeDef *hsdram)
 {
 	GPIO_InitTypeDef GPIO_Init = {0};
 
-	/* فعال‌سازی کلاک‌ها */
+	/* Enable clocks */
 	__HAL_RCC_FMC_CLK_ENABLE();
 	__HAL_RCC_GPIOC_CLK_ENABLE();
 	__HAL_RCC_GPIOD_CLK_ENABLE();

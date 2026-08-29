@@ -31,9 +31,7 @@ extern "C" {
 #define ZFM_DEFAULT_ADDRESS        0xFFFFFFFFU
 
 #define ZFM_PID_COMMAND            0x01U
-#define ZFM_PID_DATA               0x02U
 #define ZFM_PID_ACK                0x07U
-#define ZFM_PID_END_OF_DATA        0x08U
 
 /* ---- Instruction codes ---- */
 #define ZFM_CMD_GET_IMAGE          0x01U

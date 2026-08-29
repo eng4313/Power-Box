@@ -95,12 +95,6 @@ typedef enum
     ISD_ERROR = 0x01U
 } ISD_StatusTypeDef;
 
-/* Row addressing: SE (sound effects) occupy rows 0x000-0x00F, voice
- * message storage starts at row 0x010. Row address is 11 bits (0-2047,
- * device-dependent maximum -- see ISD1700 family table for exact top row
- * per part number). */
-#define ISD_FIRST_VOICE_ROW        0x010U
-
 /**
   * @brief  Init CS GPIO and issue Power-Up so the chip is ready for
   *         further commands.
