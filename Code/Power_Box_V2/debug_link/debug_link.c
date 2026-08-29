@@ -16,12 +16,10 @@
 
 static UART_HandleTypeDef *s_huart = NULL;
 
-/* Raw DMA/IT receive buffer - HAL writes here, refilled after every event */
+/* Raw DMA/IT receive buffer */
 static uint8_t s_rx_raw[DEBUG_LINK_RX_BUF_SIZE];
 
-/* Snapshot of the last completed line, copied out of s_rx_raw inside the
- * ISR callback so the main loop can process it safely without racing the
- * next reception. */
+/* Snapshot of the last completed line */
 static uint8_t s_rx_line[DEBUG_LINK_RX_BUF_SIZE];
 static volatile uint16_t s_rx_line_len = 0;
 static volatile uint8_t s_rx_line_ready = 0;
@@ -30,18 +28,31 @@ static char s_tx_buf[DEBUG_LINK_TX_BUF_SIZE];
 
 static uint32_t s_last_tx_tick = 0;
 static uint32_t s_last_locker_tick = 0;
-static uint32_t s_fake_seconds = 0; /* fake HH:MM:SS counter, no RTC dependency for this test */
-static uint8_t s_locker_cycle_state = 0; /* 0=CLOSED, 1=OPEN, 2=BLINK */
+static uint32_t s_fake_seconds = 0;
+static uint8_t s_locker_cycle_state = 0;
 
-/* ------------------------------------------------------------------- */
+/* ==========================================================================
+ *  NEW: Callback for incoming lines
+ * ========================================================================== */
+static void (*s_line_callback)(const char *line) = NULL;
+
+void DebugLink_RegisterCallback(void (*callback)(const char *line))
+{
+    s_line_callback = callback;
+}
+
+/* ==========================================================================
+ *  Private functions
+ * ========================================================================== */
+
 static void DebugLink_StartReceive(void)
 {
-    /* Re-arm reception after every completed event (idle-line detection).
-     * ReceiveToIdle_IT will call HAL_UARTEx_RxEventCallback once either the
-     * buffer is full OR the line goes idle (i.e. a full "\n"-terminated
-     * message, or any pause in transmission). */
     HAL_UARTEx_ReceiveToIdle_IT(s_huart, s_rx_raw, DEBUG_LINK_RX_BUF_SIZE);
 }
+
+/* ==========================================================================
+ *  Public API
+ * ========================================================================== */
 
 DebugLinkStatusTypeDef DebugLink_Init(UART_HandleTypeDef *huart)
 {
@@ -81,7 +92,7 @@ DebugLinkStatusTypeDef DebugLink_SendLine(const char *text)
     }
     if (len >= (int)DEBUG_LINK_TX_BUF_SIZE)
     {
-        len = DEBUG_LINK_TX_BUF_SIZE - 1; /* truncated, still send what fits */
+        len = DEBUG_LINK_TX_BUF_SIZE - 1;
     }
 
     if (HAL_UART_Transmit(s_huart, (uint8_t *)s_tx_buf, (uint16_t)len, 100) != HAL_OK)
@@ -92,13 +103,11 @@ DebugLinkStatusTypeDef DebugLink_SendLine(const char *text)
     return DEBUG_LINK_OK;
 }
 
-/* ------------------------------------------------------------------- */
-/* Called from HAL - keep it short, just copy the buffer and re-arm.   */
 void DebugLink_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
     if (huart != s_huart)
     {
-        return; /* not our UART, ignore */
+        return;
     }
 
     if (Size > 0 && Size < DEBUG_LINK_RX_BUF_SIZE && s_rx_line_ready == 0)
@@ -107,14 +116,14 @@ void DebugLink_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
         s_rx_line_len = Size;
         s_rx_line_ready = 1;
     }
-    /* If a previous line hasn't been processed yet, this event is dropped.
-     * Fine for a test link; the real implementation may want a small
-     * ring buffer of lines instead. */
 
     DebugLink_StartReceive();
 }
 
-/* ------------------------------------------------------------------- */
+/* ==========================================================================
+ *  Line processing
+ * ========================================================================== */
+
 static void DebugLink_HandleReceivedLine(void)
 {
     char line[DEBUG_LINK_RX_BUF_SIZE + 1];
@@ -128,7 +137,7 @@ static void DebugLink_HandleReceivedLine(void)
     memcpy(line, s_rx_line, len);
     line[len] = '\0';
 
-    /* Strip trailing \r or \n if present */
+    /* Strip trailing \r or \n */
     while (len > 0 && (line[len - 1] == '\r' || line[len - 1] == '\n'))
     {
         line[--len] = '\0';
@@ -140,14 +149,25 @@ static void DebugLink_HandleReceivedLine(void)
         return;
     }
 
-    /* Echo back whatever was received, prefixed so it's obviously a test echo */
+    /* ===========================================================
+     *  NEW: Call the registered callback if present
+     * =========================================================== */
+    if (s_line_callback != NULL)
+    {
+        s_line_callback(line);
+    }
+
+    /* Echo back for debugging */
     snprintf(s_tx_buf, DEBUG_LINK_TX_BUF_SIZE, "OUT:LOG:RX_OK -> %s", line);
     DebugLink_SendLine(s_tx_buf);
 
     s_rx_line_ready = 0;
 }
 
-/* ------------------------------------------------------------------- */
+/* ==========================================================================
+ *  Periodic transmissions
+ * ========================================================================== */
+
 static void DebugLink_PeriodicTx(void)
 {
     uint32_t now = HAL_GetTick();
@@ -200,7 +220,10 @@ static void DebugLink_PeriodicLockerCycle(void)
     }
 }
 
-/* ------------------------------------------------------------------- */
+/* ==========================================================================
+ *  Main process function - call from main loop
+ * ========================================================================== */
+
 void DebugLink_Process(void)
 {
     if (s_rx_line_ready)

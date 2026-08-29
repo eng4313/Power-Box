@@ -32,9 +32,7 @@
 #include "AT24Cxx.h"
 #include "rtc.h"
 #include "debug_link.h"
-#include "ui_interface.h"
-#include "channel_hw.h"
-#include "channel_manager.h"
+#include "ui_interface.h"  
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,21 +42,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-/* PA0 blinks once when a scanned finger matches a template already
-   stored in the module; not used anywhere else in this project */
-#define FP_MATCH_LED_GPIO_Port     GPIOA
-#define FP_MATCH_LED_Pin           GPIO_PIN_0
 
-/* Audio message definitions for test (match ISD_MESSAGE_t in isd1730.h) */
-#define AUDIO_MSG_WELCOME          FULL_BOX
-#define AUDIO_MSG_PLACE_FINGER     ENTER_FINGER
-#define AUDIO_MSG_FINGER_AGAIN     ENTER_FINGER
-#define AUDIO_MSG_FINGER_MISMATCH  WRONG_FINGER
-#define AUDIO_MSG_DOOR_OPENED      DOOR_OPENED
-#define AUDIO_MSG_DOOR_IS_OPEN     DOOR_IS_OPEN
-#define AUDIO_MSG_SUCCESS          END_TIME
-#define AUDIO_MSG_CANCELLED        NOT_SAVE
-#define AUDIO_MSG_TIMEOUT          END_TIME
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -90,24 +74,16 @@ SDRAM_HandleTypeDef hsdram1;
    call, since the module's touch-detect pin never toggles. */
 volatile uint8_t zfm_poll_flag = 0;
 
-/* Test state machine for single locker */
-typedef enum
-{
-    TEST_STATE_IDLE = 0,
-    TEST_STATE_WAIT_FINGER_1,      /* First fingerprint scan */
-    TEST_STATE_WAIT_FINGER_2,      /* Second fingerprint scan (enroll) */
-    TEST_STATE_DOOR_OPEN,          /* Locker opened, waiting for door close */
-    TEST_STATE_COMPLETE            /* Test finished successfully */
-} TestStateTypeDef;
+/* Drives the identify-or-enroll flow across successive poll ticks so
+   the loop never blocks waiting for the finger to be lifted/replaced */
+//typedef enum
+//{
+//    FP_STATE_IDLE = 0,          /* waiting for a finger + running the search    */
+//    FP_STATE_WAIT_FINGER_UP,    /* unknown finger: buffer1 captured, wait for lift */
+//    FP_STATE_WAIT_SECOND_TOUCH  /* unknown finger: wait for the 2nd placement    */
+//} FP_AppStateTypeDef;
 
-static TestStateTypeDef test_state = TEST_STATE_IDLE;
-static uint8_t test_locker_index = 0;
-static uint8_t test_phone_number[12] = "09123456789";
-static uint16_t test_fingerprint_id = 0;
-static uint8_t test_confirm_code = 0;
-static uint16_t test_page_id = 0;
-static uint16_t test_score = 0;
-static uint32_t test_timer_start = 0;
+//static FP_AppStateTypeDef fp_state = FP_STATE_IDLE;
 
 /* ---- Touch bring-up test (no LCD yet): watch these in Keil's
    Watch window with "Periodic Window Update" enabled while running.
@@ -132,10 +108,7 @@ static void MX_RTC_Init(void);
 static void MX_TIM14_Init(void);
 static void MX_UART7_Init(void);
 /* USER CODE BEGIN PFP */
-static void Test_HandleFingerprintEvent(void);
-static void Test_PlayMessage(ISD_MESSAGE_t msg);
-static void Test_Log(const char *msg);
-static void Test_ResetState(void);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -183,93 +156,56 @@ int main(void)
   MX_TIM14_Init();
   MX_UART7_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim14);
+	HAL_TIM_Base_Start_IT(&htim14);
+///////////////////////////////////////////////////////////////////////////
+	Backlight_Init();              
+	Backlight_SetBrightness(50);   
+///////////////////////////////////////////////////////////////////////////
+	RTC_Init();
 
-  /* ---- 1. Initialize Backlight ---- */
-  Backlight_Init();
-  Backlight_SetBrightness(50);
+	RTC_DateTimeTypeDef now;
+	RTC_GetDateTime(&now);
+///////////////////////////////////////////////////////////////////////////
+	SPI_Bus_Init();
+	
+	ISD1730_Init();
+	
+	Touch_Init();
+	Touch_ForceConversion();   /* wake up PENIRQ detection, see touch.h */
+	
+	DebugLink_Init(&huart7);
+	DebugLink_RegisterCallback(UI_ProcessIncomingLine);
+	UI_Init();
+///////////////////////////////////////////////////////////////////////////
+//ZFM40_Init();
+//HAL_Delay(1);
+//uint8_t confirm;uint16_t pageId, score;
+//ZFM_StatusTypeDef st = ZFM40_VerifyPassword(0x00000000, &confirm);
+//HAL_Delay(100);
+///////////////////////////////////////////////////////////////////////////
+/* Send initial clock/date to PC tool */
+	{
+			char time_str[16];
+			char date_str[16];
+			snprintf(time_str, sizeof(time_str), "%02d:%02d:%02d", now.hour, now.minute, now.second);
+			snprintf(date_str, sizeof(date_str), "%02d/%02d/%04d", now.day, now.month, now.year);
+			UI_ShowClock(time_str, date_str);
+	}
 
-  /* ---- 2. Initialize RTC ---- */
-  RTC_Init();
-  RTC_DateTimeTypeDef now;
-  RTC_GetDateTime(&now);
-
-  /* ---- 3. Initialize SPI bus & peripherals ---- */
-  SPI_Bus_Init();
-
-  /* ---- 4. Initialize Audio (ISD1730) ---- */
-  Test_Log("Initializing ISD1730...");
-  if (ISD1730_Init() == ISD_OK)
-  {
-      Test_Log("ISD1730 OK - Playing welcome message...");
-      Test_PlayMessage(AUDIO_MSG_WELCOME);
-  }
-  else
-  {
-      Test_Log("ISD1730 ERROR!");
-  }
-
-  /* ---- 5. Initialize Fingerprint (ZFM-40) ---- */
-  Test_Log("Initializing ZFM-40...");
-  ZFM40_Init();
-  HAL_Delay(500);
-
-  /* Verify password (default is 0x00000000) */
-  if (ZFM40_VerifyPassword(0x00000000, &test_confirm_code) == ZFM_OK)
-  {
-      Test_Log("ZFM-40 OK - Password verified!");
-  }
-  else
-  {
-      Test_Log("ZFM-40 ERROR - Password verification failed!");
-  }
-
-  /* ---- 6. Initialize Channel Hardware ---- */
-  Test_Log("Initializing Channel HW...");
-  if (ChannelHW_Init() == SYS_OK)
-  {
-      Test_Log("Channel HW OK - All locks/LEDs/door sensors ready");
-  }
-  else
-  {
-      Test_Log("Channel HW ERROR!");
-  }
-
-  /* ---- 7. Initialize DebugLink & UI ---- */
-  DebugLink_Init(&huart7);
-  DebugLink_RegisterCallback(UI_ProcessIncomingLine);
-  UI_Init();
-
-  /* ---- 8. Send initial state to PC ---- */
-  {
-      char time_str[16];
-      char date_str[16];
-      snprintf(time_str, sizeof(time_str), "%02d:%02d:%02d", now.hour, now.minute, now.second);
-      snprintf(date_str, sizeof(date_str), "%02d/%02d/%04d", now.day, now.month, now.year);
-      UI_ShowClock(time_str, date_str);
-  }
-
-  UI_ShowMessage("System ready for test");
-  UI_SetScreenState("TEST_MODE");
-
-  /* Show initial locker states */
-  for (uint8_t i = 0; i < LOCKER_COUNT; i++)
-  {
-      UI_SetLockerState(i, false, false, false);
-  }
-
-  Test_Log("=== TEST SYSTEM READY ===");
-  Test_Log("Press 'Deposit' button on PC tool to start test");
-
-  /* ---- 9. Start test in IDLE state ---- */
-  test_state = TEST_STATE_IDLE;
-  test_locker_index = 0;  /* Use locker 1 (index 0) */
+	UI_ShowMessage("READY SYS");
+	UI_SetScreenState("IDLE");
+///////////////////////////////////////////////////////////////////////////
+	for (uint8_t i = 0; i < LOCKER_COUNT; i++)
+	{
+			UI_SetLockerState(i, false, false, false);
+	}
+		
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
+	{
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -277,101 +213,200 @@ int main(void)
     /* Process UART communication */
     DebugLink_Process();
 
-    /* Process UI events (from UART) */
+    /* NEW: Process UI events (from UART or touch) */
     UI_Tick();
 
+    /* NEW: Handle UI events */
     UI_EventTypeDef event;
     uint8_t digit;
     if (UI_GetNextEvent(&event, &digit))
     {
-        /* Map UI events to test actions */
-        switch (event)
-        {
-            case UI_EVENT_BTN_DEPOSIT:
-                Test_Log("Starting deposit flow...");
-                /* Start the fingerprint enrollment */
-                test_state = TEST_STATE_WAIT_FINGER_1;
-                Test_PlayMessage(AUDIO_MSG_PLACE_FINGER);
-                UI_ShowMessage("Place your finger on sensor");
-                test_timer_start = HAL_GetTick();
-                break;
+			switch (event)
+			{
+				case UI_EVENT_BTN_DEPOSIT:
+					UI_ShowMessage("StartDeposit");
+					/* TODO: Call ChannelManager_StartDeposit() */
+					break;
 
-            case UI_EVENT_BTN_RETRIEVE:
-                Test_Log("Retrieve button pressed - not implemented in test");
-                UI_ShowMessage("Retrieve not supported in test mode");
-                break;
+				case UI_EVENT_BTN_RETRIEVE:
+					UI_ShowMessage("StartRetrieve");
+					/* TODO: Call ChannelManager_StartRetrieve() */
+					break;
 
-            case UI_EVENT_BTN_ADMIN:
-                Test_Log("Admin button pressed - not implemented in test");
-                UI_ShowMessage("Admin not supported in test mode");
-                break;
+				case UI_EVENT_BTN_ADMIN:
+					UI_ShowMessage("admin login flow");
+					/* TODO: Start admin login flow */
+					break;
 
-            case UI_EVENT_PHONE_ANDROID:
-                Test_Log("Phone type: Android selected");
-                UI_ShowMessage("Phone: Android");
-                break;
+				case UI_EVENT_PHONE_ANDROID:
+					UI_ShowMessage("android");
+					break;
 
-            case UI_EVENT_PHONE_IPHONE:
-                Test_Log("Phone type: iPhone selected");
-                UI_ShowMessage("Phone: iPhone");
-                break;
+				case UI_EVENT_PHONE_IPHONE:
+					UI_ShowMessage("ios");
+					break;
 
-            case UI_EVENT_CANCEL:
-                Test_Log("Test cancelled by user");
-                Test_ResetState();
-                UI_ShowMessage("Test cancelled");
-                Test_PlayMessage(AUDIO_MSG_CANCELLED);
-                /* Close locker if it was open */
-                ChannelHW_SetLock(test_locker_index, false);
-                ChannelHW_SetLED(test_locker_index, false);
-                UI_SetLockerState(test_locker_index, false, false, false);
-                break;
+				case UI_EVENT_DIGIT_0:
+				case UI_EVENT_DIGIT_1:
+				case UI_EVENT_DIGIT_2:
+				case UI_EVENT_DIGIT_3:
+				case UI_EVENT_DIGIT_4:
+				case UI_EVENT_DIGIT_5:
+				case UI_EVENT_DIGIT_6:
+				case UI_EVENT_DIGIT_7:
+				case UI_EVENT_DIGIT_8:
+				case UI_EVENT_DIGIT_9:
+					/* TODO: Append digit to current input buffer */
+					break;
 
-            default:
-                break;
-        }
-    }
+				case UI_EVENT_BACKSPACE:
+					/* TODO: Remove last digit from input buffer */
+					break;
 
-    /* ---- Handle fingerprint polling (every 100ms) ---- */
-    if (zfm_poll_flag)
-    {
-        zfm_poll_flag = 0;
-        Test_HandleFingerprintEvent();
-    }
+				case UI_EVENT_CONFIRM:
+					/* TODO: Confirm current input */
+					break;
 
-    /* ---- Check door sensor for locker 1 ---- */
-    if (test_state == TEST_STATE_DOOR_OPEN)
-    {
-        if (ChannelHW_IsDoorClosed(test_locker_index))
-        {
-            Test_Log("Door closed! Test completed successfully!");
-            UI_SetLockerState(test_locker_index, false, true, false);
-            UI_ShowMessage("Test PASSED!");
-            Test_PlayMessage(AUDIO_MSG_SUCCESS);
-            test_state = TEST_STATE_COMPLETE;
+				case UI_EVENT_CANCEL:
+					/* TODO: Cancel current operation */
+					break;
 
-            /* De-energize lock and turn off LED */
-            ChannelHW_SetLock(test_locker_index, false);
-            ChannelHW_SetLED(test_locker_index, false);
-        }
-        else
-        {
-            /* Check timeout (150 seconds) */
-            uint32_t elapsed = (HAL_GetTick() - test_timer_start) / 1000;
-            if (elapsed > TIMEOUT_DOOR_CLOSE_AFTER_DEPOSIT_SEC)
-            {
-                Test_Log("ERROR: Door open timeout!");
-                UI_SetLockerState(test_locker_index, false, true, true);  /* LED blinking */
-                UI_ShowMessage("ERROR: Door left open!");
-                Test_PlayMessage(AUDIO_MSG_DOOR_IS_OPEN);
-                Test_ResetState();
-            }
-        }
-    }
+				default:
+						break;
+			}
+    }	
+		
+		
+		
+    /* ---- Touch bring-up test: cheap GPIO check every loop pass,
+       SPI transaction only when actually pressed. ---- */
+//    if (Touch_IsPressed())
+//    {
+//        TOUCH_RawPointTypeDef pt;
 
-    /* ---- Toggle LED on development board (status indicator) ---- */
-    /* (Already done in HAL_TIM_PeriodElapsedCallback) */
+//        g_touch_pressed = 1;
 
+//        if (Touch_ReadRaw(&pt) == TOUCH_OK)
+//        {
+//            g_touch_x = pt.x;
+//            g_touch_y = pt.y;
+//            g_touch_count++;
+//        }
+//    }
+//    else
+//    {
+//        g_touch_pressed = 0;
+//    }
+///////////////////////////////////////////////////////////////////////////
+//    if (!zfm_poll_flag) continue; /* wait for the next TIM14 (~100ms) tick */
+//    zfm_poll_flag = 0;
+
+//    switch (fp_state)
+//    {
+//        case FP_STATE_IDLE:
+//        {
+//            /* short-timeout poll: returns immediately with OK or NO_FINGER,
+//               never blocks the loop waiting for a finger */
+//            if (ZFM40_PollImage(&confirm) != ZFM_OK || confirm != ZFM_CONF_OK) continue;
+
+//            if (ZFM40_GenChar(1, &confirm) != ZFM_OK || confirm != ZFM_CONF_OK) continue;
+
+//            {
+//                ZFM_StatusTypeDef searchStatus = ZFM40_Search(1, 0, 1000, &pageId, &score, &confirm);
+
+//                /* ZFM40_Search() returns ZFM_NACK for a clean "not found" reply
+//                   (confirm == ZFM_CONF_SEARCH_NOT_FOUND) -- that is a valid,
+//                   expected outcome and must still fall through to the confirm
+//                   check below. Only bail out on a real transport failure. */
+//                if ((searchStatus != ZFM_OK) && (searchStatus != ZFM_NACK)) continue;
+//            }
+
+//            if (confirm == ZFM_CONF_OK)
+//            {
+//                /* known finger: blink PA0 once */
+//                HAL_GPIO_WritePin(FP_MATCH_LED_GPIO_Port, FP_MATCH_LED_Pin, GPIO_PIN_SET);
+//                HAL_Delay(200);
+//                HAL_GPIO_WritePin(FP_MATCH_LED_GPIO_Port, FP_MATCH_LED_Pin, GPIO_PIN_RESET);
+//            }
+//            else
+//            {
+//                /* unknown finger: CharBuffer1 already holds this capture,
+//                   now wait for it to be lifted before asking for the
+//                   confirming second touch (enrollment needs 2 captures) */
+//                fp_state = FP_STATE_WAIT_FINGER_UP;
+//            }
+
+//            break;
+//        }
+
+//        case FP_STATE_WAIT_FINGER_UP:
+//        {
+//            /* PollImage() returns ZFM_NACK (not ZFM_OK) whenever confirm
+//               != ZFM_CONF_OK, so a "finger lifted" reply is ZFM_NACK with
+//               confirm == ZFM_CONF_NO_FINGER -- never ZFM_OK */
+//            ZFM_StatusTypeDef pollStatus = ZFM40_PollImage(&confirm);
+
+//            if ((pollStatus == ZFM_NACK) && (confirm == ZFM_CONF_NO_FINGER))
+//            {
+//                fp_state = FP_STATE_WAIT_SECOND_TOUCH;
+//            }
+
+//            break;
+//        }
+
+//        case FP_STATE_WAIT_SECOND_TOUCH:
+//        {
+//            uint16_t templateCount;
+
+//            if (ZFM40_PollImage(&confirm) != ZFM_OK || confirm != ZFM_CONF_OK) continue;
+
+//            if (ZFM40_GenChar(2, &confirm) != ZFM_OK || confirm != ZFM_CONF_OK)
+//            {
+//                fp_state = FP_STATE_IDLE; /* second capture unusable, give up */
+//                continue;
+//            }
+
+//            if (ZFM40_RegModel(&confirm) != ZFM_OK || confirm != ZFM_CONF_OK)
+//            {
+//                fp_state = FP_STATE_IDLE; /* the two captures did not merge, e.g. different finger */
+//                continue;
+//            }
+
+//            /* store at the next free page: this assumes templates are
+//               kept compact from page 0 with no gaps left by deletions */
+//            if (ZFM40_GetTemplateCount(&templateCount, &confirm) != ZFM_OK || confirm != ZFM_CONF_OK)
+//            {
+//                fp_state = FP_STATE_IDLE;
+//                continue;
+//            }
+
+//            ZFM40_StoreChar(1, templateCount, &confirm);
+
+//            fp_state = FP_STATE_IDLE;
+//            break;
+//        }
+
+//        default:
+//        {
+//            fp_state = FP_STATE_IDLE;
+//            break;
+//        }
+//    }
+///////////////////////////////////////////////////////////////////////////
+//		if (!HAL_GPIO_ReadPin(KEY_2_GPIO_Port,KEY_2_Pin))
+//		{
+//			ISD1730_PlayMessage(i);
+//			HAL_Delay(2000);
+//		}
+//		if (!HAL_GPIO_ReadPin(KEY_1_GPIO_Port,KEY_1_Pin))
+//		{
+//			if (i == NOT_FOUND)
+//				i = FULL_BOX;
+//			else
+//				i++;
+//			
+//			HAL_Delay(2000);
+//		}
   }
   /* USER CODE END 3 */
 }
@@ -1002,221 +1037,21 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(XPT_IRQ_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
-  HAL_GPIO_WritePin(FP_MATCH_LED_GPIO_Port, FP_MATCH_LED_Pin, GPIO_PIN_RESET);
 
-  GPIO_InitStruct.Pin = FP_MATCH_LED_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(FP_MATCH_LED_GPIO_Port, &GPIO_InitStruct);
+
+
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-
-/**
-  * @brief  Reset test state to IDLE
-  */
-static void Test_ResetState(void)
-{
-    test_state = TEST_STATE_IDLE;
-    test_timer_start = 0;
-    UI_SetScreenState("TEST_MODE");
-}
-
-/**
-  * @brief  Play a recorded message on ISD1730
-  */
-static void Test_PlayMessage(ISD_MESSAGE_t msg)
-{
-    ISD_StatusTypeDef st = ISD1730_PlayMessage(msg);
-    if (st == ISD_OK)
-    {
-        /* Message is playing */
-    }
-    else
-    {
-        Test_Log("Audio play error!");
-    }
-}
-
-/**
-  * @brief  Send log message to PC via UART
-  */
-static void Test_Log(const char *msg)
-{
-    if (msg != NULL)
-    {
-        DebugLink_SendLine(msg);
-    }
-}
-
-/**
-  * @brief  Handle fingerprint events (called every 100ms)
-  */
-static void Test_HandleFingerprintEvent(void)
-{
-    uint8_t confirm;
-    ZFM_StatusTypeDef st;
-
-    switch (test_state)
-    {
-        case TEST_STATE_IDLE:
-            /* Nothing to do - waiting for user to press "Deposit" */
-            break;
-
-        case TEST_STATE_WAIT_FINGER_1:
-            /* First fingerprint scan (enrollment) */
-            st = ZFM40_PollImage(&confirm);
-            if ((st == ZFM_OK) && (confirm == ZFM_CONF_OK))
-            {
-                Test_Log("Finger detected - capturing image 1...");
-
-                /* Generate character file in buffer 1 */
-                if (ZFM40_GenChar(1, &confirm) == ZFM_OK)
-                {
-                    if (confirm == ZFM_CONF_OK)
-                    {
-                        Test_Log("Character 1 generated successfully");
-                        test_state = TEST_STATE_WAIT_FINGER_2;
-                        Test_PlayMessage(AUDIO_MSG_FINGER_AGAIN);
-                        UI_ShowMessage("Place finger again");
-                    }
-                    else
-                    {
-                        Test_Log("Character generation failed!");
-                        Test_ResetState();
-                        UI_ShowMessage("Fingerprint error!");
-                    }
-                }
-            }
-            else if ((st == ZFM_NACK) && (confirm == ZFM_CONF_NO_FINGER))
-            {
-                /* No finger yet - keep waiting */
-                uint32_t elapsed = (HAL_GetTick() - test_timer_start) / 1000;
-                if (elapsed > TIMEOUT_FINGERPRINT_FIRST_SCAN_SEC)
-                {
-                    Test_Log("ERROR: Fingerprint timeout (first scan)!");
-                    Test_ResetState();
-                    UI_ShowMessage("Fingerprint timeout!");
-                    Test_PlayMessage(AUDIO_MSG_TIMEOUT);
-                }
-            }
-            break;
-
-        case TEST_STATE_WAIT_FINGER_2:
-            /* Second fingerprint scan (confirmation) */
-            st = ZFM40_PollImage(&confirm);
-            if ((st == ZFM_OK) && (confirm == ZFM_CONF_OK))
-            {
-                Test_Log("Finger detected - capturing image 2...");
-
-                /* Generate character file in buffer 2 */
-                if (ZFM40_GenChar(2, &confirm) == ZFM_OK)
-                {
-                    if (confirm == ZFM_CONF_OK)
-                    {
-                        Test_Log("Character 2 generated successfully");
-
-                        /* Merge the two fingerprints into a template */
-                        if (ZFM40_RegModel(&confirm) == ZFM_OK)
-                        {
-                            if (confirm == ZFM_CONF_OK)
-                            {
-                                Test_Log("Template merged successfully");
-
-                                /* Get next available page ID */
-                                uint16_t template_count;
-                                if (ZFM40_GetTemplateCount(&template_count, &confirm) == ZFM_OK)
-                                {
-                                    if (confirm == ZFM_CONF_OK)
-                                    {
-                                        test_fingerprint_id = template_count;
-
-                                        /* Store the template */
-                                        if (ZFM40_StoreChar(1, test_fingerprint_id, &confirm) == ZFM_OK)
-                                        {
-                                            if (confirm == ZFM_CONF_OK)
-                                            {
-                                                Test_Log("Fingerprint stored at page");
-                                                Test_Log("Opening locker...");
-
-                                                /* Open the locker */
-                                                ChannelHW_SetLock(test_locker_index, true);
-                                                ChannelHW_SetLED(test_locker_index, true);
-                                                UI_SetLockerState(test_locker_index, true, true, false);
-
-                                                /* Start door-close timer */
-                                                test_state = TEST_STATE_DOOR_OPEN;
-                                                test_timer_start = HAL_GetTick();
-
-                                                UI_ShowMessage("Locker opened - place phone and close door");
-                                                Test_PlayMessage(AUDIO_MSG_DOOR_OPENED);
-                                            }
-                                            else
-                                            {
-                                                Test_Log("Store template failed!");
-                                                Test_ResetState();
-                                                UI_ShowMessage("Store template failed!");
-                                            }
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Test_Log("GetTemplateCount failed!");
-                                        Test_ResetState();
-                                        UI_ShowMessage("GetTemplateCount failed!");
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                Test_Log("Template merge failed - fingerprints didn't match!");
-                                Test_ResetState();
-                                UI_ShowMessage("Fingerprints did not match!");
-                                Test_PlayMessage(AUDIO_MSG_FINGER_MISMATCH);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        Test_Log("Character 2 generation failed!");
-                        Test_ResetState();
-                        UI_ShowMessage("Character 2 generation failed!");
-                    }
-                }
-            }
-            else if ((st == ZFM_NACK) && (confirm == ZFM_CONF_NO_FINGER))
-            {
-                /* No finger yet - keep waiting */
-                uint32_t elapsed = (HAL_GetTick() - test_timer_start) / 1000;
-                if (elapsed > TIMEOUT_FINGERPRINT_CONFIRM_SCAN_SEC)
-                {
-                    Test_Log("ERROR: Fingerprint timeout (second scan)!");
-                    Test_ResetState();
-                    UI_ShowMessage("Fingerprint timeout!");
-                    Test_PlayMessage(AUDIO_MSG_TIMEOUT);
-                }
-            }
-            break;
-
-        case TEST_STATE_DOOR_OPEN:
-        case TEST_STATE_COMPLETE:
-        default:
-            /* Nothing to do here */
-            break;
-    }
-}
-
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    if (htim->Instance == TIM14)
-    {
-        HAL_GPIO_TogglePin(LD_GPIO_Port, LD_Pin);
-        zfm_poll_flag = 1;
-    }
+	if (htim->Instance == TIM14)
+	{
+		HAL_GPIO_TogglePin(LD_GPIO_Port, LD_Pin);
+		zfm_poll_flag = 1;
+	}
 }
-
 void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 {
     DebugLink_RxEventCallback(huart, Size);

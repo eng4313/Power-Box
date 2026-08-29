@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F429xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BackLight;../BUS-SPI;../LCD;../SD-RAM;../W25Q32;../ZFM40;../TOUCH;../EEPROM;../Typedef;../ISD1730;../Storage;../BDC;../LOG;../Channel-Manager;../Channel-HW;../RTC;..\debug_link</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../BackLight;../BUS-SPI;../LCD;../SD-RAM;../W25Q32;../ZFM40;../TOUCH;../EEPROM;../Typedef;../ISD1730;../Storage;../BDC;../LOG;../Channel-Manager;../Channel-HW;../RTC;..\debug_link;..\UI</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -823,6 +823,16 @@
               <FileName>debug_link.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\debug_link\debug_link.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>UI</GroupName>
+          <Files>
+            <File>
+              <FileName>ui_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\UI\ui_interface.c</FilePath>
             </File>
           </Files>
         </Group>

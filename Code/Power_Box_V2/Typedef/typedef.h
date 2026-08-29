@@ -23,6 +23,11 @@ extern "C" {
 #include <stdint.h>
 #include <stdbool.h>
 
+/* ========================================================================== 
+	0U -> lcd & touch are not installed and UI will work by uart
+	1U -> lcd & touch are installed  
+*/
+#define UI_HARD_WARE_MODE                 0U   
 /* ==========================================================================
  *  HARDWARE SCALE (locker count)
  * ==========================================================================
@@ -99,34 +104,34 @@ extern "C" {
  *  record tool for that slot. Do not remove or renumber entries once other
  *  modules start calling Audio_Play(AUDIO_MSG_xxx) against them.
  * ========================================================================== */
-typedef enum
-{
-    AUDIO_MSG_SELECT_PHONE_TYPE = 0,       /* "select android or iphone" */
-    AUDIO_MSG_ENTER_PHONE_NUMBER,          /* "enter your phone number" */
-    AUDIO_MSG_INVALID_PHONE_NUMBER,        /* "invalid phone number" */
-    AUDIO_MSG_CONFIRM_PHONE_NUMBER,        /* "is this number correct?" */
-    AUDIO_MSG_PLACE_FINGER,                /* "place your finger" (1st scan) */
-    AUDIO_MSG_PLACE_FINGER_AGAIN,          /* "place your finger again" (confirm scan) */
-    AUDIO_MSG_FINGERPRINT_TIMEOUT,         /* 60s expired without a valid scan */
-    AUDIO_MSG_FINGERPRINT_MISMATCH,        /* two scans did not match, deposit flow */
-    AUDIO_MSG_LOCKER_OPENED_PLACE_PHONE,   /* "locker opened, place your phone and close the door" */
-    AUDIO_MSG_DEPOSIT_TIMEOUT_ERROR,       /* 150s expired, door not closed */
-    AUDIO_MSG_DEPOSIT_SUCCESS,             /* deposit completed successfully */
+//typedef enum
+//{
+//    AUDIO_MSG_SELECT_PHONE_TYPE = 0,       /* "select android or iphone" */
+//    AUDIO_MSG_ENTER_PHONE_NUMBER,          /* "enter your phone number" */
+//    AUDIO_MSG_INVALID_PHONE_NUMBER,        /* "invalid phone number" */
+//    AUDIO_MSG_CONFIRM_PHONE_NUMBER,        /* "is this number correct?" */
+//    AUDIO_MSG_PLACE_FINGER,                /* "place your finger" (1st scan) */
+//    AUDIO_MSG_PLACE_FINGER_AGAIN,          /* "place your finger again" (confirm scan) */
+//    AUDIO_MSG_FINGERPRINT_TIMEOUT,         /* 60s expired without a valid scan */
+//    AUDIO_MSG_FINGERPRINT_MISMATCH,        /* two scans did not match, deposit flow */
+//    AUDIO_MSG_LOCKER_OPENED_PLACE_PHONE,   /* "locker opened, place your phone and close the door" */
+//    AUDIO_MSG_DEPOSIT_TIMEOUT_ERROR,       /* 150s expired, door not closed */
+//    AUDIO_MSG_DEPOSIT_SUCCESS,             /* deposit completed successfully */
 
-    AUDIO_MSG_RETRIEVE_ENTER_PHONE,        /* retrieve flow: "enter your phone number" */
-    AUDIO_MSG_PHONE_NOT_FOUND,             /* phone number not found / attempts remaining */
-    AUDIO_MSG_RETRIEVE_PLACE_FINGER,       /* retrieve flow: "place your finger" */
-    AUDIO_MSG_FINGERPRINT_NOT_MATCH,       /* retrieve flow: fingerprint mismatch, attempts remaining */
-    AUDIO_MSG_LOCKER_LOCKED_30MIN,         /* locker locked out for 30 minutes */
-    AUDIO_MSG_LOCKER_OPENED_TAKE_PHONE,    /* "locker opened, take your phone and close the door" */
-    AUDIO_MSG_RETRIEVE_TIMEOUT_DOOR_OPEN,  /* 60s expired, door left open */
-    AUDIO_MSG_RETRIEVE_SUCCESS,            /* retrieve completed successfully */
+//    AUDIO_MSG_RETRIEVE_ENTER_PHONE,        /* retrieve flow: "enter your phone number" */
+//    AUDIO_MSG_PHONE_NOT_FOUND,             /* phone number not found / attempts remaining */
+//    AUDIO_MSG_RETRIEVE_PLACE_FINGER,       /* retrieve flow: "place your finger" */
+//    AUDIO_MSG_FINGERPRINT_NOT_MATCH,       /* retrieve flow: fingerprint mismatch, attempts remaining */
+//    AUDIO_MSG_LOCKER_LOCKED_30MIN,         /* locker locked out for 30 minutes */
+//    AUDIO_MSG_LOCKER_OPENED_TAKE_PHONE,    /* "locker opened, take your phone and close the door" */
+//    AUDIO_MSG_RETRIEVE_TIMEOUT_DOOR_OPEN,  /* 60s expired, door left open */
+//    AUDIO_MSG_RETRIEVE_SUCCESS,            /* retrieve completed successfully */
 
-    AUDIO_MSG_ADMIN_WRONG_PASSWORD,        /* wrong admin password entered */
-    AUDIO_MSG_ADMIN_WELCOME,               /* correct admin password entered */
+//    AUDIO_MSG_ADMIN_WRONG_PASSWORD,        /* wrong admin password entered */
+//    AUDIO_MSG_ADMIN_WELCOME,               /* correct admin password entered */
 
-    AUDIO_MSG_COUNT                        /* keep last: total number of defined messages */
-} AudioMsgIdTypeDef;
+//    AUDIO_MSG_COUNT                        /* keep last: total number of defined messages */
+//} AudioMsgIdTypeDef;
 
 /* TODO(audio): fill in real ISD1730 addresses once messages are recorded.
  * Kept as a separate table (not baked into the enum) so re-recording never
