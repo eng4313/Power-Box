@@ -43,6 +43,6 @@ power_box_v2\ui_interface.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_t
 power_box_v2\ui_interface.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 power_box_v2\ui_interface.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 power_box_v2\ui_interface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-power_box_v2\ui_interface.o: ..\debug_link\debug_link.h
+power_box_v2\ui_interface.o: ../debug_link/debug_link.h
 power_box_v2\ui_interface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 power_box_v2\ui_interface.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

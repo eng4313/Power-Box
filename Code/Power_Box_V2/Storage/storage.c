@@ -57,13 +57,13 @@ System_StatusTypeDef Storage_LoadLocker(uint8_t locker_index, LockerRecordTypeDe
     }
 
     memset(out_record, 0, sizeof(*out_record));
-    out_record->locker_index = locker_index;
-    out_record->in_use       = (buf[0] != 0U);
-    out_record->state        = out_record->in_use ? LOCKER_STATE_OCCUPIED : LOCKER_STATE_EMPTY;
+    out_record->locker_index         = locker_index;
+    out_record->flags.bits.in_use    = (buf[0] != 0U) ? 1U : 0U;
+    out_record->state                = out_record->flags.bits.in_use ? LOCKER_STATE_OCCUPIED : LOCKER_STATE_EMPTY;
 
     BCD_UnpackDigits(&buf[1], 6U, out_record->phone_number, PHONE_NUMBER_DIGIT_COUNT);
 
-    out_record->phone_type = (PhoneTypeTypeDef)buf[7];
+    out_record->flags.bits.phone_type = buf[7] ? 1U : 0U;  /* 0=PHONE_TYPE_ANDROID, 1=PHONE_TYPE_IPHONE */
 
     out_record->fingerprint_id = (uint16_t)(buf[8] | (buf[9] << 8));
 
@@ -71,7 +71,7 @@ System_StatusTypeDef Storage_LoadLocker(uint8_t locker_index, LockerRecordTypeDe
                                            ((uint32_t)buf[11] << 8) |
                                            ((uint32_t)buf[12] << 16)|
                                            ((uint32_t)buf[13] << 24);
-    out_record->lockout_active = (out_record->lockout_until_unix_time != 0U);
+    out_record->flags.bits.lockout_active = (out_record->lockout_until_unix_time != 0U) ? 1U : 0U;
 
     out_record->deposit_unix_time = (uint32_t)buf[14]        |
                                      ((uint32_t)buf[15] << 8) |
@@ -90,16 +90,16 @@ System_StatusTypeDef Storage_SaveLocker(uint8_t locker_index, const LockerRecord
         return SYS_INVALID_PARAM;
     }
 
-    buf[0] = record->in_use ? 1U : 0U;
+    buf[0] = record->flags.bits.in_use ? 1U : 0U;
 
     BCD_PackDigits(record->phone_number, PHONE_NUMBER_DIGIT_COUNT, &buf[1], 6U);
 
-    buf[7] = (uint8_t)record->phone_type;
+    buf[7] = record->flags.bits.phone_type ? 1U : 0U;
 
     buf[8] = (uint8_t)(record->fingerprint_id & 0xFFU);
     buf[9] = (uint8_t)((record->fingerprint_id >> 8) & 0xFFU);
 
-    uint32_t lockout = record->lockout_active ? record->lockout_until_unix_time : 0U;
+    uint32_t lockout = record->flags.bits.lockout_active ? record->lockout_until_unix_time : 0U;
     buf[10] = (uint8_t)(lockout & 0xFFU);
     buf[11] = (uint8_t)((lockout >> 8)  & 0xFFU);
     buf[12] = (uint8_t)((lockout >> 16) & 0xFFU);

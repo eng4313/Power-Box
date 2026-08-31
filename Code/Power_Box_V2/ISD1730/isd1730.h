@@ -76,17 +76,17 @@ typedef struct
 
 static const ISD_MessageAddress_t ISD_MessageTable[] =
 {
-    [FULL_BOX]     = {0U,   20U },
-    [OS_SELECT]    = {20U, 	40U },
-    [ENTER_NUM]    = {40U, 	60U },
-    [SAVE]         = {60U, 	70U },
-    [NOT_SAVE]     = {70U, 	80U },
-    [ENTER_FINGER] = {80U, 	100U},
-    [END_TIME]     = {100U, 115U},
-    [DOOR_OPENED]  = {115U, 135U},
-    [DOOR_IS_OPEN] = {135U, 155U},
-    [WRONG_FINGER] = {155U, 180U},
-    [NOT_FOUND]    = {180U, 190U}
+	[FULL_BOX]     = {0U,   20U },
+	[OS_SELECT]    = {20U, 	40U },
+	[ENTER_NUM]    = {40U, 	60U },
+	[SAVE]         = {60U, 	70U },
+	[NOT_SAVE]     = {70U, 	80U },
+	[ENTER_FINGER] = {80U, 	100U},
+	[END_TIME]     = {100U, 115U},
+	[DOOR_OPENED]  = {115U, 135U},
+	[DOOR_IS_OPEN] = {135U, 155U},
+	[WRONG_FINGER] = {155U, 180U},
+	[NOT_FOUND]    = {180U, 190U}
 };
 
 typedef enum

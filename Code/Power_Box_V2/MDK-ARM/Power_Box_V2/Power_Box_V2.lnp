@@ -47,6 +47,7 @@
 "power_box_v2\rtc.o"
 "power_box_v2\debug_link.o"
 "power_box_v2\ui_interface.o"
+"power_box_v2\flow_manager.o"
 --strict --scatter "Power_Box_V2\Power_Box_V2.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

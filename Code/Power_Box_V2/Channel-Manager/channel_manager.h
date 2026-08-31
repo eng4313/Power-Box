@@ -17,6 +17,16 @@
   * through the Log module. This module has no direct RTC dependency --
   * every function that needs "now" takes it as a unix_time parameter, so
   * the caller (UI task) is the only place that calls RTC_GetUnixTime().
+  *
+  * All per-locker bookkeeping (door-close deadline, failed fingerprint
+  * attempts, and the various single-bit flags) lives inside each
+  * LockerRecordTypeDef itself (see typedef.h) rather than in parallel
+  * arrays here -- ChannelManager_GetLockerState() returns the complete
+  * picture for a locker in one call, including the live
+  * flags.bits.door_open cache that ChannelManager_Poll() refreshes for
+  * every locker on every call (not just the ones this state machine is
+  * actively timing), so callers can show real door status for an OCCUPIED
+  * locker too without touching hardware directly.
   ******************************************************************************
   */
 

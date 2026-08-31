@@ -3,18 +3,15 @@
   * @file    channel_manager.c
   * @brief   See channel_manager.h.
   *
-  * RAM-only bookkeeping not part of LockerRecordTypeDef (none of it needs to
-  * survive a reboot -- a power loss mid-operation simply drops back to
-  * whatever was last persisted, i.e. the locker reverts to EMPTY if a
-  * deposit was in progress, or stays OCCUPIED if a retrieve was in
-  * progress; the customer just has to start that step over):
-  *   - deadline_unix_time[i]  : door-close deadline while AWAITING_*_CLOSE
-  *   - pending_is_deposit[i]  : which flow to finalize once the fault/await
-  *                              state resolves (deposit -> OCCUPIED,
-  *                              retrieve -> EMPTY)
-  *   - fault_logged[i]        : whether LOG_EVENT_DOOR_LEFT_OPEN_* already
-  *                              fired for the CURRENT fault episode
-  *   - failed_fp_attempts[i]  : retrieve-flow fingerprint mismatch counter
+  * All per-locker bookkeeping now lives inside LockerRecordTypeDef itself
+  * (see typedef.h) -- door_close_deadline_unix_time, failed_fp_attempts, and
+  * the flags union (in_use, phone_type, lockout_active, door_open,
+  * opened_by_admin, fault_logged, pending_is_deposit) replace what used to
+  * be four separate parallel arrays here. Only in_use, phone_type,
+  * lockout_active/lockout_until_unix_time, fingerprint_id, phone_number and
+  * deposit_unix_time are persisted by Storage; everything else is RAM-only
+  * and safe to lose on reboot (a mid-operation locker simply reverts to its
+  * last-persisted state and the customer restarts that step).
   ******************************************************************************
   */
 
@@ -25,11 +22,6 @@
 #include <string.h>
 
 static LockerRecordTypeDef lockers[LOCKER_COUNT];
-
-static uint32_t deadline_unix_time[LOCKER_COUNT];
-static bool     pending_is_deposit[LOCKER_COUNT];
-static bool     fault_logged[LOCKER_COUNT];
-static uint8_t  failed_fp_attempts[LOCKER_COUNT];
 
 static void FinalizeSuccess(uint8_t locker_index, uint32_t unix_time, bool was_deposit);
 static void EnterDoorLeftOpenFault(uint8_t locker_index, uint32_t unix_time, bool was_deposit,
@@ -42,10 +34,31 @@ System_StatusTypeDef ChannelManager_Init(void)
         return SYS_ERROR;
     }
 
-    memset(deadline_unix_time, 0, sizeof(deadline_unix_time));
-    memset(pending_is_deposit, 0, sizeof(pending_is_deposit));
-    memset(fault_logged, 0, sizeof(fault_logged));
-    memset(failed_fp_attempts, 0, sizeof(failed_fp_attempts));
+    /* Boot-time door reconciliation: Storage only ever persists a locker as
+     * EMPTY or OCCUPIED (the transient AWAITING_FAULT states are RAM-only
+     * and do not survive a reboot), so seed the live door_open cache from
+     * the actual sensor right now rather than leaving it at its
+     * zero-initialized "closed" default. This does not by itself change
+     * any locker's `state` -- an OCCUPIED locker whose door happens to
+     * read open at boot stays OCCUPIED; it is up to the caller (UI/flow
+     * layer) to notice flags.bits.door_open on an OCCUPIED locker and
+     * decide what to show/announce for that anomaly, since it is not one
+     * of the deposit/retrieve timeout faults this module's state machine
+     * models. */
+    for (uint8_t i = 0U; i < LOCKER_COUNT; i++)
+    {
+        lockers[i].door_close_deadline_unix_time = 0U;
+        lockers[i].failed_fp_attempts            = 0U;
+        lockers[i].flags.bits.door_open          = ChannelHW_IsDoorClosed(i) ? 0U : 1U;
+        lockers[i].flags.bits.opened_by_admin    = 0U;
+        lockers[i].flags.bits.fault_logged       = 0U;
+        lockers[i].flags.bits.pending_is_deposit = 0U;
+
+        /* Lock/LED start de-energized/off (ChannelHW_Init() already did
+         * this; repeated here so the two stay explicitly consistent). */
+        ChannelHW_SetLock(i, false);
+        ChannelHW_SetLED(i, false);
+    }
 
     return SYS_OK;
 }
@@ -67,16 +80,16 @@ System_StatusTypeDef ChannelManager_StartDeposit(const char *phone_number, Phone
         {
             strncpy(lockers[i].phone_number, phone_number, PHONE_NUMBER_DIGIT_COUNT);
             lockers[i].phone_number[PHONE_NUMBER_DIGIT_COUNT] = '\0';
-            lockers[i].phone_type         = phone_type;
-            lockers[i].fingerprint_id     = fingerprint_id;
-            lockers[i].deposit_unix_time  = unix_time;
-            lockers[i].state              = LOCKER_STATE_AWAITING_DEPOSIT_CLOSE;
-            /* in_use / lockout fields stay as they were (false / inactive for
+            lockers[i].flags.bits.phone_type = (uint8_t)phone_type;
+            lockers[i].fingerprint_id        = fingerprint_id;
+            lockers[i].deposit_unix_time     = unix_time;
+            lockers[i].state                 = LOCKER_STATE_AWAITING_DEPOSIT_CLOSE;
+            /* in_use / lockout fields stay as they were (0 / inactive for
              * an EMPTY locker) until FinalizeSuccess() confirms the door closed. */
 
-            deadline_unix_time[i]  = unix_time + TIMEOUT_DOOR_CLOSE_AFTER_DEPOSIT_SEC;
-            pending_is_deposit[i]  = true;
-            fault_logged[i]        = false;
+            lockers[i].door_close_deadline_unix_time = unix_time + TIMEOUT_DOOR_CLOSE_AFTER_DEPOSIT_SEC;
+            lockers[i].flags.bits.pending_is_deposit = 1U;
+            lockers[i].flags.bits.fault_logged       = 0U;
 
             ChannelHW_SetLock(i, true);
             ChannelHW_SetLED(i, true);
@@ -100,7 +113,8 @@ System_StatusTypeDef ChannelManager_FindLockerByPhone(const char *phone_number, 
 
     for (uint8_t i = 0U; i < LOCKER_COUNT; i++)
     {
-        if (lockers[i].in_use && (strncmp(lockers[i].phone_number, phone_number, PHONE_NUMBER_DIGIT_COUNT) == 0))
+        if (lockers[i].flags.bits.in_use &&
+            (strncmp(lockers[i].phone_number, phone_number, PHONE_NUMBER_DIGIT_COUNT) == 0))
         {
             *out_locker_index = i;
             return SYS_OK;
@@ -120,19 +134,19 @@ System_StatusTypeDef ChannelManager_IsLockerLockedOut(uint8_t locker_index, uint
 
     LockerRecordTypeDef *rec = &lockers[locker_index];
 
-    if (rec->lockout_active && (rec->lockout_until_unix_time > unix_time))
+    if (rec->flags.bits.lockout_active && (rec->lockout_until_unix_time > unix_time))
     {
         *out_locked            = true;
         *out_seconds_remaining = rec->lockout_until_unix_time - unix_time;
         return SYS_OK;
     }
 
-    if (rec->lockout_active)
+    if (rec->flags.bits.lockout_active)
     {
         /* Lockout window has expired: clear it and persist, so a future
          * reboot doesn't come back up still "locked" against a stale timestamp. */
-        rec->lockout_active          = false;
-        rec->lockout_until_unix_time = 0U;
+        rec->flags.bits.lockout_active = 0U;
+        rec->lockout_until_unix_time   = 0U;
         (void)Storage_SaveLocker(locker_index, rec);
     }
 
@@ -150,14 +164,14 @@ System_StatusTypeDef ChannelManager_RegisterFailedFingerprintAttempt(uint8_t loc
     }
 
     *out_locker_now_locked = false;
-    failed_fp_attempts[locker_index]++;
+    lockers[locker_index].failed_fp_attempts++;
 
-    if (failed_fp_attempts[locker_index] >= RETRIEVE_MAX_FINGERPRINT_ATTEMPTS)
+    if (lockers[locker_index].failed_fp_attempts >= RETRIEVE_MAX_FINGERPRINT_ATTEMPTS)
     {
         LockerRecordTypeDef *rec = &lockers[locker_index];
 
-        rec->lockout_active          = true;
-        rec->lockout_until_unix_time = unix_time + LOCKER_LOCKOUT_DURATION_SEC;
+        rec->flags.bits.lockout_active = 1U;
+        rec->lockout_until_unix_time   = unix_time + LOCKER_LOCKOUT_DURATION_SEC;
 
         if (Storage_SaveLocker(locker_index, rec) != SYS_OK)
         {
@@ -166,7 +180,7 @@ System_StatusTypeDef ChannelManager_RegisterFailedFingerprintAttempt(uint8_t loc
 
         (void)Log_Append(LOG_EVENT_LOCKER_LOCKOUT_30MIN, locker_index, rec->phone_number, unix_time);
 
-        failed_fp_attempts[locker_index] = 0U;
+        lockers[locker_index].failed_fp_attempts = 0U;
         *out_locker_now_locked = true;
     }
 
@@ -179,7 +193,7 @@ void ChannelManager_ClearFailedAttempts(uint8_t locker_index)
     {
         return;
     }
-    failed_fp_attempts[locker_index] = 0U;
+    lockers[locker_index].failed_fp_attempts = 0U;
 }
 
 System_StatusTypeDef ChannelManager_StartRetrieve(uint8_t locker_index, uint32_t unix_time)
@@ -198,9 +212,9 @@ System_StatusTypeDef ChannelManager_StartRetrieve(uint8_t locker_index, uint32_t
 
     rec->state = LOCKER_STATE_AWAITING_RETRIEVE_CLOSE;
 
-    deadline_unix_time[locker_index] = unix_time + TIMEOUT_DOOR_CLOSE_AFTER_RETRIEVE_SEC;
-    pending_is_deposit[locker_index] = false;
-    fault_logged[locker_index]       = false;
+    rec->door_close_deadline_unix_time = unix_time + TIMEOUT_DOOR_CLOSE_AFTER_RETRIEVE_SEC;
+    rec->flags.bits.pending_is_deposit = 0U;
+    rec->flags.bits.fault_logged       = 0U;
 
     ChannelHW_SetLock(locker_index, true);
     ChannelHW_SetLED(locker_index, true);
@@ -219,7 +233,7 @@ System_StatusTypeDef ChannelManager_AdminOpenLocker(uint8_t locker_index, uint32
 
     LockerRecordTypeDef *rec = &lockers[locker_index];
 
-    rec->opened_by_admin = true; /* RAM-only flag, not persisted -- purely for the log entry below */
+    rec->flags.bits.opened_by_admin = 1U; /* RAM-only flag, not persisted -- purely for the log entry below */
 
     ChannelHW_SetLock(locker_index, true);
     ChannelHW_SetLED(locker_index, true);
@@ -252,22 +266,30 @@ System_StatusTypeDef ChannelManager_Poll(uint32_t unix_time, uint32_t *out_remin
 
     for (uint8_t i = 0U; i < LOCKER_COUNT; i++)
     {
+        bool door_closed = ChannelHW_IsDoorClosed(i);
+
+        /* Keep the live door-state cache fresh for EVERY locker, EVERY
+         * call -- not just the ones this state machine actively times.
+         * Lets the UI/admin layer show real door status for OCCUPIED
+         * lockers too (e.g. a door propped open) without touching
+         * hardware directly and without this module having to decide
+         * what, if anything, to do about it. */
+        lockers[i].flags.bits.door_open = door_closed ? 0U : 1U;
+
         LockerStateTypeDef state = lockers[i].state;
 
         if ((state != LOCKER_STATE_AWAITING_DEPOSIT_CLOSE) &&
             (state != LOCKER_STATE_AWAITING_RETRIEVE_CLOSE) &&
             (state != LOCKER_STATE_DOOR_LEFT_OPEN_FAULT))
         {
-            continue; /* EMPTY / OCCUPIED lockers need no polling */
+            continue; /* EMPTY / OCCUPIED lockers need no further polling here */
         }
-
-        bool door_closed = ChannelHW_IsDoorClosed(i);
 
         if (door_closed)
         {
             /* Door closing at ANY point -- normal window or already in
              * fault -- finalizes the operation the same way. */
-            FinalizeSuccess(i, unix_time, pending_is_deposit[i]);
+            FinalizeSuccess(i, unix_time, lockers[i].flags.bits.pending_is_deposit == 1U);
             continue;
         }
 
@@ -281,10 +303,10 @@ System_StatusTypeDef ChannelManager_Poll(uint32_t unix_time, uint32_t *out_remin
                 *out_reminder_bitmask |= (1UL << i);
             }
         }
-        else if (unix_time >= deadline_unix_time[i])
+        else if (unix_time >= lockers[i].door_close_deadline_unix_time)
         {
             /* Door-close window expired without the door closing. */
-            EnterDoorLeftOpenFault(i, unix_time, pending_is_deposit[i], out_reminder_bitmask);
+            EnterDoorLeftOpenFault(i, unix_time, lockers[i].flags.bits.pending_is_deposit == 1U, out_reminder_bitmask);
         }
         else
         {
@@ -333,8 +355,8 @@ static void FinalizeSuccess(uint8_t locker_index, uint32_t unix_time, bool was_d
 
     if (was_deposit)
     {
-        rec->in_use = true;
-        rec->state  = LOCKER_STATE_OCCUPIED;
+        rec->flags.bits.in_use = 1U;
+        rec->state             = LOCKER_STATE_OCCUPIED;
         /* phone_number / phone_type / fingerprint_id / deposit_unix_time were
          * already written into *rec by ChannelManager_StartDeposit(). */
 
@@ -350,14 +372,13 @@ static void FinalizeSuccess(uint8_t locker_index, uint32_t unix_time, bool was_d
         memset(rec, 0, sizeof(*rec));
         rec->locker_index = idx;
         rec->state        = LOCKER_STATE_EMPTY;
-        rec->in_use        = false;
 
         (void)Storage_SaveLocker(locker_index, rec);
         (void)Log_Append(LOG_EVENT_RETRIEVE_SUCCESS, locker_index, phone_for_log, unix_time);
     }
 
-    fault_logged[locker_index]                    = false;
-    lockers[locker_index].door_open_reminder_counter = 0U;
+    rec->flags.bits.fault_logged    = 0U;
+    rec->door_open_reminder_counter = 0U;
 
     ChannelHW_SetLock(locker_index, false);
     ChannelHW_SetLED(locker_index, false);
@@ -366,15 +387,16 @@ static void FinalizeSuccess(uint8_t locker_index, uint32_t unix_time, bool was_d
 static void EnterDoorLeftOpenFault(uint8_t locker_index, uint32_t unix_time, bool was_deposit,
                                     uint32_t *out_reminder_bitmask)
 {
-    lockers[locker_index].state = LOCKER_STATE_DOOR_LEFT_OPEN_FAULT;
-    lockers[locker_index].door_open_reminder_counter = 0U;
+    lockers[locker_index].state                         = LOCKER_STATE_DOOR_LEFT_OPEN_FAULT;
+    lockers[locker_index].door_open_reminder_counter     = 0U;
+    lockers[locker_index].flags.bits.pending_is_deposit  = was_deposit ? 1U : 0U;
 
-    if (!fault_logged[locker_index])
+    if (!lockers[locker_index].flags.bits.fault_logged)
     {
         LogEventTypeDef event = was_deposit ? LOG_EVENT_DOOR_LEFT_OPEN_AFTER_DEPOSIT
                                              : LOG_EVENT_DOOR_LEFT_OPEN_AFTER_RETRIEVE;
         (void)Log_Append(event, locker_index, lockers[locker_index].phone_number, unix_time);
-        fault_logged[locker_index] = true;
+        lockers[locker_index].flags.bits.fault_logged = 1U;
     }
 
     /* Fire the reminder immediately on entering the fault too, not just on

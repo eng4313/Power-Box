@@ -128,11 +128,20 @@ typedef enum
 /* ==========================================================================
  *  LOCKER (CHANNEL) RUNTIME STATE
  * ==========================================================================
- *  One instance per physical locker. Lives in RAM, mirrored to EEPROM by the
- *  storage layer whenever occupancy/lockout state changes. Fingerprint ID is
- *  the ZFM-40 internal template ID (independent from locker_index, see
- *  fingerprint mapping rationale) so a locker can be freed and reused with a
- *  different fingerprint template without renumbering anything.
+ *  One instance per physical locker. Lives in RAM; the Storage layer persists
+ *  only the fields that must survive a reboot (in_use, phone_type,
+ *  fingerprint_id, phone_number, deposit_unix_time, lockout_active,
+ *  lockout_until_unix_time) -- everything else here is RAM-only bookkeeping
+ *  that is safe to lose on power loss (a mid-operation locker simply reverts
+ *  to its last-persisted state and the customer restarts that step).
+ *
+ *  All the single-bit status flags that used to live as separate parallel
+ *  arrays inside Channel Manager (pending_is_deposit[], fault_logged[]) or
+ *  as individual bool fields (in_use) are consolidated into the
+ *  LockerFlagsTypeDef bitfield union below, plus a "door_open" bit that is a
+ *  live cache of the last ChannelHW_IsDoorClosed() poll result (so any
+ *  module -- admin locker-status screen, UI mirror -- can read current door
+ *  state without touching hardware directly).
  * ========================================================================== */
 typedef enum
 {
@@ -143,24 +152,37 @@ typedef enum
     LOCKER_STATE_DOOR_LEFT_OPEN_FAULT      /* timeout expired with door still open, LED blinking, periodic reminder */
 } LockerStateTypeDef;
 
+typedef union
+{
+    uint8_t all_bits;
+    struct
+    {
+        uint8_t in_use             : 1;  /* PERSISTED. true once state != LOCKER_STATE_EMPTY */
+        uint8_t phone_type         : 1;  /* PERSISTED. 0 = PHONE_TYPE_ANDROID, 1 = PHONE_TYPE_IPHONE (valid only if in_use) */
+        uint8_t lockout_active     : 1;  /* PERSISTED. true while this locker is in its 30-min retrieve lockout */
+        uint8_t door_open          : 1;  /* RAM-only. live cache of the last door-sensor poll: 1 = currently open */
+        uint8_t opened_by_admin    : 1;  /* RAM-only. last door-open was an admin override (for logging only) */
+        uint8_t fault_logged       : 1;  /* RAM-only. DOOR_LEFT_OPEN log already fired for the CURRENT fault episode */
+        uint8_t pending_is_deposit : 1;  /* RAM-only. while AWAITING_*_CLOSE: which flow to finalize once the door closes */
+        uint8_t reserved           : 1;
+    } bits;
+} LockerFlagsTypeDef;
+
 typedef struct
 {
-    uint8_t              locker_index;                             /* 0..LOCKER_COUNT-1, matches Channel module wiring */
+    uint8_t              locker_index;     /* 0..LOCKER_COUNT-1, matches Channel module wiring */
     LockerStateTypeDef   state;
-    bool                 in_use;                                   /* true once state != LOCKER_STATE_EMPTY */
+    LockerFlagsTypeDef   flags;
 
-    char                 phone_number[PHONE_NUMBER_DIGIT_COUNT + 1U]; /* '\0' terminated, valid only if in_use */
-    PhoneTypeTypeDef      phone_type;
-    uint16_t             fingerprint_id;                            /* ZFM-40 template ID, independent from locker_index */
+    char                 phone_number[PHONE_NUMBER_DIGIT_COUNT + 1U]; /* PERSISTED, '\0' terminated, valid only if flags.bits.in_use */
+    uint16_t             fingerprint_id;   /* PERSISTED. ZFM-40 template ID, independent from locker_index */
 
-    uint32_t             deposit_unix_time;                         /* RTC timestamp phone was deposited */
+    uint32_t             deposit_unix_time;             /* PERSISTED. RTC timestamp phone was deposited (date+time) */
+    uint32_t             lockout_until_unix_time;        /* PERSISTED. valid only if flags.bits.lockout_active */
+    uint32_t             door_close_deadline_unix_time;  /* RAM-only. 150s (deposit) / 60s (retrieve) door-close deadline */
 
-    bool                 opened_by_admin;                           /* true if last door-open was an admin override, for logging */
-
-    bool                 lockout_active;                            /* true while this locker is in its 30-min retrieve lockout */
-    uint32_t             lockout_until_unix_time;                   /* valid only if lockout_active == true */
-
-    uint8_t              door_open_reminder_counter;                /* internal use: tracks DOOR_LEFT_OPEN_REMINDER_INTERVAL_SEC */
+    uint8_t              failed_fp_attempts;             /* RAM-only. retrieve-flow fingerprint mismatch counter */
+    uint8_t              door_open_reminder_counter;      /* RAM-only. tracks DOOR_LEFT_OPEN_REMINDER_INTERVAL_SEC */
 } LockerRecordTypeDef;
 
 /* ==========================================================================

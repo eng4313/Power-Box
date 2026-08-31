@@ -54,10 +54,11 @@ power_box_v2\main.o: ../EEPROM/AT24Cxx.h
 power_box_v2\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 power_box_v2\main.o: ../RTC/rtc.h
 power_box_v2\main.o: ../Typedef/typedef.h
-power_box_v2\main.o: ..\debug_link\debug_link.h
-power_box_v2\main.o: ..\UI\ui_interface.h
+power_box_v2\main.o: ../debug_link/debug_link.h
+power_box_v2\main.o: ../UI/ui_interface.h
 power_box_v2\main.o: ../Channel-HW/channel_hw.h
 power_box_v2\main.o: ../Channel-Manager/channel_manager.h
 power_box_v2\main.o: ../Storage/storage.h
 power_box_v2\main.o: ../BDC/bcd.h
 power_box_v2\main.o: ../LOG/log.h
+power_box_v2\main.o: ..\Flow-Manager\flow_manager.h
