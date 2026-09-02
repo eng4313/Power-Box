@@ -141,7 +141,11 @@ int main(void)
   MX_TIM14_Init();
   MX_UART7_Init();
   /* USER CODE BEGIN 2 */
+
+	
   HAL_TIM_Base_Start_IT(&htim14);
+	
+
 
   /* DebugLink first: no peripheral dependency beyond MX_UART7_Init()
    * (already done above), and every later init-failure message below
